@@ -193,9 +193,7 @@ public final class a extends BottomSheetDialogFragment {
             str2 = "hfSXrunUhcf9goXslpQ=";
             return StringDecoder.decode(str2);
         }
-        if (displayLanguage == null) {
-            return str;
-        }
+        return (displayLanguage == null || displayLanguage.isEmpty()) ? str : displayLanguage;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
