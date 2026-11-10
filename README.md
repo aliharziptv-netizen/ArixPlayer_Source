@@ -5,7 +5,7 @@ This project is reconstructed from the APK supplied in the workspace, `Arix Play
 ## Restored from the APK
 
 - Decompiled Java from the app's DEX containing `com.arix.player` classes (JADX 1.5.6). Decompiled source is placed in `app/src/main/java`; the app's original short/obfuscated class names are retained. This is recovered bytecode output, not the original publisher's source tree.
-- The APK's decoded AndroidManifest, all 1,493 decoded `res/` files, and its assets/fonts are used by the build. The unusable six `$avd_*.xml` compiled resource filenames were omitted; all other decoded resource XML is present.
+- The APK's decoded layouts/drawables/values and assets/fonts are used by the build. The build manifest combines the duplicate WaitActivity and VideoplayerActivity declarations; the exact original decoded manifest remains in `reference/`. The unusable six `$avd_*.xml` filenames and duplicate library `attrs.xml`/`public.xml` tables are excluded from the compiled app; their full decoded copies remain in `reference/original-res/`.
 - Media3 ExoPlayer, the custom HTTP request/header and ClearKey DRM path, app URL parsing/encryption code, dialogs, channel/project editing flows, persisted project list, social page, animation helper and player track-selection dialog are from the app's DEX or resources.
 - The original manifest identity and SDK levels are retained: `com.arix.player`, versionCode 8, minSdk 24, targetSdk 36.
 
