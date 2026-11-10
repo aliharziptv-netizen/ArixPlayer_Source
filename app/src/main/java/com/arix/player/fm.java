@@ -56,8 +56,7 @@ class fm implements cj {
                         this.a.f = (HashMap) new Gson().fromJson(ft.a(a.a("ODUyTlA7OzE="), str2), new fn(this).getType());
                         if (this.a.f.get(a.a("NDA1")).toString().equals(a.a("ISYzSA=="))) {
                             AdRequest adRequestBuild = new AdRequest.Builder().build();
-                            ?? r2 = this.a;
-                            InterstitialAd.load((Context) r2, ((WaitActivity) r2).b, adRequestBuild, this.a.s);
+                            InterstitialAd.load(this.a, this.a.b, adRequestBuild, this.a.s);
                             return;
                         }
                         this.a.n.setClass(this.a.getApplicationContext(), VideoplayerActivity.class);
