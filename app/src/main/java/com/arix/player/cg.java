@@ -18,11 +18,11 @@ class cg implements View.OnFocusChangeListener {
         GradientDrawable gradientDrawable = (GradientDrawable) view.getBackground();
         if (gradientDrawable != null) {
             if (z) {
-                gradientDrawable.setColor(Color.parseColor(com.arix.player.a.a("dhIAawtmYHIb")));
+                gradientDrawable.setColor(Color.parseColor(StringDecoder.decode("dhIAawtmYHIb")));
                 ((TextView) view).setTextColor(-1);
             } else {
                 ((TextView) view).setTextColor(-16777216);
-                gradientDrawable.setColor(Color.parseColor(com.arix.player.a.a("dhEDaH0QEQ==")));
+                gradientDrawable.setColor(Color.parseColor(StringDecoder.decode("dhEDaH0QEQ==")));
             }
             view.animate().scaleX(1.0f).scaleY(1.0f).setDuration(200L).start();
         }

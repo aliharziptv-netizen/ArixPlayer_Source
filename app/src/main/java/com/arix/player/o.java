@@ -20,6 +20,6 @@ class o implements View.OnClickListener {
         this.b.dismiss();
         di.a(this.a, this.c.b());
         this.a.d();
-        i.a(this.a, com.arix.player.a.a("jf6fqBiN+Z6d4dR0norh0Y3E9Z+N8p+o4Px0noXh04zq9Z+N+Q=="));
+        i.a(this.a, StringDecoder.decode("jf6fqBiN+Z6d4dR0norh0Y3E9Z+N8p+o4Px0noXh04zq9Z+N+Q=="));
     }
 }

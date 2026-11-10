@@ -33,7 +33,7 @@ class bd implements Runnable {
             View viewFindViewById = viewInflate.findViewById(2131361954);
             View viewFindViewById2 = viewInflate.findViewById(2131361953);
             textView.setText(String.valueOf(size - i2));
-            textView2.setText(this.a.a(i2, gVar.b()).replaceFirst(com.arix.player.a.a("Cw92AAEIfxoDZCZ+"), ""));
+            textView2.setText(this.a.a(i2, gVar.b()).replaceFirst(StringDecoder.decode("Cw92AAEIfxoDZCZ+"), ""));
             if (i2 == i) {
                 viewFindViewById.setAlpha(0.25f);
                 viewFindViewById.setEnabled(false);

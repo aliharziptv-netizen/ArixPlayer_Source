@@ -83,7 +83,7 @@ public class HomeActivity extends Activity {
         TextView textView = (TextView) dialog.findViewById(2131362556);
         Button button = (Button) dialog.findViewById(2131361934);
         Button button2 = (Button) dialog.findViewById(2131361932);
-        textView.setText(chVar.c().isEmpty() ? com.arix.player.a.a("jNaeiuDzjcP1kXWM7vWXjNyfqxiN7Z+r4d2M4fS+") : chVar.c());
+        textView.setText(chVar.c().isEmpty() ? StringDecoder.decode("jNaeiuDzjcP1kXWM7vWXjNyfqxiN7Z+r4d2M4fS+") : chVar.c());
         com.arix.player.k.a(this, dialog.findViewById(android.R.id.content));
         button.setOnClickListener(new o(this, dialog, chVar));
         button2.setOnClickListener(new p(this, dialog));
@@ -93,7 +93,7 @@ public class HomeActivity extends Activity {
     /* JADX INFO: Access modifiers changed from: private */
     public void a(String str) {
         if (str == null || str.trim().isEmpty()) {
-            com.arix.player.i.c(this, com.arix.player.a.a("jfOfqeDkjOH1kI3jZvWCjN6enBiN4Z6K4dGM6w=="));
+            com.arix.player.i.c(this, StringDecoder.decode("jfOfqeDkjOH1kI3jZvWCjN6enBiN4Z6K4dGM6w=="));
             return;
         }
         try {
@@ -101,7 +101,7 @@ public class HomeActivity extends Activity {
             uri.addFlags(268435456);
             startActivity(uri);
         } catch (Throwable unused) {
-            com.arix.player.i.c(this, com.arix.player.a.a("jf6elODljPcN4P+M8vWCjN6fqRiN85+p4OSM4fWQjeNm9LmM3mb1n4zQn6jg4Yz89Lw="));
+            com.arix.player.i.c(this, StringDecoder.decode("jf6elODljPcN4P+M8vWCjN6fqRiN85+p4OSM4fWQjeNm9LmM3mb1n4zQn6jg4Yz89Lw="));
         }
     }
 
@@ -161,7 +161,7 @@ public class HomeActivity extends Activity {
         } else {
             Collections.reverse(listA);
         }
-        this.a.setText(String.valueOf(this.m.size()) + com.arix.player.a.a("dY3E9Z+N8p+o4Pw="));
+        this.a.setText(String.valueOf(this.m.size()) + StringDecoder.decode("dY3E9Z+N8p+o4Pw="));
         e();
     }
 
@@ -189,7 +189,7 @@ public class HomeActivity extends Activity {
             this.j.setVisibility(0);
             TextView textView = this.k;
             if (textView != null) {
-                textView.setText(com.arix.player.a.a("jNCfqBiM3p6H4dB0norh0Yz/9ZOM3J6cGI3tn6nh3HSejuHfdJ+v4PKM4PS9jf1m9ZKN456K4P2NxA0f") + this.n + com.arix.player.a.a("cg=="));
+                textView.setText(StringDecoder.decode("jNCfqBiM3p6H4dB0norh0Yz/9ZOM3J6cGI3tn6nh3HSejuHfdJ+v4PKM4PS9jf1m9ZKN456K4P2NxA0f") + this.n + StringDecoder.decode("cg=="));
                 return;
             }
             return;
@@ -206,10 +206,10 @@ public class HomeActivity extends Activity {
             ImageView imageView3 = (ImageView) viewInflate.findViewById(2131361942);
             String strC = chVar2.c();
             if (strC != null) {
-                strC = strC.replaceAll(com.arix.player.a.a("CSdscRAJMG1xS3+NxPS+jNyeiuD/CG8="), "").trim();
+                strC = strC.replaceAll(StringDecoder.decode("CSdscRAJMG1xS3+NxPS+jNyeiuD/CG8="), "").trim();
             }
             if (strC == null || strC.isEmpty()) {
-                strC = com.arix.player.a.a("jNaeiuDzjcP1kXWM7vWXjNyfqxiN7Z+r4d2M4fS+");
+                strC = StringDecoder.decode("jNaeiuDzjcP1kXWM7vWXjNyfqxiN7Z+r4d2M4fS+");
             }
             textView2.setText(strC);
             viewInflate.setOnClickListener(new ag(this, chVar2));

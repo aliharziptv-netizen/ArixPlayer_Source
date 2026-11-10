@@ -35,11 +35,11 @@ class z implements Runnable {
         if (dialog != null && dialog.isShowing()) {
             this.b.dismiss();
         }
-        String str = new SimpleDateFormat(com.arix.player.a.a("LC0/VBUYGWtJXHUcDhdVOA=="), Locale.getDefault()).format(new Date());
+        String str = new SimpleDateFormat(StringDecoder.decode("LC0/VBUYGWtJXHUcDhdVOA=="), Locale.getDefault()).format(new Date());
         ch chVar = new ch();
         chVar.a(String.valueOf(System.currentTimeMillis()));
         chVar.b(this.c);
-        chVar.c(com.arix.player.a.a("IjEk"));
+        chVar.c(StringDecoder.decode("IjEk"));
         chVar.d(this.d);
         chVar.e(this.e);
         chVar.f(this.f);
@@ -49,6 +49,6 @@ class z implements Runnable {
         chVar.a(this.i);
         di.a(this.a.a, chVar);
         this.a.a.d();
-        com.arix.player.i.b(this.a.a, com.arix.player.a.a("jf6fqBiN856e4P+NzPWJjfOeghiM1p6K4PONw/WRdQ==") + this.c + com.arix.player.a.a("dYzu9L6N+J6K4Ph1"));
+        com.arix.player.i.b(this.a.a, StringDecoder.decode("jf6fqBiN856e4P+NzPWJjfOeghiM1p6K4PONw/WRdQ==") + this.c + StringDecoder.decode("dYzu9L6N+J6K4Ph1"));
     }
 }

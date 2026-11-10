@@ -11,7 +11,7 @@ class bn implements Runnable {
     @Override // java.lang.Runnable
     public void run() {
         if (this.a.ad != null) {
-            this.a.ad.setText(com.arix.player.a.a("jNKenuD7"));
+            this.a.ad.setText(StringDecoder.decode("jNKenuD7"));
         }
     }
 }

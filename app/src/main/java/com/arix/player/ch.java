@@ -7,12 +7,12 @@ import org.json.JSONObject;
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class ch implements Serializable {
     private String a = String.valueOf(System.currentTimeMillis());
-    private String b = com.arix.player.a.a("jNaeiuDzjcP1kXWNxPS+jNyeiuD/");
-    private String c = com.arix.player.a.a("PDoySFYh");
+    private String b = StringDecoder.decode("jNaeiuDzjcP1kXWNxPS+jNyeiuD/");
+    private String c = StringDecoder.decode("PDoySFYh");
     private String d = "";
     private String e = "";
     private String f = "";
-    private String g = com.arix.player.a.a("Dgk=");
+    private String g = StringDecoder.decode("Dgk=");
     private String h = "";
     private int i = 0;
     private boolean j = false;
@@ -22,31 +22,31 @@ public class ch implements Serializable {
             return null;
         }
         ch chVar = new ch();
-        chVar.a(jSONObject.optString(com.arix.player.a.a("PDA="), String.valueOf(System.currentTimeMillis())));
-        chVar.b(jSONObject.optString(com.arix.player.a.a("IT0yQV0="), com.arix.player.a.a("jNaeiuDzjcP1kXWNxPS+jNyeiuD/")));
-        chVar.c(jSONObject.optString(com.arix.player.a.a("OT0oRmwsJCM="), com.arix.player.a.a("PDoySFYh")));
-        chVar.d(jSONObject.optString(com.arix.player.a.a("MDolX0ElICNJfDQgJw=="), ""));
-        chVar.e(jSONObject.optString(com.arix.player.a.a("Mz0oTFQAJio="), ""));
-        chVar.f(jSONObject.optString(com.arix.player.a.a("PDoySFYhATRB"), jSONObject.optString(com.arix.player.a.a("Mz0oTFQAJio="), "")));
-        chVar.g(jSONObject.optString(com.arix.player.a.a("NjwnQ1YwODVnSzo6"), com.arix.player.a.a("Dgk=")));
-        chVar.h(jSONObject.optString(com.arix.player.a.a("MTUySA=="), ""));
-        chVar.a(jSONObject.optInt(com.arix.player.a.a("NjwnQ1YwOAVCTTsg"), 0));
-        chVar.a(jSONObject.optBoolean(com.arix.player.a.a("IyQo"), false));
+        chVar.a(jSONObject.optString(StringDecoder.decode("PDA="), String.valueOf(System.currentTimeMillis())));
+        chVar.b(jSONObject.optString(StringDecoder.decode("IT0yQV0="), StringDecoder.decode("jNaeiuDzjcP1kXWNxPS+jNyeiuD/")));
+        chVar.c(jSONObject.optString(StringDecoder.decode("OT0oRmwsJCM="), StringDecoder.decode("PDoySFYh")));
+        chVar.d(jSONObject.optString(StringDecoder.decode("MDolX0ElICNJfDQgJw=="), ""));
+        chVar.e(jSONObject.optString(StringDecoder.decode("Mz0oTFQAJio="), ""));
+        chVar.f(jSONObject.optString(StringDecoder.decode("PDoySFYhATRB"), jSONObject.optString(StringDecoder.decode("Mz0oTFQAJio="), "")));
+        chVar.g(jSONObject.optString(StringDecoder.decode("NjwnQ1YwODVnSzo6"), StringDecoder.decode("Dgk=")));
+        chVar.h(jSONObject.optString(StringDecoder.decode("MTUySA=="), ""));
+        chVar.a(jSONObject.optInt(StringDecoder.decode("NjwnQ1YwOAVCTTsg"), 0));
+        chVar.a(jSONObject.optBoolean(StringDecoder.decode("IyQo"), false));
         return chVar;
     }
 
     public JSONObject a() throws JSONException {
         JSONObject jSONObject = new JSONObject();
-        jSONObject.put(com.arix.player.a.a("PDA="), this.a);
-        jSONObject.put(com.arix.player.a.a("IT0yQV0="), this.b);
-        jSONObject.put(com.arix.player.a.a("OT0oRmwsJCM="), this.c);
-        jSONObject.put(com.arix.player.a.a("MDolX0ElICNJfDQgJw=="), this.d);
-        jSONObject.put(com.arix.player.a.a("Mz0oTFQAJio="), this.e);
-        jSONObject.put(com.arix.player.a.a("PDoySFYhATRB"), f());
-        jSONObject.put(com.arix.player.a.a("NjwnQ1YwODVnSzo6"), this.g);
-        jSONObject.put(com.arix.player.a.a("MTUySA=="), this.h);
-        jSONObject.put(com.arix.player.a.a("NjwnQ1YwOAVCTTsg"), this.i);
-        jSONObject.put(com.arix.player.a.a("IyQo"), this.j);
+        jSONObject.put(StringDecoder.decode("PDA="), this.a);
+        jSONObject.put(StringDecoder.decode("IT0yQV0="), this.b);
+        jSONObject.put(StringDecoder.decode("OT0oRmwsJCM="), this.c);
+        jSONObject.put(StringDecoder.decode("MDolX0ElICNJfDQgJw=="), this.d);
+        jSONObject.put(StringDecoder.decode("Mz0oTFQAJio="), this.e);
+        jSONObject.put(StringDecoder.decode("PDoySFYhATRB"), f());
+        jSONObject.put(StringDecoder.decode("NjwnQ1YwODVnSzo6"), this.g);
+        jSONObject.put(StringDecoder.decode("MTUySA=="), this.h);
+        jSONObject.put(StringDecoder.decode("NjwnQ1YwOAVCTTsg"), this.i);
+        jSONObject.put(StringDecoder.decode("IyQo"), this.j);
         return jSONObject;
     }
 

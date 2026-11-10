@@ -75,8 +75,8 @@ public class InformationActivity extends AppCompatActivity {
                 this.f$0.a(i);
             }
         });
-        a(this.u, 12.0d, 5.0d, 0.0d, com.arix.player.a.a("dmB0FQpgFQ=="), com.arix.player.a.a("dmcAGAkXYQ=="));
-        a(com.arix.player.a.a("OzEpXlk7JydfWTc9JQ=="));
+        a(this.u, 12.0d, 5.0d, 0.0d, StringDecoder.decode("dmB0FQpgFQ=="), StringDecoder.decode("dmcAGAkXYQ=="));
+        a(StringDecoder.decode("OzEpXlk7JydfWTc9JQ=="));
         LinearLayout linearLayout = (LinearLayout) findViewById(2131362252);
         if (Build.VERSION.SDK_INT >= 35) {
             LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) linearLayout.getLayoutParams();
@@ -89,17 +89,17 @@ public class InformationActivity extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= 21) {
             Window window = getWindow();
             window.addFlags(Integer.MIN_VALUE);
-            window.setNavigationBarColor(Color.parseColor(com.arix.player.a.a("dmcAGAkXYQ==")));
+            window.setNavigationBarColor(Color.parseColor(StringDecoder.decode("dmcAGAkXYQ==")));
         }
         try {
-            if (!getIntent().getStringExtra(com.arix.player.a.a("OyErT10n")).equals("")) {
-                this.v.setText(getIntent().getStringExtra(com.arix.player.a.a("IT0yQV0=")));
-                this.w.setText(getIntent().getStringExtra(com.arix.player.a.a("OT0oRg==")));
-                this.y.setText(getIntent().getStringExtra(com.arix.player.a.a("ICcjX2c0MyNDTA==")));
-                this.z.setText(getIntent().getStringExtra(com.arix.player.a.a("JzEgSEowJg==")));
-                this.B.setText(getIntent().getStringExtra(com.arix.player.a.a("NjspRlE=")));
-                this.A.setText(getIntent().getStringExtra(com.arix.player.a.a("OiYvSlE7")));
-                this.C.setText(getIntent().getStringExtra(com.arix.player.a.a("NjgjTEo+MT8=")));
+            if (!getIntent().getStringExtra(StringDecoder.decode("OyErT10n")).equals("")) {
+                this.v.setText(getIntent().getStringExtra(StringDecoder.decode("IT0yQV0=")));
+                this.w.setText(getIntent().getStringExtra(StringDecoder.decode("OT0oRg==")));
+                this.y.setText(getIntent().getStringExtra(StringDecoder.decode("ICcjX2c0MyNDTA==")));
+                this.z.setText(getIntent().getStringExtra(StringDecoder.decode("JzEgSEowJg==")));
+                this.B.setText(getIntent().getStringExtra(StringDecoder.decode("NjspRlE=")));
+                this.A.setText(getIntent().getStringExtra(StringDecoder.decode("OiYvSlE7")));
+                this.C.setText(getIntent().getStringExtra(StringDecoder.decode("NjgjTEo+MT8=")));
             }
         } catch (Exception unused) {
             ct.a(getApplicationContext(), "");
@@ -132,7 +132,7 @@ public class InformationActivity extends AppCompatActivity {
                 ((Button) view).setTypeface(typefaceCreateFromAsset);
             }
         } catch (Exception unused) {
-            ct.a(getApplicationContext(), com.arix.player.a.a("ECY0Qkp1GClMXDw6IQ1+Ojoy"));
+            ct.a(getApplicationContext(), StringDecoder.decode("ECY0Qkp1GClMXDw6IQ1+Ojoy"));
         }
     }
 
@@ -164,8 +164,8 @@ public class InformationActivity extends AppCompatActivity {
         this.F = (CheckBox) findViewById(2131361982);
         this.G = (LinearLayout) findViewById(2131362265);
         this.H = (CheckBox) findViewById(2131361983);
-        this.J = getSharedPreferences(com.arix.player.a.a("BiQ="), 0);
-        this.K = getSharedPreferences(com.arix.player.a.a("JjE0W10n"), 0);
+        this.J = getSharedPreferences(StringDecoder.decode("BiQ="), 0);
+        this.K = getSharedPreferences(StringDecoder.decode("JjE0W10n"), 0);
         this.u.setOnClickListener(new ai(this));
     }
 
@@ -180,7 +180,7 @@ public class InformationActivity extends AppCompatActivity {
 
     /* JADX WARN: Multi-variable type inference failed */
     public void a(String str) {
-        this.a = com.arix.player.a.a("MzsoWUt6").concat(str.concat(com.arix.player.a.a("eyAySw==")));
+        this.a = StringDecoder.decode("MzsoWUt6").concat(str.concat(StringDecoder.decode("eyAySw==")));
         a((Context) this, getWindow().getDecorView());
     }
 
@@ -197,7 +197,7 @@ public class InformationActivity extends AppCompatActivity {
         a(bundle);
         FirebaseApp.initializeApp(this);
         MobileAds.initialize(this);
-        MobileAds.setRequestConfiguration(new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList(com.arix.player.a.a("YGcHHHkQEHUYfWBlchx6YmR/bnxkbHdvehBndxQIYmI="))).build());
+        MobileAds.setRequestConfiguration(new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList(StringDecoder.decode("YGcHHHkQEHUYfWBlchx6YmR/bnxkbHdvehBndxQIYmI="))).build());
         a();
     }
 }

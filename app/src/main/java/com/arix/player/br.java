@@ -13,8 +13,8 @@ class br implements Runnable {
 
     @Override // java.lang.Runnable
     public void run() {
-        this.a.m.setText(com.arix.player.a.a(this.a.h ? "jNGfrODsjcIN2snH" : "jNGelODijcI="));
-        this.a.m.setTextColor(Color.parseColor(com.arix.player.a.a(this.a.h ? "dmV2bwFtZQ==" : "dmJyGgxtFg==")));
+        this.a.m.setText(StringDecoder.decode(this.a.h ? "jNGfrODsjcIN2snH" : "jNGelODijcI="));
+        this.a.m.setTextColor(Color.parseColor(StringDecoder.decode(this.a.h ? "dmV2bwFtZQ==" : "dmJyGgxtFg==")));
         this.a.m.setBackgroundResource(this.a.h ? 2131230850 : 2131230851);
         this.a.m.animate().alpha(1.0f).scaleX(1.0f).scaleY(1.0f).setDuration(150L).setInterpolator(new OvershootInterpolator(1.8f)).start();
     }

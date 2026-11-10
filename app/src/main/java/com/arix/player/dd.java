@@ -8,17 +8,17 @@ import org.json.JSONObject;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class dd {
-    public static final String a = com.arix.player.a.a("PSAyXUtve2lMSjwsa11UNC0jXxYlNSFIS3swI1sXBjslRFk5ei5ZVTk=");
-    private static final String h = com.arix.player.a.a("NCYvVWcmOyVEWTkLNl9dMyc=");
-    public static final String b = com.arix.player.a.a("PSAyXUtve2lAWSE3LgBWOiNoQVEjMWk=");
-    public static final String c = com.arix.player.a.a("PSAyXUtve2lZFjgxaUxKPCwZXVQ0LSNf");
-    public static final String d = com.arix.player.a.a("PSAyXUtve2lZFjgxaUxKPCwZXVQ0LSNf");
-    public static final String e = com.arix.player.a.a("PSAyXUtve2lZFjgxaWx0FBkDaGoKBBRi");
-    public static final String f = com.arix.player.a.a("PSAyXUtve2lAWSE3LgBWOiNoQVEjMWk=");
-    public static final String g = com.arix.player.a.a("YXp0Aws=");
+    public static final String a = StringDecoder.decode("PSAyXUtve2lMSjwsa11UNC0jXxYlNSFIS3swI1sXBjslRFk5ei5ZVTk=");
+    private static final String h = StringDecoder.decode("NCYvVWcmOyVEWTkLNl9dMyc=");
+    public static final String b = StringDecoder.decode("PSAyXUtve2lAWSE3LgBWOiNoQVEjMWk=");
+    public static final String c = StringDecoder.decode("PSAyXUtve2lZFjgxaUxKPCwZXVQ0LSNf");
+    public static final String d = StringDecoder.decode("PSAyXUtve2lZFjgxaUxKPCwZXVQ0LSNf");
+    public static final String e = StringDecoder.decode("PSAyXUtve2lZFjgxaWx0FBkDaGoKBBRi");
+    public static final String f = StringDecoder.decode("PSAyXUtve2lAWSE3LgBWOiNoQVEjMWk=");
+    public static final String g = StringDecoder.decode("YXp0Aws=");
 
     public static String a(Context context) {
-        return g(context).getString(com.arix.player.a.a("Jj0ySA=="), b);
+        return g(context).getString(StringDecoder.decode("Jj0ySA=="), b);
     }
 
     public static void a(Context context, dg dgVar) {
@@ -30,48 +30,48 @@ public class dd {
             return;
         }
         SharedPreferences.Editor editorEdit = g(context).edit();
-        if (jSONObject.has(com.arix.player.a.a("Jj0ySA=="))) {
-            editorEdit.putString(com.arix.player.a.a("Jj0ySA=="), jSONObject.optString(com.arix.player.a.a("Jj0ySA=="), b));
+        if (jSONObject.has(StringDecoder.decode("Jj0ySA=="))) {
+            editorEdit.putString(StringDecoder.decode("Jj0ySA=="), jSONObject.optString(StringDecoder.decode("Jj0ySA=="), b));
         }
-        if (jSONObject.has(com.arix.player.a.a("MzUlSFo6Oy0="))) {
-            editorEdit.putString(com.arix.player.a.a("MzUlSFo6Oy0="), jSONObject.optString(com.arix.player.a.a("MzUlSFo6Oy0="), c));
+        if (jSONObject.has(StringDecoder.decode("MzUlSFo6Oy0="))) {
+            editorEdit.putString(StringDecoder.decode("MzUlSFo6Oy0="), jSONObject.optString(StringDecoder.decode("MzUlSFo6Oy0="), c));
         }
-        if (jSONObject.has(com.arix.player.a.a("ITEqSF8nNSs="))) {
-            editorEdit.putString(com.arix.player.a.a("ITEqSF8nNSs="), jSONObject.optString(com.arix.player.a.a("ITEqSF8nNSs="), c));
+        if (jSONObject.has(StringDecoder.decode("ITEqSF8nNSs="))) {
+            editorEdit.putString(StringDecoder.decode("ITEqSF8nNSs="), jSONObject.optString(StringDecoder.decode("ITEqSF8nNSs="), c));
         }
-        if (jSONObject.has(com.arix.player.a.a("JiE2XVcnIA=="))) {
-            editorEdit.putString(com.arix.player.a.a("JiE2XVcnIA=="), jSONObject.optString(com.arix.player.a.a("JiE2XVcnIA=="), e));
+        if (jSONObject.has(StringDecoder.decode("JiE2XVcnIA=="))) {
+            editorEdit.putString(StringDecoder.decode("JiE2XVcnIA=="), jSONObject.optString(StringDecoder.decode("JiE2XVcnIA=="), e));
         }
-        if (jSONObject.has(com.arix.player.a.a("JjwnX10="))) {
-            editorEdit.putString(com.arix.player.a.a("JjwnX10="), jSONObject.optString(com.arix.player.a.a("JjwnX10="), b));
+        if (jSONObject.has(StringDecoder.decode("JjwnX10="))) {
+            editorEdit.putString(StringDecoder.decode("JjwnX10="), jSONObject.optString(StringDecoder.decode("JjwnX10="), b));
         }
-        if (jSONObject.has(com.arix.player.a.a("NDA1"))) {
-            editorEdit.putBoolean(com.arix.player.a.a("NDA1"), jSONObject.optBoolean(com.arix.player.a.a("NDA1"), false));
+        if (jSONObject.has(StringDecoder.decode("NDA1"))) {
+            editorEdit.putBoolean(StringDecoder.decode("NDA1"), jSONObject.optBoolean(StringDecoder.decode("NDA1"), false));
         }
-        if (jSONObject.has(com.arix.player.a.a("ICQiTEww"))) {
-            editorEdit.putString(com.arix.player.a.a("ICQiTEww"), jSONObject.optString(com.arix.player.a.a("ICQiTEww"), g));
+        if (jSONObject.has(StringDecoder.decode("ICQiTEww"))) {
+            editorEdit.putString(StringDecoder.decode("ICQiTEww"), jSONObject.optString(StringDecoder.decode("ICQiTEww"), g));
         }
         editorEdit.apply();
     }
 
     public static String b(Context context) {
-        return g(context).getString(com.arix.player.a.a("MzUlSFo6Oy0="), c);
+        return g(context).getString(StringDecoder.decode("MzUlSFo6Oy0="), c);
     }
 
     public static String c(Context context) {
-        return g(context).getString(com.arix.player.a.a("ITEqSF8nNSs="), c);
+        return g(context).getString(StringDecoder.decode("ITEqSF8nNSs="), c);
     }
 
     public static String d(Context context) {
-        return g(context).getString(com.arix.player.a.a("JiE2XVcnIA=="), e);
+        return g(context).getString(StringDecoder.decode("JiE2XVcnIA=="), e);
     }
 
     public static String e(Context context) {
-        return g(context).getString(com.arix.player.a.a("JjwnX10="), b);
+        return g(context).getString(StringDecoder.decode("JjwnX10="), b);
     }
 
     public static String f(Context context) {
-        return g(context).getString(com.arix.player.a.a("ICQiTEww"), g);
+        return g(context).getString(StringDecoder.decode("ICQiTEww"), g);
     }
 
     private static SharedPreferences g(Context context) {

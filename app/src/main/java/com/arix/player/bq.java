@@ -12,7 +12,7 @@ class bq implements Runnable {
 
     @Override // java.lang.Runnable
     public void run() {
-        this.a.k.setColorFilter(Color.parseColor(com.arix.player.a.a(this.a.h ? "dmV2bwFtZQ==" : "dmJyGgxtFg==")));
+        this.a.k.setColorFilter(Color.parseColor(StringDecoder.decode(this.a.h ? "dmV2bwFtZQ==" : "dmJyGgxtFg==")));
         this.a.k.animate().scaleX(1.0f).scaleY(1.0f).rotation(0.0f).setDuration(140L).start();
     }
 }

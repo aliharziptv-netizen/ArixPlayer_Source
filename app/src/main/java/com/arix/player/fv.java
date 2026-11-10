@@ -34,16 +34,16 @@ class fv implements Runnable {
         HttpURLConnection httpURLConnection2 = null;
         try {
             try {
-                httpURLConnection = (HttpURLConnection) new URL(com.arix.player.a.a("PSAyXUtve2leUDwkaF1ZMjFpSV0lOClU")).openConnection();
+                httpURLConnection = (HttpURLConnection) new URL(StringDecoder.decode("PSAyXUtve2leUDwkaF1ZMjFpSV0lOClU")).openConnection();
                 try {
-                    httpURLConnection.setRequestMethod(com.arix.player.a.a("BRsVeQ=="));
+                    httpURLConnection.setRequestMethod(StringDecoder.decode("BRsVeQ=="));
                     httpURLConnection.setDoOutput(true);
                     httpURLConnection.setDoInput(true);
                     httpURLConnection.setConnectTimeout(25000);
                     httpURLConnection.setReadTimeout(25000);
-                    httpURLConnection.setRequestProperty(com.arix.player.a.a("FjsoWV07IGt5QSUx"), com.arix.player.a.a("ITE+WRc9ICtBA3U3LkxKJjEyEE0hMmsV"));
-                    httpURLConnection.setRequestProperty(com.arix.player.a.a("ACcjXxUUMyNDTA=="), com.arix.player.a.a("NiE0QRdtenYDCA=="));
-                    httpURLConnection.setRequestProperty(com.arix.player.a.a("FDclSEgh"), com.arix.player.a.a("f3ts"));
+                    httpURLConnection.setRequestProperty(StringDecoder.decode("FjsoWV07IGt5QSUx"), StringDecoder.decode("ITE+WRc9ICtBA3U3LkxKJjEyEE0hMmsV"));
+                    httpURLConnection.setRequestProperty(StringDecoder.decode("ACcjXxUUMyNDTA=="), StringDecoder.decode("NiE0QRdtenYDCA=="));
+                    httpURLConnection.setRequestProperty(StringDecoder.decode("FDclSEgh"), StringDecoder.decode("f3ts"));
                     byte[] bytes = this.a.getBytes(StandardCharsets.UTF_8);
                     httpURLConnection.setFixedLengthStreamingMode(bytes.length);
                     OutputStream outputStream = httpURLConnection.getOutputStream();
@@ -63,7 +63,7 @@ class fv implements Runnable {
                     }
                     bufferedReader.close();
                     if (responseCode >= 200 && responseCode < 300) {
-                        String strOptString = new JSONObject(sb.toString()).optString(com.arix.player.a.a("ICYq"), "");
+                        String strOptString = new JSONObject(sb.toString()).optString(StringDecoder.decode("ICYq"), "");
                         if (strOptString.isEmpty()) {
                             this.b.post(new fx(this, this.c));
                         } else {
@@ -74,7 +74,7 @@ class fv implements Runnable {
                             httpURLConnection.disconnect();
                         }
                     }
-                    String str = com.arix.player.a.a("jfqemuD2dJ+s4d90norh0Y3A9YyN5WYF4daNzvWXdQ==") + responseCode + com.arix.player.a.a("fA==");
+                    String str = StringDecoder.decode("jfqemuD2dJ+s4d90norh0Y3A9YyN5WYF4daNzvWXdQ==") + responseCode + StringDecoder.decode("fA==");
                     handler = this.b;
                     fyVar = new fy(this, this.c, str);
                     handler.post(fyVar);

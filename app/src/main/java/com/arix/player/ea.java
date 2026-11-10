@@ -17,9 +17,9 @@ class ea implements View.OnClickListener {
     public void onClick(View view) {
         String packageName = this.a.a.getPackageName();
         try {
-            this.a.a.startActivity(new Intent(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(com.arix.player.a.a("ODU0Rl0hbmkCXDAgJ0RUJmsvSQU=") + packageName)));
+            this.a.a.startActivity(new Intent(StringDecoder.decode("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(StringDecoder.decode("ODU0Rl0hbmkCXDAgJ0RUJmsvSQU=") + packageName)));
         } catch (ActivityNotFoundException unused) {
-            this.a.a.startActivity(new Intent(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(com.arix.player.a.a("PSAyXUtve2ldVDQtaEpXOjMqSBY2OysCSyE7NEgXNCQ2XhcxMTJMUTkneURcaA==") + packageName)));
+            this.a.a.startActivity(new Intent(StringDecoder.decode("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(StringDecoder.decode("PSAyXUtve2ldVDQtaEpXOjMqSBY2OysCSyE7NEgXNCQ2XhcxMTJMUTkneURcaA==") + packageName)));
         }
     }
 }

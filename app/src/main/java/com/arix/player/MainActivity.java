@@ -126,13 +126,13 @@ public class MainActivity extends Activity {
         int size = list != null ? list.size() : 1;
         int i2 = size > 0 ? size - i : i + 1;
         if (str == null || str.trim().isEmpty()) {
-            return String.valueOf(i2) + com.arix.player.a.a("e3Sfr+HTjOH1kXU=") + i2;
+            return String.valueOf(i2) + StringDecoder.decode("e3Sfr+HTjOH1kXU=") + i2;
         }
-        String strTrim = str.trim().replaceFirst(com.arix.player.a.a("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/"), "").trim().replaceFirst(com.arix.player.a.a("C43E9L6N856EZCZ+HR0VbAlsCQ=="), "").trim();
+        String strTrim = str.trim().replaceFirst(StringDecoder.decode("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/"), "").trim().replaceFirst(StringDecoder.decode("C43E9L6N856EZCZ+HR0VbAlsCQ=="), "").trim();
         if (strTrim.isEmpty()) {
-            return String.valueOf(i2) + com.arix.player.a.a("e3Sfr+HTjOH1kXU=") + i2;
+            return String.valueOf(i2) + StringDecoder.decode("e3Sfr+HTjOH1kXU=") + i2;
         }
-        return String.valueOf(i2) + com.arix.player.a.a("e3Q=") + strTrim;
+        return String.valueOf(i2) + StringDecoder.decode("e3Q=") + strTrim;
     }
 
     private void a() {
@@ -202,7 +202,7 @@ public class MainActivity extends Activity {
         }
         this.ag = i;
         g gVar = this.af.get(i);
-        this.B.setText(com.arix.player.a.a("jf6elOD6jcz0vG90") + gVar.b());
+        this.B.setText(StringDecoder.decode("jf6elOD6jcz0vG90") + gVar.b());
         this.C.setText(gVar.b());
         this.D.setText(gVar.c());
         this.H.setText(gVar.d());
@@ -214,7 +214,7 @@ public class MainActivity extends Activity {
         if ((z && !this.ak) || (!z && this.ak)) {
             e();
         }
-        this.M.setText(com.arix.player.a.a("t8jVDeD/jOv1l4zenoYYjfyfp+DyjcD1n43+ZvWfjNCfr+HTjOH1kQ=="));
+        this.M.setText(StringDecoder.decode("t8jVDeD/jOv1l4zenoYYjfyfp+DyjcD1n43+ZvWfjNCfr+HTjOH1kQ=="));
         this.C.requestFocus();
         h();
     }
@@ -275,17 +275,17 @@ public class MainActivity extends Activity {
             return;
         }
         this.c.setText(chVarB.c());
-        (com.arix.player.a.a("IjEk").equals(chVarB.d()) ? this.f : this.g).setChecked(true);
+        (StringDecoder.decode("IjEk").equals(chVarB.d()) ? this.f : this.g).setChecked(true);
         a(this.d.getCheckedRadioButtonId(), false);
         LinearLayout linearLayout = this.e;
         if (linearLayout != null) {
-            linearLayout.setVisibility(com.arix.player.a.a("IjEk").equals(chVarB.d()) ? 0 : 8);
+            linearLayout.setVisibility(StringDecoder.decode("IjEk").equals(chVarB.d()) ? 0 : 8);
         }
         this.h = chVarB.h();
         try {
             JSONArray jSONArray = new JSONArray(chVarB.g());
-            if (jSONArray.length() > 0 && jSONArray.getJSONObject(0).has(com.arix.player.a.a("IyQo"))) {
-                this.h = jSONArray.getJSONObject(0).optBoolean(com.arix.player.a.a("IyQo"), this.h);
+            if (jSONArray.length() > 0 && jSONArray.getJSONObject(0).has(StringDecoder.decode("IyQo"))) {
+                this.h = jSONArray.getJSONObject(0).optBoolean(StringDecoder.decode("IyQo"), this.h);
             }
         } catch (Exception unused) {
         }
@@ -339,11 +339,11 @@ public class MainActivity extends Activity {
             List<g> list = this.af;
             strTrim = list.get(list.size() - 1).b();
             if (strTrim.isEmpty()) {
-                strTrim = com.arix.player.a.a("jNaeiuDzjcP1kXWNxPS+jNyeiuD/");
+                strTrim = StringDecoder.decode("jNaeiuDzjcP1kXWNxPS+jNyeiuD/");
             }
             this.c.setText(strTrim);
         }
-        String str5 = new SimpleDateFormat(com.arix.player.a.a("LC0/VBUYGWtJXHUcDhdVOA=="), Locale.getDefault()).format(new Date());
+        String str5 = new SimpleDateFormat(StringDecoder.decode("LC0/VBUYGWtJXHUcDhdVOA=="), Locale.getDefault()).format(new Date());
         ch chVar = new ch();
         chVar.a(this.ah);
         chVar.b(strTrim);
@@ -358,10 +358,10 @@ public class MainActivity extends Activity {
         chVar.a(this.h);
         di.a(this, chVar);
         this.Z.requestFocus();
-        if (com.arix.player.a.a("IjEk").equals(str2)) {
+        if (StringDecoder.decode("IjEk").equals(str2)) {
             return;
         }
-        com.arix.player.i.b(this, com.arix.player.a.a("jf6fqBiN/p6Z4dSNzPWJdY3O9ZWM1Z6VGI3zn6nh14zh9Z6M0Z6EGI38n6vg+Yzh9ZV0"));
+        com.arix.player.i.b(this, StringDecoder.decode("jf6fqBiN/p6Z4dSNzPWJdY3O9ZWM1Z6VGI3zn6nh14zh9Z6M0Z6EGI38n6vg+Yzh9ZV0"));
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -416,15 +416,15 @@ public class MainActivity extends Activity {
         }
         ImageView imageView2 = this.k;
         if (imageView2 != null) {
-            imageView2.setColorFilter(Color.parseColor(this.h ? com.arix.player.a.a("dmV2bwFtZQ==") : com.arix.player.a.a("dmJyGgxtFg==")));
+            imageView2.setColorFilter(Color.parseColor(this.h ? StringDecoder.decode("dmV2bwFtZQ==") : StringDecoder.decode("dmJyGgxtFg==")));
             this.k.setRotation(0.0f);
             this.k.setScaleX(1.0f);
             this.k.setScaleY(1.0f);
         }
         TextView textView2 = this.m;
         if (textView2 != null) {
-            textView2.setText(com.arix.player.a.a(this.h ? "jNGfrODsjcIN2snH" : "jNGelODijcI="));
-            this.m.setTextColor(Color.parseColor(this.h ? com.arix.player.a.a("dmV2bwFtZQ==") : com.arix.player.a.a("dmJyGgxtFg==")));
+            textView2.setText(StringDecoder.decode(this.h ? "jNGfrODsjcIN2snH" : "jNGelODijcI="));
+            this.m.setTextColor(Color.parseColor(this.h ? StringDecoder.decode("dmV2bwFtZQ==") : StringDecoder.decode("dmJyGgxtFg==")));
             this.m.setBackgroundResource(this.h ? 2131230850 : 2131230851);
             this.m.setAlpha(1.0f);
             this.m.setScaleX(1.0f);
@@ -463,7 +463,7 @@ public class MainActivity extends Activity {
         Button button = (Button) dialog.findViewById(2131361934);
         Button button2 = (Button) dialog.findViewById(2131361932);
         if (str.isEmpty()) {
-            str = com.arix.player.a.a("jNafq+DyjO8N4P2M6fSwjNJm9Z+N55+o");
+            str = StringDecoder.decode("jNafq+DyjO8N4P2M6fSwjNJm9Z+N55+o");
         }
         textView.setText(str);
         com.arix.player.k.a(this, dialog.findViewById(android.R.id.content));
@@ -479,7 +479,7 @@ public class MainActivity extends Activity {
         HorizontalScrollView horizontalScrollView3 = this.p;
         int scrollX = horizontalScrollView3 != null ? horizontalScrollView3.getScrollX() : 0;
         this.r.removeAllViews();
-        this.q.setText(String.valueOf(this.af.size()) + com.arix.player.a.a("dY3E9L6M3J6K4P8="));
+        this.q.setText(String.valueOf(this.af.size()) + StringDecoder.decode("dY3E9L6M3J6K4P8="));
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(this);
         int i = 0;
         while (i < this.af.size()) {
@@ -518,7 +518,7 @@ public class MainActivity extends Activity {
             List<g> list = this.af;
             strTrim = list.get(list.size() - 1).b();
             if (strTrim.isEmpty()) {
-                strTrim = com.arix.player.a.a("jNaeiuDzjcP1kXWNxPS+jNyeiuD/");
+                strTrim = StringDecoder.decode("jNaeiuDzjcP1kXWNxPS+jNyeiuD/");
             }
             this.c.setText(strTrim);
         }
@@ -527,9 +527,9 @@ public class MainActivity extends Activity {
             try {
                 JSONObject jSONObjectA = this.af.get(size).a();
                 if (jSONArray.length() == 0) {
-                    jSONObjectA.put(com.arix.player.a.a("IyQo"), this.h);
-                    jSONObjectA.put(com.arix.player.a.a("JSYpR102IBlDWTgx"), strTrim);
-                    jSONObjectA.put(com.arix.player.a.a("NDgqQk8KPStdVycg"), com.arix.player.a.a(z ? "jNGfpeDyjcf0ug==" : "jNGenOHUjc71jg=="));
+                    jSONObjectA.put(StringDecoder.decode("IyQo"), this.h);
+                    jSONObjectA.put(StringDecoder.decode("JSYpR102IBlDWTgx"), strTrim);
+                    jSONObjectA.put(StringDecoder.decode("NDgqQk8KPStdVycg"), StringDecoder.decode(z ? "jNGfpeDyjcf0ug==" : "jNGenOHUjc71jg=="));
                 }
                 jSONArray.put(jSONObjectA);
             } catch (Exception e) {
@@ -539,12 +539,12 @@ public class MainActivity extends Activity {
         String string = jSONArray.toString();
         String strA = h.a(string);
         if (strA == null) {
-            com.arix.player.i.c(this, com.arix.player.a.a("jNWemeHRdJ6H4OGNx/SyjeVm9Z+M0J6F4d+M4fS+jfOehxk="));
+            com.arix.player.i.c(this, StringDecoder.decode("jNWemeHRdJ6H4OGNx/SyjeVm9Z+M0J6F4d+M4fS+jfOehxk="));
             return;
         }
         this.ai = h.c(strA);
         if (this.g.isChecked()) {
-            a(this.ai, com.arix.player.a.a("PDoySFYh"), strA, string);
+            a(this.ai, StringDecoder.decode("PDoySFYh"), strA, string);
         } else {
             a(strA, string);
         }
@@ -597,12 +597,12 @@ public class MainActivity extends Activity {
         String strTrim = this.C.getText().toString().trim();
         String strTrim2 = this.D.getText().toString().trim();
         if (strTrim.isEmpty()) {
-            com.arix.player.i.c(this, com.arix.player.a.a("jN6enOD5jc8N4daM7PWfjfyehBiN856e4dB0norh0Y3E9L6N856E"));
+            com.arix.player.i.c(this, StringDecoder.decode("jN6enOD5jc8N4daM7PWfjfyehBiN856e4dB0norh0Y3E9L6N856E"));
             this.C.requestFocus();
             return;
         }
         if (strTrim2.isEmpty()) {
-            com.arix.player.i.c(this, com.arix.player.a.a("jN6enOD5jc8N4daM7PWfjfyehBiN5Z6K4P2M8Q3g8o3C9ZCN/2Z4ahk="));
+            com.arix.player.i.c(this, StringDecoder.decode("jN6enOD5jc8N4daM7PWfjfyehBiN5Z6K4P2M8Q3g8o3C9ZCN/2Z4ahk="));
             this.D.requestFocus();
             return;
         }
@@ -621,7 +621,7 @@ public class MainActivity extends Activity {
             gVar.g(this.L.getText().toString().trim());
             str = "jf6fqBiN/p6A4PqNzPWTdYzu9LKN85+r4PKM7A3g8o3C9LqM0p6K4Px0noXh04zq9Z+N+Wc=";
         }
-        com.arix.player.i.b(this, com.arix.player.a.a(str));
+        com.arix.player.i.b(this, StringDecoder.decode(str));
         g();
         h();
     }
@@ -639,8 +639,8 @@ public class MainActivity extends Activity {
         if (this.ak) {
             e();
         }
-        this.B.setText(com.arix.player.a.a("jfyfp+DyjcD1n43+ZvWfjNCfr+HTjOH1kXWNzvWfjNCenuHfjPf0uY3l"));
-        this.M.setText(com.arix.player.a.a("fnSegOHUjP4N4PKNwvS6jNKeiuD8dJ+s4d90norh0Y3E9Z+N8p+o4Pw="));
+        this.B.setText(StringDecoder.decode("jfyfp+DyjcD1n43+ZvWfjNCfr+HTjOH1kXWNzvWfjNCenuHfjPf0uY3l"));
+        this.M.setText(StringDecoder.decode("fnSegOHUjP4N4PKNwvS6jNKeiuD8dJ+s4d90norh0Y3E9Z+N8p+o4Pw="));
         h();
     }
 
@@ -676,18 +676,18 @@ public class MainActivity extends Activity {
                 int i2 = size > 0 ? size - i : i + 1;
                 String strB = gVar.b();
                 if (strB == null || strB.trim().isEmpty()) {
-                    sb = new StringBuilder(com.arix.player.a.a("jNafq+DyjO8N"));
+                    sb = new StringBuilder(StringDecoder.decode("jNafq+DyjO8N"));
                 } else {
                     String strTrim = strB.trim();
-                    if (strTrim.matches(com.arix.player.a.a("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/aAc="))) {
-                        String strTrim2 = strTrim.replaceFirst(com.arix.player.a.a("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/"), "").trim();
+                    if (strTrim.matches(StringDecoder.decode("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/aAc="))) {
+                        String strTrim2 = strTrim.replaceFirst(StringDecoder.decode("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/"), "").trim();
                         if (strTrim2.isEmpty()) {
-                            strTrim2 = com.arix.player.a.a("jNafq+DyjO8N") + i2;
+                            strTrim2 = StringDecoder.decode("jNafq+DyjO8N") + i2;
                         }
-                        string = String.valueOf(i2) + com.arix.player.a.a("e3Q=") + strTrim2;
+                        string = String.valueOf(i2) + StringDecoder.decode("e3Q=") + strTrim2;
                         gVar.a(string);
-                    } else if (strTrim.matches(com.arix.player.a.a("C43E9L6N856EZCZ+HR0VbAlsCQ=="))) {
-                        sb = new StringBuilder(com.arix.player.a.a("jNafq+DyjO8N"));
+                    } else if (strTrim.matches(StringDecoder.decode("C43E9L6N856EZCZ+HR0VbAlsCQ=="))) {
+                        sb = new StringBuilder(StringDecoder.decode("jNafq+DyjO8N"));
                     }
                 }
                 sb.append(i2);
@@ -701,7 +701,7 @@ public class MainActivity extends Activity {
     public void k() {
         List<g> list = this.af;
         if (list == null || list.size() < 2) {
-            i.a(this, com.arix.player.a.a("jfeem+HUdJ+v4dOM4fWSjN6fqxiN7Z+p4dx0norh0Yzl9LqM0Gb0vI3xnpTg8ozp9ZF1jOH0vI3+npzg/43M9ZA="));
+            i.a(this, StringDecoder.decode("jfeem+HUdJ+v4dOM4fWSjN6fqxiN7Z+p4dx0norh0Yzl9LqM0Gb0vI3xnpTg8ozp9ZF1jOH0vI3+npzg/43M9ZA="));
             return;
         }
         Dialog dialog = new Dialog(this);
@@ -730,7 +730,7 @@ public class MainActivity extends Activity {
             h();
         }
         if (this.af.isEmpty()) {
-            com.arix.player.i.c(this, com.arix.player.a.a("jN6enOD5jc8N4PCM8PWfjNWehBiM1p+r4PKM7w3h3Yzh9ZWN+56EGI3tn6nh3HSeiuHRjOX0uozQ"));
+            com.arix.player.i.c(this, StringDecoder.decode("jN6enOD5jc8N4PCM8PWfjNWehBiM1p+r4PKM7w3h3Yzh9ZWN+56EGI3tn6nh3HSeiuHRjOX0uozQ"));
             return;
         }
         RadioButton radioButton = this.f;
@@ -763,15 +763,15 @@ public class MainActivity extends Activity {
         if (string.isEmpty()) {
             return;
         }
-        ClipboardManager clipboardManager = (ClipboardManager) getSystemService(com.arix.player.a.a("NjgvXVo6NTRJ"));
-        ClipData clipDataNewPlainText = ClipData.newPlainText(com.arix.player.a.a("FCYvVRgQOiVfQSUgI0kYGT0oRg=="), string);
+        ClipboardManager clipboardManager = (ClipboardManager) getSystemService(StringDecoder.decode("NjgvXVo6NTRJ"));
+        ClipData clipDataNewPlainText = ClipData.newPlainText(StringDecoder.decode("FCYvVRgQOiVfQSUgI0kYGT0oRg=="), string);
         if (clipboardManager != null) {
             clipboardManager.setPrimaryClip(clipDataNewPlainText);
             TextView textView = this.ad;
             if (textView != null) {
-                textView.setText(com.arix.player.a.a("jf6fqBiN85+p4dOM9fWWdHSksas="));
+                textView.setText(StringDecoder.decode("jf6fqBiN85+p4dOM9fWWdHSksas="));
             }
-            com.arix.player.i.b(this, com.arix.player.a.a("jf6fqBiM0p6e4Pt0norh0Yz39Z+N/J6aGI3xn6nh3HSeiuHRjOv1n4zVnpXg/A=="));
+            com.arix.player.i.b(this, StringDecoder.decode("jf6fqBiM0p6e4Pt0norh0Yz39Z+N/J6aGI3xn6nh3HSeiuHRjOv1n4zVnpXg/A=="));
             new Handler().postDelayed(new bn(this), 2000L);
         }
     }
@@ -779,7 +779,7 @@ public class MainActivity extends Activity {
     /* JADX INFO: Access modifiers changed from: private */
     public void o() {
         if (this.ai.isEmpty()) {
-            com.arix.player.i.c(this, com.arix.player.a.a("jN6enOD5jc8N4PCNwPWMjfOejBiN85+p4OSM4fWQjeNm9ZuM3J+p4PKNzQ=="));
+            com.arix.player.i.c(this, StringDecoder.decode("jN6enOD5jc8N4PCNwPWMjfOejBiN85+p4OSM4fWQjeNm9ZuM3J+p4PKNzQ=="));
             return;
         }
         try {
@@ -787,21 +787,21 @@ public class MainActivity extends Activity {
             uri.addFlags(268435456);
             startActivity(uri);
         } catch (Throwable unused) {
-            com.arix.player.i.c(this, com.arix.player.a.a("jf6elODljPcN4dSM7PWVdYzh9LyN5Z6K4P2M8Q3h1I3MDeDyjcL0vY3gnpfh0Q=="));
+            com.arix.player.i.c(this, StringDecoder.decode("jf6elODljPcN4dSM7PWVdYzh9LyN5Z6K4P2M8Q3h1I3MDeDyjcL0vY3gnpfh0Q=="));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public void p() {
         if (this.aj.isEmpty()) {
-            com.arix.player.i.c(this, com.arix.player.a.a("jN6enOD5jc8N4PCNwPWMjfOejBiN85+p4OSM4fWQjeNm9ZuM3J+p4PKNzQ=="));
+            com.arix.player.i.c(this, StringDecoder.decode("jN6enOD5jc8N4PCNwPWMjfOejBiN85+p4OSM4fWQjeNm9ZuM3J+p4PKNzQ=="));
             return;
         }
-        Intent intent = new Intent(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehVodhE="));
-        intent.setType(com.arix.player.a.a("ITE+WRclOCdEVg=="));
-        intent.putExtra(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWMCwyX1l7BxNvchAXEg=="), com.arix.player.a.a("FCYvVRgQOiVfQSUgI0kYGT0oRg=="));
-        intent.putExtra(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWMCwyX1l7AAN1bA=="), this.aj);
-        startActivity(Intent.createChooser(intent, com.arix.player.a.a("jNGemeDyjPf0u439ZvWfjNCenODyjO71j3WM4fS8jNGemeHUjPcN4OyM7vWJ")));
+        Intent intent = new Intent(StringDecoder.decode("NDoiX1c8MGhEViExKFkWNDcyRFc7ehVodhE="));
+        intent.setType(StringDecoder.decode("ITE+WRclOCdEVg=="));
+        intent.putExtra(StringDecoder.decode("NDoiX1c8MGhEViExKFkWMCwyX1l7BxNvchAXEg=="), StringDecoder.decode("FCYvVRgQOiVfQSUgI0kYGT0oRg=="));
+        intent.putExtra(StringDecoder.decode("NDoiX1c8MGhEViExKFkWMCwyX1l7AAN1bA=="), this.aj);
+        startActivity(Intent.createChooser(intent, StringDecoder.decode("jNGemeDyjPf0u439ZvWfjNCenODyjO71j3WM4fS8jNGemeHUjPcN4OyM7vWJ")));
     }
 
     @Override // android.app.Activity
@@ -836,13 +836,13 @@ public class MainActivity extends Activity {
         if (linearLayout != null) {
             linearLayout.setVisibility(8);
         }
-        if (getIntent().hasExtra(com.arix.player.a.a("EAwSf3kKBBRichAXEnJxEQ=="))) {
-            this.ah = getIntent().getStringExtra(com.arix.player.a.a("EAwSf3kKBBRichAXEnJxEQ=="));
-            this.b.setText(com.arix.player.a.a("jf6elOD6jcz0vHWNxPWfjfKfqOD8dJ+o4OGNx/WJjf0="));
+        if (getIntent().hasExtra(StringDecoder.decode("EAwSf3kKBBRichAXEnJxEQ=="))) {
+            this.ah = getIntent().getStringExtra(StringDecoder.decode("EAwSf3kKBBRichAXEnJxEQ=="));
+            this.b.setText(StringDecoder.decode("jf6elOD6jcz0vHWNxPWfjfKfqOD8dJ+o4OGNx/WJjf0="));
             a(this.ah);
         } else {
             this.ah = String.valueOf(System.currentTimeMillis());
-            this.b.setText(com.arix.player.a.a("jf6emeHUjcz1iXWM4fS8jeWfpeDyjO71j3WNzvWfjNCfr+HTjc71n43+"));
+            this.b.setText(StringDecoder.decode("jf6emeHUjcz1iXWM4fS8jeWfpeDyjO71j3WNzvWfjNCfr+HTjc71n43+"));
             this.af.clear();
             g();
             h();

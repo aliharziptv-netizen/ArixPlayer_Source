@@ -134,7 +134,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
         }
         linearLayout.removeAllViews();
         boolean z = this.d.isEmpty() && !this.e;
-        a(linearLayout, com.arix.player.a.a("FCEyQhh9jOz0vIzWnorg843MBA=="), z, new View.OnClickListener() { // from class: com.arix.player.TrackSelectionDialog$$ExternalSyntheticLambda2
+        a(linearLayout, StringDecoder.decode("FCEyQhh9jOz0vIzWnorg843MBA=="), z, new View.OnClickListener() { // from class: com.arix.player.TrackSelectionDialog$$ExternalSyntheticLambda2
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
                 this.f$0.a(view);
@@ -156,12 +156,12 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
                     int i4 = trackFormat.bitrate;
                     if (i4 > 0) {
                         it = it2;
-                        strA = String.format(Locale.US, com.arix.player.a.a("dXlmCBZkMmZgWiUn"), Double.valueOf(((double) i4) / 1000000.0d));
+                        strA = String.format(Locale.US, StringDecoder.decode("dXlmCBZkMmZgWiUn"), Double.valueOf(((double) i4) / 1000000.0d));
                     } else {
                         it = it2;
-                        strA = (trackFormat.codecs == null || !trackFormat.codecs.toLowerCase(Locale.US).contains(com.arix.player.a.a("NCJ2HA=="))) ? "" : com.arix.player.a.a("dXlmUwp7ZGZgWiUn");
+                        strA = (trackFormat.codecs == null || !trackFormat.codecs.toLowerCase(Locale.US).contains(StringDecoder.decode("NCJ2HA=="))) ? "" : StringDecoder.decode("dXlmUwp7ZGZgWiUn");
                     }
-                    String str = String.valueOf(i3) + com.arix.player.a.a("JQ==") + strA;
+                    String str = String.valueOf(i3) + StringDecoder.decode("JQ==") + strA;
                     boolean z2 = !z && this.d.containsKey(mediaTrackGroup) && this.d.get(mediaTrackGroup).trackIndices.contains(Integer.valueOf(i2));
                     dl dlVar = new dl(null);
                     dlVar.a = mediaTrackGroup;
@@ -210,7 +210,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
         if (z) {
             gradientDrawable.setStroke(2, -769226);
         } else {
-            gradientDrawable.setStroke(1, Color.parseColor(com.arix.player.a.a("dhEDaH0QEQ==")));
+            gradientDrawable.setStroke(1, Color.parseColor(StringDecoder.decode("dhEDaH0QEQ==")));
         }
         linearLayout2.setBackground(gradientDrawable);
         linearLayout2.setClickable(true);
@@ -218,7 +218,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
             linearLayout2.setFocusable(true);
             linearLayout2.setFocusableInTouchMode(true);
             try {
-                int identifier = getResources().getIdentifier(com.arix.player.a.a("ISIZWVcgNy5ySzA4I05MOiZ0"), com.arix.player.a.a("MSYnWlk3OCM="), requireContext().getPackageName());
+                int identifier = getResources().getIdentifier(StringDecoder.decode("ISIZWVcgNy5ySzA4I05MOiZ0"), StringDecoder.decode("MSYnWlk3OCM="), requireContext().getPackageName());
                 if (identifier != 0) {
                     linearLayout2.setBackgroundResource(identifier);
                 }
@@ -248,9 +248,9 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
             layoutParams2.setMargins(10, 0, 0, 0);
             textView2.setLayoutParams(layoutParams2);
             textView2.setGravity(8388629);
-            textView2.setText(String.format(Locale.US, com.arix.player.a.a("t87nDR17ZSANdTckNQ=="), Double.valueOf(((double) i) / 1000000.0d)));
+            textView2.setText(String.format(Locale.US, StringDecoder.decode("t87nDR17ZSANdTckNQ=="), Double.valueOf(((double) i) / 1000000.0d)));
             textView2.setTextSize(10.0f);
-            textView2.setTextColor(z ? -769226 : Color.parseColor(com.arix.player.a.a("dm1/FAFsbQ==")));
+            textView2.setTextColor(z ? -769226 : Color.parseColor(StringDecoder.decode("dm1/FAFsbQ==")));
             textView2.setTypeface(g, 0);
             linearLayout2.addView(textView2);
         }
@@ -294,10 +294,10 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
 
     @Nullable
     public View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle) {
-        if (((UiModeManager) requireContext().getSystemService(com.arix.player.a.a("ID0rQlww"))).getCurrentModeType() == 4) {
+        if (((UiModeManager) requireContext().getSystemService(StringDecoder.decode("ID0rQlww"))).getCurrentModeType() == 4) {
             this.h = true;
         }
-        if (!requireContext().getPackageManager().hasSystemFeature(com.arix.player.a.a("NDoiX1c8MGhFWScwMUxKMHoyQk02PDVOSjAxKA=="))) {
+        if (!requireContext().getPackageManager().hasSystemFeature(StringDecoder.decode("NDoiX1c8MGhFWScwMUxKMHoyQk02PDVOSjAxKA=="))) {
             this.h = true;
         }
         LinearLayout linearLayout = new LinearLayout(getContext());
@@ -308,7 +308,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
             try {
                 g = getResources().getFont(2131296258);
             } catch (Exception unused) {
-                g = Typeface.create(com.arix.player.a.a("JjUoXhUmMTREXg=="), 0);
+                g = Typeface.create(StringDecoder.decode("JjUoXhUmMTREXg=="), 0);
             }
         }
         LinearLayout linearLayout2 = new LinearLayout(getContext());
@@ -324,7 +324,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setShape(0);
         gradientDrawable.setCornerRadius(8.0f);
-        gradientDrawable.setColor(Color.parseColor(com.arix.player.a.a("dhcFbnsWFw==")));
+        gradientDrawable.setColor(Color.parseColor(StringDecoder.decode("dhcFbnsWFw==")));
         view.setBackground(gradientDrawable);
         linearLayout2.addView(view);
         linearLayout.addView(linearLayout2);
@@ -332,7 +332,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
         LinearLayout.LayoutParams layoutParams3 = new LinearLayout.LayoutParams(-1, -2);
         layoutParams3.setMargins(5, 5, 5, 12);
         textView.setLayoutParams(layoutParams3);
-        textView.setText(com.arix.player.a.a("jfOeg+D/jPcN4PmNzvWXjf1m9Z+M0J+s4d+M6fSyjNw="));
+        textView.setText(StringDecoder.decode("jfOeg+D/jPcN4PmNzvWXjf1m9Z+M0J+s4d+M6fSyjNw="));
         textView.setTextColor(-13421773);
         textView.setTextSize(15.0f);
         textView.setTypeface(g, 1);
@@ -342,7 +342,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
         LinearLayout.LayoutParams layoutParams4 = new LinearLayout.LayoutParams(-1, 1);
         layoutParams4.setMargins(10, 0, 10, 12);
         view2.setLayoutParams(layoutParams4);
-        view2.setBackgroundColor(Color.parseColor(com.arix.player.a.a("dhF2aAgQZA==")));
+        view2.setBackgroundColor(Color.parseColor(StringDecoder.decode("dhF2aAgQZA==")));
         linearLayout.addView(view2);
         View nestedScrollView = new NestedScrollView(getContext());
         nestedScrollView.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));

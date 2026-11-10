@@ -64,10 +64,10 @@ public class bz implements DataSource {
         this.f = 0;
         this.g = false;
         if (dataSpec.uri == null) {
-            throw new IOException(com.arix.player.a.a("AAYPDVEmdChYVDk="));
+            throw new IOException(StringDecoder.decode("AAYPDVEmdChYVDk="));
         }
         String string = dataSpec.uri.toString();
-        if (string.startsWith(com.arix.player.a.a("MTUyTAI="))) {
+        if (string.startsWith(StringDecoder.decode("MTUyTAI="))) {
             this.g = true;
             int iIndexOf = string.indexOf(44);
             if (iIndexOf != -1) {
@@ -84,7 +84,7 @@ public class bz implements DataSource {
             return dataSpec.length != -1 ? Math.min(dataSpec.length, length) : length;
         }
         String lowerCase = string.toLowerCase();
-        if (lowerCase.contains(com.arix.player.a.a("ej8jVA==")) || lowerCase.contains(com.arix.player.a.a("PjE/EA==")) || lowerCase.contains(com.arix.player.a.a("MjEyRl0s")) || lowerCase.endsWith(com.arix.player.a.a("ez8jVA==")) || lowerCase.contains(com.arix.player.a.a("PjE/A0g9JA=="))) {
+        if (lowerCase.contains(StringDecoder.decode("ej8jVA==")) || lowerCase.contains(StringDecoder.decode("PjE/EA==")) || lowerCase.contains(StringDecoder.decode("MjEyRl0s")) || lowerCase.endsWith(StringDecoder.decode("ez8jVA==")) || lowerCase.contains(StringDecoder.decode("PjE/A0g9JA=="))) {
             this.g = true;
             long jOpen = this.a.open(dataSpec);
             byte[] bArr = new byte[2048];

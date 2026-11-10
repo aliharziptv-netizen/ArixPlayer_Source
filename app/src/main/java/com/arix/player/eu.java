@@ -19,7 +19,7 @@ class eu implements View.OnClickListener {
     public void onClick(View view) {
         this.a.c();
         if (Build.VERSION.SDK_INT < 26) {
-            Toast.makeText((Context) this.a, (CharSequence) com.arix.player.a.a("FzUlRl8nOzNDXHUkKkxBMCZmQ1chdDVYSCU7NFldMXQpQxgsOzNfGDExMERbMA=="), 0).show();
+            Toast.makeText((Context) this.a, (CharSequence) StringDecoder.decode("FzUlRl8nOzNDXHUkKkxBMCZmQ1chdDVYSCU7NFldMXQpQxgsOzNfGDExMERbMA=="), 0).show();
             this.a.finish();
             return;
         }

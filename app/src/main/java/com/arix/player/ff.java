@@ -39,8 +39,8 @@ class ff implements View.OnClickListener {
         View viewFindViewById3;
         this.b.setAlpha(1.0f);
         this.b.startAnimation(AnimationUtils.loadAnimation(this.a.b, 2130772032));
-        if (com.arix.player.a.a("EDk2WUE=").equals(this.a.b.getIntent().getStringExtra(com.arix.player.a.a("JSYpR102IBlDWTgx")))) {
-            this.a.b.al.setText(((HashMap) this.a.b.Z.get(this.c)).get(com.arix.player.a.a("OzUrSA==")).toString());
+        if (StringDecoder.decode("EDk2WUE=").equals(this.a.b.getIntent().getStringExtra(StringDecoder.decode("JSYpR102IBlDWTgx")))) {
+            this.a.b.al.setText(((HashMap) this.a.b.Z.get(this.c)).get(StringDecoder.decode("OzUrSA==")).toString());
         }
         this.a.b.P = false;
         this.a.b.N.removeCallbacks(this.a.b.O);
@@ -57,29 +57,29 @@ class ff implements View.OnClickListener {
         this.a.b.aC.setSecondaryProgress(0);
         this.a.b.at.setVisibility(0);
         this.a.b.aC.setEnabled(false);
-        if (this.a.a.get(this.c).get(com.arix.player.a.a("NjspRlEw")).toString().equals(com.arix.player.a.a("LDUlRFYw"))) {
+        if (this.a.a.get(this.c).get(StringDecoder.decode("NjspRlEw")).toString().equals(StringDecoder.decode("LDUlRFYw"))) {
             if (this.a.b.a != null) {
                 this.a.b.ac.setPlayer((Player) null);
                 this.a.b.a.release();
                 this.a.b.a = null;
             }
-            this.a.b.S = this.a.a.get(this.c).get(com.arix.player.a.a("ICYq")).toString();
+            this.a.b.S = this.a.a.get(this.c).get(StringDecoder.decode("ICYq")).toString();
             try {
-                strA = new String(Base64.decode(this.a.b.S, 0), com.arix.player.a.a("AAAAAAA="));
+                strA = new String(Base64.decode(this.a.b.S, 0), StringDecoder.decode("AAAAAAA="));
             } catch (Exception unused) {
-                strA = com.arix.player.a.a("MzUvQV0x");
+                strA = StringDecoder.decode("MzUvQV0x");
             }
-            if (com.arix.player.a.a("MzUvQV0x").equals(strA)) {
-                ct.a(this.a.b.getApplicationContext(), com.arix.player.a.a("EDoySEp1IC5IGDY7NF9dNiBmW1k5ISNe"));
-                this.a.b.a(com.arix.player.a.a("PSAyXUtve2lIQDQ5NkFdezcpQBcjPSJIV3s5dVgA"), "", "", "", "", "");
+            if (StringDecoder.decode("MzUvQV0x").equals(strA)) {
+                ct.a(this.a.b.getApplicationContext(), StringDecoder.decode("EDoySEp1IC5IGDY7NF9dNiBmW1k5ISNe"));
+                this.a.b.a(StringDecoder.decode("PSAyXUtve2lIQDQ5NkFdezcpQBcjPSJIV3s5dVgA"), "", "", "", "", "");
             } else {
                 this.a.b.p = (HashMap) new Gson().fromJson(strA, new fg(this).getType());
-                this.a.b.T = this.a.b.p.get(com.arix.player.a.a("OzUrSA==")).toString();
-                this.a.b.V = this.a.b.p.get(com.arix.player.a.a("OzUrSAo=")).toString();
-                this.a.b.U = this.a.b.p.get(com.arix.player.a.a("MTsrRFY=")).toString();
-                this.a.b.W = (HashMap) new Gson().fromJson(new Gson().toJson(this.a.b.p.get(com.arix.player.a.a("NiE1WVc4eS5IXCcn"))), new fh(this).getType());
+                this.a.b.T = this.a.b.p.get(StringDecoder.decode("OzUrSA==")).toString();
+                this.a.b.V = this.a.b.p.get(StringDecoder.decode("OzUrSAo=")).toString();
+                this.a.b.U = this.a.b.p.get(StringDecoder.decode("MTsrRFY=")).toString();
+                this.a.b.W = (HashMap) new Gson().fromJson(new Gson().toJson(this.a.b.p.get(StringDecoder.decode("NiE1WVc4eS5IXCcn"))), new fh(this).getType());
                 this.a.b.aY.a(this.a.b.W);
-                this.a.b.aY.a(com.arix.player.a.a("EhES"), this.a.b.U.concat(com.arix.player.a.a("ejU2RBc2NTJIXzomL0hL")), com.arix.player.a.a("ZA=="), this.a.b.aZ);
+                this.a.b.aY.a(StringDecoder.decode("EhES"), this.a.b.U.concat(StringDecoder.decode("ejU2RBc2NTJIXzomL0hL")), StringDecoder.decode("ZA=="), this.a.b.aZ);
             }
             int i = (int) this.a.b.Q;
             this.a.b.Q = this.c;
@@ -99,24 +99,24 @@ class ff implements View.OnClickListener {
             childAt = viewGroup.getChildAt(viewGroup.getChildCount() - 1);
             animationLoadAnimation = AnimationUtils.loadAnimation(this.a.b, 2130772033);
             fkVar = new fi(this, childAt);
-        } else if (this.a.a.get(this.c).get(com.arix.player.a.a("NjspRlEw")).toString().equals(com.arix.player.a.a("OicyQko0"))) {
+        } else if (this.a.a.get(this.c).get(StringDecoder.decode("NjspRlEw")).toString().equals(StringDecoder.decode("OicyQko0"))) {
             if (this.a.b.a != null) {
                 this.a.b.ac.setPlayer((Player) null);
                 this.a.b.a.release();
                 this.a.b.a = null;
             }
             try {
-                this.a.b.u = fa.a(com.arix.player.a.a("ODUyTlA7OzE="), this.a.a.get(this.c).get(com.arix.player.a.a("ICYq")).toString());
-                String strA2 = com.arix.player.a.a("FBYFaX0TEw5kch4YC2N3BQUUfmwAAhF1YQ81JE5cMDIhRVE/PypAVjokN19LISEwWkAsLnYcCmZgcxsPbW0=");
+                this.a.b.u = fa.a(StringDecoder.decode("ODUyTlA7OzE="), this.a.a.get(this.c).get(StringDecoder.decode("ICYq")).toString());
+                String strA2 = StringDecoder.decode("FBYFaX0TEw5kch4YC2N3BQUUfmwAAhF1YQ81JE5cMDIhRVE/PypAVjokN19LISEwWkAsLnYcCmZgcxsPbW0=");
                 String str = "";
                 for (int i2 = 0; i2 < 12; i2++) {
                     str = String.valueOf(str) + strA2.charAt(new Random().nextInt(strA2.length()));
                 }
-                this.a.b.t = this.a.b.u.substring(this.a.b.u.indexOf(com.arix.player.a.a("dnc=")) + 2);
-                this.a.b.ba.a(com.arix.player.a.a("EhES"), com.arix.player.a.a("PSAyXUtve2k=").concat(str.concat(com.arix.player.a.a("eycnHQthejVFVyV7J11ReiJwAwp6NydZXTI7NFQX").concat(this.a.b.u.substring(0, this.a.b.u.indexOf(com.arix.player.a.a("dnc=")))))), "", this.a.b.bb);
+                this.a.b.t = this.a.b.u.substring(this.a.b.u.indexOf(StringDecoder.decode("dnc=")) + 2);
+                this.a.b.ba.a(StringDecoder.decode("EhES"), StringDecoder.decode("PSAyXUtve2k=").concat(str.concat(StringDecoder.decode("eycnHQthejVFVyV7J11ReiJwAwp6NydZXTI7NFQX").concat(this.a.b.u.substring(0, this.a.b.u.indexOf(StringDecoder.decode("dnc=")))))), "", this.a.b.bb);
             } catch (Exception unused2) {
-                ct.a(this.a.b.getApplicationContext(), com.arix.player.a.a("EDoySEp1IC5IGDY7NF9dNiBmW1k5ISNe"));
-                this.a.b.a(com.arix.player.a.a("PSAyXUtve2lIQDQ5NkFdezcpQBcjPSJIV3s5dVgA"), "", "", "", "", "");
+                ct.a(this.a.b.getApplicationContext(), StringDecoder.decode("EDoySEp1IC5IGDY7NF9dNiBmW1k5ISNe"));
+                this.a.b.a(StringDecoder.decode("PSAyXUtve2lIQDQ5NkFdezcpQBcjPSJIV3s5dVgA"), "", "", "", "", "");
             }
             int i3 = (int) this.a.b.Q;
             this.a.b.Q = this.c;
@@ -137,7 +137,7 @@ class ff implements View.OnClickListener {
             animationLoadAnimation = AnimationUtils.loadAnimation(this.a.b, 2130772033);
             fkVar = new fj(this, childAt);
         } else {
-            this.a.b.a(((HashMap) this.a.b.Z.get(this.c)).get(com.arix.player.a.a("ICYq")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(com.arix.player.a.a("ICcjX1kyMShZ")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(com.arix.player.a.a("JzEgSEowJg==")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(com.arix.player.a.a("OiYvSlE7")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(com.arix.player.a.a("NjspRlEw")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(com.arix.player.a.a("MSYrRl0s")).toString());
+            this.a.b.a(((HashMap) this.a.b.Z.get(this.c)).get(StringDecoder.decode("ICYq")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(StringDecoder.decode("ICcjX1kyMShZ")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(StringDecoder.decode("JzEgSEowJg==")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(StringDecoder.decode("OiYvSlE7")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(StringDecoder.decode("NjspRlEw")).toString(), ((HashMap) this.a.b.Z.get(this.c)).get(StringDecoder.decode("MSYrRl0s")).toString());
             int i4 = (int) this.a.b.Q;
             this.a.b.Q = this.c;
             this.a.b.R = -1.0d;

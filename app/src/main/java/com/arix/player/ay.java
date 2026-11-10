@@ -118,7 +118,7 @@ class ay implements View.OnTouchListener {
                 }
                 this.a.j();
                 this.a.b(true);
-                com.arix.player.i.b(this.a, com.arix.player.a.a("jf6fqBiN/p6X4d+NzPWJdYzs9YmN/p+n4P10norh0Y3E9L6M3J6K4P90noXh04zq9Z+N+Wc="));
+                com.arix.player.i.b(this.a, StringDecoder.decode("jf6fqBiN/p6X4d+NzPWJdYzs9YmN/p+n4P10norh0Y3E9L6M3J6K4P90noXh04zq9Z+N+Wc="));
             }
         } else if (Math.abs(motionEvent.getRawX() - this.b) + Math.abs(motionEvent.getRawY() - this.c) < 12.0f) {
             this.a.a(this.g);

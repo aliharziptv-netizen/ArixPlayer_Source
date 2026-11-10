@@ -17,10 +17,10 @@ import okhttp3.RequestBody;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class ck {
-    public static final String a = com.arix.player.a.a("EhES");
-    public static final String b = com.arix.player.a.a("BRsVeQ==");
-    public static final String c = com.arix.player.a.a("BQES");
-    public static final String d = com.arix.player.a.a("EREKaGwQ");
+    public static final String a = StringDecoder.decode("EhES");
+    public static final String b = StringDecoder.decode("BRsVeQ==");
+    public static final String c = StringDecoder.decode("BQES");
+    public static final String d = StringDecoder.decode("EREKaGwQ");
     private static ck f;
     protected OkHttpClient e;
 
@@ -36,7 +36,7 @@ public class ck {
             OkHttpClient.Builder builder = new OkHttpClient.Builder();
             try {
                 TrustManager[] trustManagerArr = {new cl(this)};
-                SSLContext sSLContext = SSLContext.getInstance(com.arix.player.a.a("ARgV"));
+                SSLContext sSLContext = SSLContext.getInstance(StringDecoder.decode("ARgV"));
                 sSLContext.init(null, trustManagerArr, new SecureRandom());
                 builder.sslSocketFactory(sSLContext.getSocketFactory(), (X509TrustManager) trustManagerArr[0]);
                 builder.connectTimeout(15000L, TimeUnit.MILLISECONDS);
@@ -63,7 +63,7 @@ public class ck {
         }
         try {
             if (ciVar.d() != 0) {
-                formBodyCreate = RequestBody.create(MediaType.parse(com.arix.player.a.a("NCQ2QVE2NTJEVzt7LF5XOw==")), new Gson().toJson(ciVar.a()));
+                formBodyCreate = RequestBody.create(MediaType.parse(StringDecoder.decode("NCQ2QVE2NTJEVzt7LF5XOw==")), new Gson().toJson(ciVar.a()));
                 if (str.equals(a)) {
                     builderHeaders2 = builder.url(str2).headers(builder2.build());
                     builderHeaders2.get();
@@ -82,7 +82,7 @@ public class ck {
                     builderHeaders2 = builder.url(builderNewBuilder.build()).headers(builder2.build());
                     builderHeaders2.get();
                 } catch (NullPointerException unused) {
-                    throw new NullPointerException(com.arix.player.a.a("IDojVUgwNzJIXHUhNEECdQ==") + str2);
+                    throw new NullPointerException(StringDecoder.decode("IDojVUgwNzJIXHUhNEECdQ==") + str2);
                 }
             } else {
                 FormBody.Builder builder3 = new FormBody.Builder();

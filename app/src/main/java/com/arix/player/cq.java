@@ -18,8 +18,8 @@ class cq implements Thread.UncaughtExceptionHandler {
     public void uncaughtException(Thread thread, Throwable th) {
         Intent intent = new Intent(this.a.getApplicationContext(), (Class<?>) DebugActivity.class);
         intent.setFlags(32768);
-        intent.putExtra(com.arix.player.a.a("MCY0Qko="), Log.getStackTraceString(th));
-        ((AlarmManager) this.a.getSystemService(com.arix.player.a.a("NDgnX1U="))).set(2, 1000L, PendingIntent.getActivity(this.a.getApplicationContext(), 11111, intent, 1073741824));
+        intent.putExtra(StringDecoder.decode("MCY0Qko="), Log.getStackTraceString(th));
+        ((AlarmManager) this.a.getSystemService(StringDecoder.decode("NDgnX1U="))).set(2, 1000L, PendingIntent.getActivity(this.a.getApplicationContext(), 11111, intent, 1073741824));
         cr.a(Log.getStackTraceString(th));
         Process.killProcess(Process.myPid());
         System.exit(1);

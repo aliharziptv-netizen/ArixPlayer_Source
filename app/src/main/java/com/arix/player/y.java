@@ -59,22 +59,22 @@ class y implements Runnable {
             String strTrim2 = this.b.trim();
             char c2 = '\"';
             int i2 = 1;
-            if (strTrim2.startsWith(com.arix.player.a.a("PDoySFYhbmkC"))) {
+            if (strTrim2.startsWith(StringDecoder.decode("PDoySFYhbmkC"))) {
                 strTrim = strTrim2;
                 string = "";
             } else {
-                if (!strTrim2.startsWith(com.arix.player.a.a("PSAyXQJ6ew==")) && !strTrim2.startsWith(com.arix.player.a.a("PSAyXUtve2k="))) {
-                    strTrim2 = com.arix.player.a.a("PSAyXUtve2k=") + strTrim2;
+                if (!strTrim2.startsWith(StringDecoder.decode("PSAyXQJ6ew==")) && !strTrim2.startsWith(StringDecoder.decode("PSAyXUtve2k="))) {
+                    strTrim2 = StringDecoder.decode("PSAyXUtve2k=") + strTrim2;
                 }
                 HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(strTrim2).openConnection();
-                httpURLConnection.setRequestMethod(com.arix.player.a.a("EhES"));
+                httpURLConnection.setRequestMethod(StringDecoder.decode("EhES"));
                 httpURLConnection.setConnectTimeout(15000);
                 httpURLConnection.setReadTimeout(15000);
                 httpURLConnection.setInstanceFollowRedirects(true);
-                httpURLConnection.setRequestProperty(com.arix.player.a.a("ACcjXxUUMyNDTA=="), com.arix.player.a.a("GDs8RFQ5NWkYFmV0bmFROyE+FhgUOiJfVzwwZhwIbnQLQlo8OCMEGBQkNkFdAjEkZlEhe3MeD3tncA0QHhwSYHR5dCpEUzB0AUhbPjtvDXs9JilAXXpldB0WZXQLQlo8OCMNazQyJ19RemF1GhZmYg=="));
+                httpURLConnection.setRequestProperty(StringDecoder.decode("ACcjXxUUMyNDTA=="), StringDecoder.decode("GDs8RFQ5NWkYFmV0bmFROyE+FhgUOiJfVzwwZhwIbnQLQlo8OCMEGBQkNkFdAjEkZlEhe3MeD3tncA0QHhwSYHR5dCpEUzB0AUhbPjtvDXs9JilAXXpldB0WZXQLQlo8OCMNazQyJ19RemF1GhZmYg=="));
                 int responseCode = httpURLConnection.getResponseCode();
                 if (responseCode >= 400) {
-                    this.a.a(this.c, this.d, this.e, com.arix.player.a.a("jf6elODljPcN4PKNwvSwjeGfpeHRdJ+p4dGM9/Wfjfyemhh9jcX0sI37fA0=") + responseCode + com.arix.player.a.a("fA=="));
+                    this.a.a(this.c, this.d, this.e, StringDecoder.decode("jf6elODljPcN4PKNwvSwjeGfpeHRdJ+p4dGM9/Wfjfyemhh9jcX0sI37fA0=") + responseCode + StringDecoder.decode("fA=="));
                     return;
                 }
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection.getInputStream(), StandardCharsets.UTF_8));
@@ -94,11 +94,11 @@ class y implements Runnable {
                 bufferedReader.close();
                 httpURLConnection.disconnect();
                 string = sb.toString();
-                Matcher matcher = Pattern.compile(com.arix.player.a.a("PDoySFYhbmkCYwt2YXFLaQlt")).matcher(string);
+                Matcher matcher = Pattern.compile(StringDecoder.decode("PDoySFYhbmkCYwt2YXFLaQlt")).matcher(string);
                 strTrim = matcher.find() ? matcher.group().trim() : null;
                 char c4 = '\'';
-                if (strTrim == null && string.contains(com.arix.player.a.a("MTEjXXQ8Oi0="))) {
-                    int iIndexOf2 = string.indexOf(com.arix.player.a.a("MTEjXXQ8Oi0="));
+                if (strTrim == null && string.contains(StringDecoder.decode("MTEjXXQ8Oi0="))) {
+                    int iIndexOf2 = string.indexOf(StringDecoder.decode("MTEjXXQ8Oi0="));
                     int iIndexOf3 = string.indexOf(c2, iIndexOf2);
                     int iIndexOf4 = string.indexOf(39, iIndexOf2);
                     if (iIndexOf3 != -1 && (iIndexOf4 == -1 || iIndexOf3 < iIndexOf4)) {
@@ -115,8 +115,8 @@ class y implements Runnable {
                         strTrim = string.substring(i, iIndexOf).trim();
                     }
                 }
-                if ((strTrim == null || !strTrim.contains(com.arix.player.a.a("PycpQwU="))) && string.contains(com.arix.player.a.a("PycpQwU="))) {
-                    int iIndexOf5 = string.indexOf(com.arix.player.a.a("PycpQwU=")) + 5;
+                if ((strTrim == null || !strTrim.contains(StringDecoder.decode("PycpQwU="))) && string.contains(StringDecoder.decode("PycpQwU="))) {
+                    int iIndexOf5 = string.indexOf(StringDecoder.decode("PycpQwU=")) + 5;
                     int length2 = string.length();
                     int i4 = iIndexOf5;
                     while (i4 < string.length()) {
@@ -129,13 +129,13 @@ class y implements Runnable {
                     }
                     String strTrim3 = string.substring(iIndexOf5, length2).trim();
                     if (!strTrim3.isEmpty()) {
-                        strTrim = com.arix.player.a.a("PDoySFYhbmkCTjwwI0IHPycpQwU=") + strTrim3 + com.arix.player.a.a("dh0oWV07IH1eWz0xK0gFOC0nXUhuJCdOUzQzIxBbOjloTEo8LGhdVDQtI18DMDoi");
+                        strTrim = StringDecoder.decode("PDoySFYhbmkCTjwwI0IHPycpQwU=") + strTrim3 + StringDecoder.decode("dh0oWV07IH1eWz0xK0gFOC0nXUhuJCdOUzQzIxBbOjloTEo8LGhdVDQtI18DMDoi");
                     }
                 }
             }
             if (strTrim != null && !strTrim.isEmpty()) {
                 String strB = h.b(strTrim);
-                String strA = com.arix.player.a.a("jNaeiuDzjcP1kXWNw/WLjf6fpeDkjOn1kQ==");
+                String strA = StringDecoder.decode("jNaeiuDzjcP1kXWNw/WLjf6fpeDkjOn1kQ==");
                 if (strB == null || strB.trim().isEmpty()) {
                     str = strA;
                     str2 = "";
@@ -146,13 +146,13 @@ class y implements Runnable {
                         JSONArray jSONArray = new JSONArray(strB);
                         if (jSONArray.length() > 0) {
                             JSONObject jSONObject = jSONArray.getJSONObject(0);
-                            String strOptString = jSONObject.optString(com.arix.player.a.a("NDgqQk8KPStdVycg"), "");
-                            if (com.arix.player.a.a("jNGenOHUjc71jg==").equals(strOptString) || com.arix.player.a.a("MzUqXl0=").equalsIgnoreCase(strOptString) || !(jSONObject.optBoolean(com.arix.player.a.a("NDgqQk8KPStdVycg"), true) || com.arix.player.a.a("jNGfpeDyjcf0ug==").equals(strOptString))) {
-                                this.a.a(this.c, this.d, this.e, com.arix.player.a.a("je2eneDkjOH0s3R0npjg8ozr9ZB1jcH1iI3zZvWfjNCenODyjO71j3WNxPWfjNFm9ZCN5Z+s4ON0n6Xh0I3A9YF1jOH1i43+n6fg5Izh9Zd1jcH1iIzTZvWfjNCfr+DyjOD0vY39ZvWdjNCfpBiM0Z+l4dGM6Q3g8o3C9YmM3J6K4P2M8QM="));
+                            String strOptString = jSONObject.optString(StringDecoder.decode("NDgqQk8KPStdVycg"), "");
+                            if (StringDecoder.decode("jNGenOHUjc71jg==").equals(strOptString) || StringDecoder.decode("MzUqXl0=").equalsIgnoreCase(strOptString) || !(jSONObject.optBoolean(StringDecoder.decode("NDgqQk8KPStdVycg"), true) || StringDecoder.decode("jNGfpeDyjcf0ug==").equals(strOptString))) {
+                                this.a.a(this.c, this.d, this.e, StringDecoder.decode("je2eneDkjOH0s3R0npjg8ozr9ZB1jcH1iI3zZvWfjNCenODyjO71j3WNxPWfjNFm9ZCN5Z+s4ON0n6Xh0I3A9YF1jOH1i43+n6fg5Izh9Zd1jcH1iIzTZvWfjNCfr+DyjOD0vY39ZvWdjNCfpBiM0Z+l4dGM6Q3g8o3C9YmM3J6K4P2M8QM="));
                                 return;
                             }
-                            strA = jSONObject.optString(com.arix.player.a.a("JSYpR102IBlDWTgx"), jSONObject.optString(com.arix.player.a.a("OzUrSA=="), com.arix.player.a.a("jNaeiuDzjcP1kXWNw/WLjf6fpeDkjOn1kQ==")));
-                            zOptBoolean = jSONObject.optBoolean(com.arix.player.a.a("IyQo"), false);
+                            strA = jSONObject.optString(StringDecoder.decode("JSYpR102IBlDWTgx"), jSONObject.optString(StringDecoder.decode("OzUrSA=="), StringDecoder.decode("jNaeiuDzjcP1kXWNw/WLjf6fpeDkjOn1kQ==")));
+                            zOptBoolean = jSONObject.optBoolean(StringDecoder.decode("IyQo"), false);
                             try {
                                 length = jSONArray.length();
                                 z = zOptBoolean;
@@ -181,18 +181,18 @@ class y implements Runnable {
                     str3 = str;
                 } else {
                     try {
-                        Matcher matcher2 = Pattern.compile(com.arix.player.a.a("aTAvW2QmfyVBWSYne3YacgkwRFwwO2tZUSE4I3YacgkdcwYIfngFFn9rbxEXMT0wEw=="), 34).matcher(string);
+                        Matcher matcher2 = Pattern.compile(StringDecoder.decode("aTAvW2QmfyVBWSYne3YacgkwRFwwO2tZUSE4I3YacgkdcwYIfngFFn9rbxEXMT0wEw=="), 34).matcher(string);
                         if (matcher2.find()) {
-                            String strTrim4 = matcher2.group(1).replaceAll(com.arix.player.a.a("aQ8YE2V/ag=="), "").trim();
-                            if (!strTrim4.isEmpty() && !strTrim4.contains(com.arix.player.a.a("jfieiuHSjPQN4dGNwvWSjeCel+HfjcI="))) {
+                            String strTrim4 = matcher2.group(1).replaceAll(StringDecoder.decode("aQ8YE2V/ag=="), "").trim();
+                            if (!strTrim4.isEmpty() && !strTrim4.contains(StringDecoder.decode("jfieiuHSjPQN4dGNwvWSjeCel+HfjcI="))) {
                                 str = strTrim4;
                             }
                         }
-                        if (str.equals(com.arix.player.a.a("jNaeiuDzjcP1kXWNw/WLjf6fpeDkjOn1kQ=="))) {
-                            Matcher matcher3 = Pattern.compile(com.arix.player.a.a("aSAvWVQwam4DEmp9egJMPCAqSAY="), 2).matcher(string);
+                        if (str.equals(StringDecoder.decode("jNaeiuDzjcP1kXWNw/WLjf6fpeDkjOn1kQ=="))) {
+                            Matcher matcher3 = Pattern.compile(StringDecoder.decode("aSAvWVQwam4DEmp9egJMPCAqSAY="), 2).matcher(string);
                             if (matcher3.find()) {
                                 String strTrim5 = matcher3.group(1).trim();
-                                if (strTrim5.isEmpty() || strTrim5.startsWith(com.arix.player.a.a("FCYvVRgFOCdUXSc="))) {
+                                if (strTrim5.isEmpty() || strTrim5.startsWith(StringDecoder.decode("FCYvVRgFOCdUXSc="))) {
                                     str3 = str;
                                 } else {
                                     str3 = strTrim5;
@@ -206,13 +206,13 @@ class y implements Runnable {
                     } catch (Exception unused) {
                     }
                 }
-                if (strTrim.contains(com.arix.player.a.a("PycpQwU="))) {
-                    String strSubstring = strTrim.substring(strTrim.indexOf(com.arix.player.a.a("PycpQwU=")) + 5);
-                    if (strSubstring.contains(com.arix.player.a.a("dh0oWV07IA=="))) {
-                        strSubstring = strSubstring.substring(0, strSubstring.indexOf(com.arix.player.a.a("dh0oWV07IA==")));
+                if (strTrim.contains(StringDecoder.decode("PycpQwU="))) {
+                    String strSubstring = strTrim.substring(strTrim.indexOf(StringDecoder.decode("PycpQwU=")) + 5);
+                    if (strSubstring.contains(StringDecoder.decode("dh0oWV07IA=="))) {
+                        strSubstring = strSubstring.substring(0, strSubstring.indexOf(StringDecoder.decode("dh0oWV07IA==")));
                     }
-                    if (strSubstring.contains(com.arix.player.a.a("cw=="))) {
-                        strSubstring = strSubstring.substring(0, strSubstring.indexOf(com.arix.player.a.a("cw==")));
+                    if (strSubstring.contains(StringDecoder.decode("cw=="))) {
+                        strSubstring = strSubstring.substring(0, strSubstring.indexOf(StringDecoder.decode("cw==")));
                     }
                     str4 = strSubstring;
                 } else {
@@ -221,15 +221,15 @@ class y implements Runnable {
                 this.a.runOnUiThread(new z(this, this.f, str3, str4, strTrim2, strTrim, str2, length, z));
                 return;
             }
-            this.a.a(this.c, this.d, this.e, com.arix.player.a.a("jfOfqeDkjOH1kI3jZvS8jfNm9LKN+Z6H4d2NzA3g7I3C9LF1jO70so3zn6vg8ozsDeHQjPL1gozQZvWNjfOfqeD4jO8N4dGNwvWfjeeeh+HfjPf1n437"));
+            this.a.a(this.c, this.d, this.e, StringDecoder.decode("jfOfqeDkjOH1kI3jZvS8jfNm9LKN+Z6H4d2NzA3g7I3C9LF1jO70so3zn6vg8ozsDeHQjPL1gozQZvWNjfOfqeD4jO8N4dGNwvWfjeeeh+HfjPf1n437"));
         } catch (Exception e3) {
             e3.printStackTrace();
             HomeActivity homeActivity = this.a;
             View view = this.c;
             View view2 = this.d;
             View view3 = this.e;
-            StringBuilder sb2 = new StringBuilder(com.arix.player.a.a("jfqemuD2dJ6O4P6NwPWfjfVm9ZSM0J6FGI3zn6ng5Izh9ZCN43wN"));
-            sb2.append(e3.getMessage() != null ? e3.getMessage() : com.arix.player.a.a("jNWemeHRdJ6K4dGM4fWSjeGeiuHR"));
+            StringBuilder sb2 = new StringBuilder(StringDecoder.decode("jfqemuD2dJ6O4P6NwPWfjfVm9ZSM0J6FGI3zn6ng5Izh9ZCN43wN"));
+            sb2.append(e3.getMessage() != null ? e3.getMessage() : StringDecoder.decode("jNWemeHRdJ6K4dGM4fWSjeGeiuHR"));
             homeActivity.a(view, view2, view3, sb2.toString());
         }
     }

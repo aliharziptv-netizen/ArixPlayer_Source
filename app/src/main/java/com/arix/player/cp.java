@@ -25,7 +25,7 @@ class cp implements Runnable {
         Headers headers = this.b.headers();
         HashMap<String, Object> map = new HashMap<>();
         for (String str : headers.names()) {
-            map.put(str, headers.get(str) != null ? headers.get(str) : com.arix.player.a.a("OyEqQQ=="));
+            map.put(str, headers.get(str) != null ? headers.get(str) : StringDecoder.decode("OyEqQQ=="));
         }
         this.c.a(this.d, this.e, map);
     }

@@ -7,25 +7,25 @@ import java.util.Arrays;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class ca {
-    private static final byte[] a = com.arix.player.a.a("NGJ3SQBhZndLCGQxJRQPNGVzTggwNidIWmwwIktdbG0=").getBytes(StandardCharsets.US_ASCII);
+    private static final byte[] a = StringDecoder.decode("NGJ3SQBhZndLCGQxJRQPNGVzTggwNidIWmwwIktdbG0=").getBytes(StandardCharsets.US_ASCII);
 
     public static byte[] a(String str) {
         if (str != null && !str.trim().isEmpty()) {
             String strTrim = str.trim();
-            if (strTrim.startsWith(com.arix.player.a.a("MTUyTAIhMT5ZFyU4J0RWbjYnXl1jYGo="))) {
-                strTrim = strTrim.substring(com.arix.player.a.a("MTUyTAIhMT5ZFyU4J0RWbjYnXl1jYGo=").length()).trim();
+            if (strTrim.startsWith(StringDecoder.decode("MTUyTAIhMT5ZFyU4J0RWbjYnXl1jYGo="))) {
+                strTrim = strTrim.substring(StringDecoder.decode("MTUyTAIhMT5ZFyU4J0RWbjYnXl1jYGo=").length()).trim();
             }
             try {
-                if (strTrim.startsWith(com.arix.player.a.a("BwFzaQ==")) || strTrim.contains(com.arix.player.a.a("BwFzaQ=="))) {
-                    if (!strTrim.startsWith(com.arix.player.a.a("BwFzaQ=="))) {
-                        strTrim = strTrim.substring(strTrim.indexOf(com.arix.player.a.a("BwFzaQ==")));
+                if (strTrim.startsWith(StringDecoder.decode("BwFzaQ==")) || strTrim.contains(StringDecoder.decode("BwFzaQ=="))) {
+                    if (!strTrim.startsWith(StringDecoder.decode("BwFzaQ=="))) {
+                        strTrim = strTrim.substring(strTrim.indexOf(StringDecoder.decode("BwFzaQ==")));
                     }
                     String strTrim2 = new String(Base64.decode(strTrim, 0), StandardCharsets.US_ASCII).trim();
-                    if (strTrim2.startsWith(com.arix.player.a.a("EBoFFw=="))) {
+                    if (strTrim2.startsWith(StringDecoder.decode("EBoFFw=="))) {
                         return a(Base64.decode(strTrim2.substring(4).trim(), 0), a);
                     }
                 } else {
-                    if (strTrim.startsWith(com.arix.player.a.a("EBoFFw=="))) {
+                    if (strTrim.startsWith(StringDecoder.decode("EBoFFw=="))) {
                         return a(Base64.decode(strTrim.substring(4).trim(), 0), a);
                     }
                     byte[] bArrDecode = Base64.decode(strTrim, 0);
@@ -37,7 +37,7 @@ public class ca {
                     }
                 }
             } catch (Exception e) {
-                Log.e(com.arix.player.a.a("GicyQko0ECNOSiwkMkJK"), com.arix.player.a.a("ECY0QkpvdA==") + e.getMessage());
+                Log.e(StringDecoder.decode("GicyQko0ECNOSiwkMkJK"), StringDecoder.decode("ECY0QkpvdA==") + e.getMessage());
             }
         }
         return null;

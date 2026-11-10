@@ -17,6 +17,6 @@ class bg implements View.OnClickListener {
     public void onClick(View view) {
         this.b.dismiss();
         this.a.b(true);
-        com.arix.player.i.b(this.a, com.arix.player.a.a("jf6fqBiN+Z+s4O10norh0Yzs9YmN/p+n4P10norh0Yzq9ZeM3p6CGI38n6vg+Yzh9ZV0"));
+        com.arix.player.i.b(this.a, StringDecoder.decode("jf6fqBiN+Z+s4O10norh0Yzs9YmN/p+n4P10norh0Yzq9ZeM3p6CGI38n6vg+Yzh9ZV0"));
     }
 }
