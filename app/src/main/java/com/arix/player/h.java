@@ -28,7 +28,7 @@ public class h {
         }
     }
 
-    private static SecretKeySpec a() {
+    private static SecretKeySpec a() throws Exception {
         return new SecretKeySpec(MessageDigest.getInstance(StringDecoder.decode("BhwHAApgYg==")).digest(a.getBytes(StandardCharsets.UTF_8)), StringDecoder.decode("FBEV"));
     }
 
