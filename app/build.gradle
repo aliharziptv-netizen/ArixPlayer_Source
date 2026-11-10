@@ -58,7 +58,7 @@ def normalizeBundledDependencyAttrs = tasks.register('normalizeBundledDependency
                     zip.entries().each { entry ->
                         if (!entry.directory && entry.name.startsWith('res/values') && entry.name.endsWith('.xml')) {
                             def text = zip.getInputStream(entry).getText('UTF-8')
-                            def matcher = text =~ /<attr\s+name=[\"']([^\"']+)[\"']/
+                            def matcher = text =~ /<attr\b[^>]*\bname=[\"']([^\"']+)[\"'][^>]*>/
                             matcher.each { match -> dependencyAttrs.add(match[1]) }
                         }
                     }
