@@ -58,8 +58,19 @@ def normalizeBundledDependencyAttrs = tasks.register('normalizeBundledDependency
                     zip.entries().each { entry ->
                         if (!entry.directory && entry.name.startsWith('res/values') && entry.name.endsWith('.xml')) {
                             def text = zip.getInputStream(entry).getText('UTF-8')
-                            def matcher = text =~ /<attr\b[^>]*\bname=[\"']([^\"']+)[\"'][^>]*>/
-                            matcher.each { match -> dependencyAttrs.add(match[1]) }
+                            def factory = javax.xml.parsers.DocumentBuilderFactory.newInstance()
+                            factory.setFeature('http://apache.org/xml/features/disallow-doctype-decl', true)
+                            factory.setExpandEntityReferences(false)
+                            def document = factory.newDocumentBuilder().parse(
+                                new ByteArrayInputStream(text.getBytes('UTF-8'))
+                            )
+                            def children = document.documentElement.childNodes
+                            for (int i = 0; i < children.length; i++) {
+                                def child = children.item(i)
+                                if (child.nodeType == org.w3c.dom.Node.ELEMENT_NODE && child.nodeName == 'attr') {
+                                    dependencyAttrs.add(child.getAttribute('name'))
+                                }
+                            }
                         }
                     }
                 } finally {
