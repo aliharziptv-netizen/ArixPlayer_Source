@@ -3,7 +3,6 @@ package com.arix.player;
 import android.app.Application;
 import android.content.Context;
 
-/* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class SketchApplication extends Application {
     static Context a;
     Thread.UncaughtExceptionHandler b;
@@ -12,12 +11,28 @@ public class SketchApplication extends Application {
         return a;
     }
 
-    @Override // android.app.Application
+    @Override
     public void onCreate() {
+        super.onCreate();
         a = getApplicationContext();
+
+        // Install the handler before running any other app initialization.
+        getSharedPreferences("arix_crash_report", MODE_PRIVATE)
+                .edit().putString("last_stage", "SketchApplication.onCreate")
+                .commit();
         this.b = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler(new cq(this));
-        cr.a();
-        super.onCreate();
+
+        try {
+            getSharedPreferences("arix_crash_report", MODE_PRIVATE)
+                    .edit().putString("last_stage", "SketchApplication: initializing cr")
+                    .commit();
+            cr.a();
+            getSharedPreferences("arix_crash_report", MODE_PRIVATE)
+                    .edit().putString("last_stage", "Application initialized; opening SplashActivity")
+                    .commit();
+        } catch (Throwable error) {
+            throw error;
+        }
     }
 }
