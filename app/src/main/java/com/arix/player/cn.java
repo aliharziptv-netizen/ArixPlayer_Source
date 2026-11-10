@@ -24,6 +24,13 @@ class cn implements Callback {
     }
 
     public void onResponse(Call call, Response response) {
-        this.b.c().runOnUiThread(new cp(this, response, this.c, this.d, response.body().string().trim()));
+        try {
+            String body = response.body() == null ? "" : response.body().string().trim();
+            this.b.c().runOnUiThread(new cp(this, response, this.c, this.d, body));
+        } catch (IOException exception) {
+            onFailure(call, exception);
+        } finally {
+            response.close();
+        }
     }
 }
