@@ -22,14 +22,14 @@ class dt implements cj {
 
     @Override // com.arix.player.cj
     public void a(String str, String str2, HashMap<String, Object> map) {
-        String str3;
-        String strOptString;
-        JSONArray jSONArray;
-        int i;
-        String str4;
-        String strOptString2;
-        JSONArray jSONArray2;
-        int i2;
+        String str3 = "NnU+d1J+Gn8LfxURMG1OIg==";
+        String strOptString = "";
+        JSONArray jSONArray = new JSONArray();
+        int i = 0;
+        String str4 = "IQ==";
+        String strOptString2 = "";
+        JSONArray jSONArray2 = new JSONArray();
+        int i2 = 0;
         HashMap<String, Object> map2;
         String str5 = "AQ==";
         if (str.equals(StringDecoder.decode("ZA=="))) {
