@@ -18,6 +18,7 @@ class cq implements Thread.UncaughtExceptionHandler {
             application.getSharedPreferences("arix_crash_report", 0)
                     .edit()
                     .putString("last_crash", report)
+                    .putString("crash_stage", application.getSharedPreferences("arix_crash_report", 0).getString("last_stage", "غير محددة"))
                     .putLong("crash_time", System.currentTimeMillis())
                     .commit();
             Log.e("ArixCrash", "Uncaught exception on thread: " + thread.getName(), error);
