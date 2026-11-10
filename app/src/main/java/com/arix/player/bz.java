@@ -33,7 +33,7 @@ public class bz implements DataSource {
         dataSource.addTransferListener(transferListener);
     }
 
-    public void close() {
+    public void close() throws IOException {
         this.c = null;
         this.d = 0;
         this.e = null;
@@ -136,7 +136,7 @@ public class bz implements DataSource {
         return -1L;
     }
 
-    public int read(byte[] bArr, int i, int i2) {
+    public int read(byte[] bArr, int i, int i2) throws IOException {
         int i3;
         if (i2 <= 0) {
             return 0;
