@@ -20,3 +20,10 @@ Some runtime behavior depends on the original remote services and credentials/co
 ## Build
 
 Open this folder in Android Studio, or run `gradle assembleDebug` with JDK 17 and Android SDK platform 36/build-tools 35.0.0. GitHub Actions runs the same build for pushes and `workflow_dispatch`, then uploads `ArixPlayer.apk` as an artifact. A signed release build is enabled when all four repository secrets are supplied: `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, and `ANDROID_KEY_PASSWORD`. Signing material is decoded into the runner's temporary directory and is not stored in the repository.
+
+
+### Resource merge compatibility
+
+The decompiled APK contains merged AndroidX and Material resources in addition to the Gradle dependencies. The app resource table keeps the original layouts and app resources, while attribute declarations already supplied by the declared AndroidX/Material libraries are not redeclared in the app resource source set. Full decoded resources remain under `reference/original-res`. This avoids AAPT duplicate-resource table failures without removing app screens or changing layouts. `themeLineHeight` remains declared as a `dimension`; its `Test*` styles are retained from the original merged resource archive.
+
+The manifest has one declaration per app Activity. Library Activities, services, and providers are supplied through their respective AAR manifests during normal manifest merging. The workflow runs `clean`, `:app:processDebugResources`, then `:app:assembleDebug` with stack traces enabled.
