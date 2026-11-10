@@ -131,11 +131,6 @@
     <attr name="bottomSheetDialogTheme" format="reference" />
     <attr name="bottomSheetStyle" format="reference" />
     <attr name="boxBackgroundColor" format="color" />
-    <attr name="boxBackgroundMode">
-        <enum name="filled" value="1" />
-        <enum name="none" value="0" />
-        <enum name="outline" value="2" />
-    </attr>
     <attr name="boxCollapsedPaddingTop" format="dimension" />
     <attr name="boxCornerRadiusBottomEnd" format="dimension" />
     <attr name="boxCornerRadiusBottomStart" format="dimension" />
@@ -305,10 +300,6 @@
     <attr name="controlBackground" format="reference" />
     <attr name="controller_layout_id" format="reference" />
     <attr name="coordinatorLayoutStyle" format="reference" />
-    <attr name="cornerFamilyBottomLeft">
-        <enum name="cut" value="1" />
-        <enum name="rounded" value="0" />
-    </attr>
     <attr name="cornerRadius" format="dimension" />
     <attr name="cornerSize" format="dimension|fraction" />
     <attr name="cornerSizeBottomLeft" format="dimension|fraction" />
@@ -1151,14 +1142,6 @@
     <attr name="tabBackground" format="reference" />
     <attr name="tabContentStart" format="dimension" />
     <attr name="tabIconTint" format="color" />
-    <attr name="tabIconTintMode">
-        <enum name="add" value="16" />
-        <enum name="multiply" value="14" />
-        <enum name="screen" value="15" />
-        <enum name="src_atop" value="9" />
-        <enum name="src_in" value="5" />
-        <enum name="src_over" value="3" />
-    </attr>
     <attr name="tabIndicator" format="reference" />
     <attr name="tabIndicatorAnimationDuration" format="integer" />
     <attr name="tabIndicatorColor" format="color" />
