@@ -51,7 +51,7 @@ public class ck {
     }
 
     public void a(ci ciVar, String str, String str2, String str3, cj cjVar) {
-        FormBody formBodyCreate;
+        RequestBody formBodyCreate;
         Request.Builder builderHeaders;
         Request.Builder builderHeaders2;
         Request.Builder builder = new Request.Builder();

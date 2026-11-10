@@ -173,7 +173,7 @@ class y implements Runnable {
                             z = false;
                         }
                     } catch (Exception e2) {
-                        e = e2;
+                        e2.printStackTrace();
                         zOptBoolean = false;
                     }
                 }

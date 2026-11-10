@@ -377,7 +377,7 @@ public final class a extends BottomSheetDialogFragment {
     @NonNull
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
     public BottomSheetDialog onCreateDialog(@Nullable Bundle bundle) {
-        BottomSheetDialog bottomSheetDialogOnCreateDialog = super.onCreateDialog(bundle);
+        BottomSheetDialog bottomSheetDialogOnCreateDialog = (BottomSheetDialog) super.onCreateDialog(bundle);
         bottomSheetDialogOnCreateDialog.setOnShowListener(new DialogInterface.OnShowListener() { // from class: com.arix.player.a$$ExternalSyntheticLambda4
             @Override // android.content.DialogInterface.OnShowListener
             public final void onShow(DialogInterface dialogInterface) {
@@ -439,7 +439,7 @@ public final class a extends BottomSheetDialogFragment {
         view2.setLayoutParams(layoutParams4);
         view2.setBackgroundColor(Color.parseColor(StringDecoder.decode("dhF2aAgQZA==")));
         linearLayout.addView(view2);
-        View nestedScrollView = new NestedScrollView(getContext());
+        NestedScrollView nestedScrollView = new NestedScrollView(getContext());
         nestedScrollView.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));
         LinearLayout linearLayout3 = new LinearLayout(getContext());
         linearLayout3.setOrientation(1);

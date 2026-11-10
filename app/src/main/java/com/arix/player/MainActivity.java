@@ -226,15 +226,8 @@ public class MainActivity extends Activity {
         int childCount = this.r.getChildCount();
         for (int i3 = 0; i3 < childCount; i3++) {
             View childAt = this.r.getChildAt(i3);
-            if (i3 != i || i3 == i2) {
-                if (i3 != i2) {
-                    viewPropertyAnimatorAnimate = childAt.animate();
-                    f = 1.0f;
-                }
-            } else {
-                viewPropertyAnimatorAnimate = childAt.animate();
-                f = 1.06f;
-            }
+            f = (i3 == i && i3 != i2) ? 1.06f : 1.0f;
+            viewPropertyAnimatorAnimate = childAt.animate();
             viewPropertyAnimatorAnimate.scaleX(f).scaleY(f).setDuration(100L).start();
         }
     }
@@ -667,37 +660,30 @@ public class MainActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void j() {
-        StringBuilder sb;
-        String string;
         int size = this.af.size();
         for (int i = 0; i < size; i++) {
-            g gVar = this.af.get(i);
-            if (gVar != null) {
-                int i2 = size > 0 ? size - i : i + 1;
-                String strB = gVar.b();
-                if (strB == null || strB.trim().isEmpty()) {
-                    sb = new StringBuilder(StringDecoder.decode("jNafq+DyjO8N"));
-                } else {
-                    String strTrim = strB.trim();
-                    if (strTrim.matches(StringDecoder.decode("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/aAc="))) {
-                        String strTrim2 = strTrim.replaceFirst(StringDecoder.decode("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/"), "").trim();
-                        if (strTrim2.isEmpty()) {
-                            strTrim2 = StringDecoder.decode("jNafq+DyjO8N") + i2;
-                        }
-                        string = String.valueOf(i2) + StringDecoder.decode("e3Q=") + strTrim2;
-                        gVar.a(string);
-                    } else if (strTrim.matches(StringDecoder.decode("C43E9L6N856EZCZ+HR0VbAlsCQ=="))) {
-                        sb = new StringBuilder(StringDecoder.decode("jNafq+DyjO8N"));
-                    }
-                }
-                sb.append(i2);
-                string = sb.toString();
-                gVar.a(string);
+            g channel = this.af.get(i);
+            if (channel == null) continue;
+            int number = size - i;
+            String name = channel.b();
+            if (name == null || name.trim().isEmpty()) {
+                channel.a(StringDecoder.decode("jNafq+DyjO8N") + number);
+                continue;
+            }
+            name = name.trim();
+            if (name.matches(StringDecoder.decode("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/aAc="))) {
+                name = name.replaceFirst(StringDecoder.decode("C3wadgcOZGsUZX4IGxJjCXoaAGQmbm9wE3x/"), "").trim();
+                if (name.isEmpty()) name = StringDecoder.decode("jNafq+DyjO8N") + number;
+                channel.a(number + StringDecoder.decode("e3Q=") + name);
+            } else if (name.matches(StringDecoder.decode("C43E9L6N856EZCZ+HR0VbAlsCQ=="))) {
+                channel.a(StringDecoder.decode("jNafq+DyjO8N") + number);
+            } else {
+                channel.a(name);
             }
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+        /* JADX INFO: Access modifiers changed from: private */
     public void k() {
         List<g> list = this.af;
         if (list == null || list.size() < 2) {
@@ -714,8 +700,10 @@ public class MainActivity extends Activity {
         LinearLayout linearLayout = (LinearLayout) dialog.findViewById(2131362233);
         Button button = (Button) dialog.findViewById(2131361938);
         com.arix.player.k.a(this, dialog.findViewById(android.R.id.content));
-        bd bdVar = new bd(this, linearLayout, new Runnable[]{bdVar});
-        bdVar.run();
+        Runnable[] callback = new Runnable[1];
+        bd loader = new bd(this, linearLayout, callback);
+        callback[0] = loader;
+        loader.run();
         button.setOnClickListener(new bg(this, dialog));
         dialog.show();
     }

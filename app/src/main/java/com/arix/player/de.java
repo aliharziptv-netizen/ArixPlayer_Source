@@ -21,61 +21,35 @@ class de implements Runnable {
         this.c = dgVar;
     }
 
-    @Override // java.lang.Runnable
-    public void run() throws Throwable {
-        boolean z = false;
-        HttpURLConnection httpURLConnection = null;
+    @Override
+    public void run() {
+        boolean success = false;
+        HttpURLConnection connection = null;
         try {
-            try {
-                HttpURLConnection httpURLConnection2 = (HttpURLConnection) new URL(StringDecoder.decode("PSAyXUtve2lMSjwsa11UNC0jXxYlNSFIS3swI1sXBjslRFk5ei5ZVTk=")).openConnection();
-                try {
-                    httpURLConnection2.setRequestMethod(StringDecoder.decode("EhES"));
-                    httpURLConnection2.setConnectTimeout(4500);
-                    httpURLConnection2.setReadTimeout(4500);
-                    httpURLConnection2.setRequestProperty(StringDecoder.decode("FDclSEgh"), StringDecoder.decode("NCQ2QVE2NTJEVzt7LF5XO3hmWV0tIGlFTDg4ag0Sen4="));
-                    httpURLConnection2.setRequestProperty(StringDecoder.decode("ACcjXxUUMyNDTA=="), StringDecoder.decode("GDs8RFQ5NWkYFmV0bmFROyE+FhgUOiJfVzwwbw15Jz0+fVQ0LSNf"));
-                    if (httpURLConnection2.getResponseCode() == 200) {
-                        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection2.getInputStream(), StandardCharsets.UTF_8));
-                        StringBuilder sb = new StringBuilder();
-                        while (true) {
-                            String line = bufferedReader.readLine();
-                            if (line == null) {
-                                break;
-                            }
-                            sb.append(line);
-                            sb.append('\n');
-                        }
-                        bufferedReader.close();
-                        String strTrim = sb.toString().trim();
-                        if (strTrim.contains(StringDecoder.decode("Lg==")) && strTrim.contains(StringDecoder.decode("KA=="))) {
-                            dd.a(this.a, new JSONObject(strTrim.substring(strTrim.indexOf(StringDecoder.decode("Lg==")), strTrim.lastIndexOf(StringDecoder.decode("KA==")) + 1)));
-                            z = true;
-                        }
-                    }
-                    if (httpURLConnection2 != null) {
-                        httpURLConnection2.disconnect();
-                    }
-                } catch (Exception e) {
-                    e = e;
-                    httpURLConnection = httpURLConnection2;
-                    e.printStackTrace();
-                    if (httpURLConnection != null) {
-                        httpURLConnection.disconnect();
-                    }
-                } catch (Throwable th) {
-                    th = th;
-                    httpURLConnection = httpURLConnection2;
-                    if (httpURLConnection != null) {
-                        httpURLConnection.disconnect();
-                    }
-                    throw th;
+            connection = (HttpURLConnection) new URL(StringDecoder.decode("PSAyXUtve2lMSjwsa11UNC0jXxYlNSFIS3swI1sXBjslRFk5ei5ZVTk=")).openConnection();
+            connection.setRequestMethod(StringDecoder.decode("EhES"));
+            connection.setConnectTimeout(4500);
+            connection.setReadTimeout(4500);
+            connection.setRequestProperty(StringDecoder.decode("FDclSEgh"), StringDecoder.decode("NCQ2QVE2NTJEVzt7LF5XO3hmWV0tIGlFTDg4ag0Sen4="));
+            connection.setRequestProperty(StringDecoder.decode("ACcjXxUUMyNDTA=="), StringDecoder.decode("GDs8RFQ5NWkYFmV0bmFROyE+FhgUOiJfVzwwbw15Jz0+fVQ0LSNf"));
+            if (connection.getResponseCode() == 200) {
+                BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8));
+                StringBuilder body = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) body.append(line).append('\n');
+                reader.close();
+                String response = body.toString().trim();
+                if (response.contains(StringDecoder.decode("Lg==")) && response.contains(StringDecoder.decode("KA=="))) {
+                    dd.a(this.a, new JSONObject(response.substring(response.indexOf(StringDecoder.decode("Lg==")), response.lastIndexOf(StringDecoder.decode("KA==")) + 1)));
+                    success = true;
                 }
-            } catch (Exception e2) {
-                e = e2;
             }
-            this.b.post(new df(this, this.c, z));
-        } catch (Throwable th2) {
-            th = th2;
+        } catch (Exception exception) {
+            exception.printStackTrace();
+        } finally {
+            if (connection != null) connection.disconnect();
         }
+        this.b.post(new df(this, this.c, success));
     }
+
 }

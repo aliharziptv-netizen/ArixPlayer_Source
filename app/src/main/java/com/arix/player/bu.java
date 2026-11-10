@@ -15,11 +15,11 @@ import java.net.ProxySelector;
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class bu {
     private static Activity a;
-    private static Handler b;
+    static Handler b;
     private static ConnectivityManager.NetworkCallback c;
     private static Network d;
-    private static boolean e;
-    private static boolean f;
+    static boolean e;
+    static boolean f;
 
     public static void a(Activity activity) {
         if (activity == null) {

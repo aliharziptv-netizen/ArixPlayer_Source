@@ -33,26 +33,26 @@ import javax.crypto.spec.SecretKeySpec;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class WaitActivity extends AppCompatActivity {
-    private String b;
-    private FrameLayout i;
-    private TextView j;
-    private TextView k;
-    private FrameLayout l;
-    private ProgressBar m;
-    private ci p;
-    private cj q;
-    private InterstitialAd r;
-    private InterstitialAdLoadCallback s;
-    private FullScreenContentCallback t;
-    private Timer a = new Timer();
-    private HashMap<String, Object> c = new HashMap<>();
-    private String d = "";
-    private String e = "";
-    private HashMap<String, Object> f = new HashMap<>();
-    private boolean g = false;
-    private ArrayList<HashMap<String, Object>> h = new ArrayList<>();
-    private Intent n = new Intent();
-    private Intent o = new Intent();
+    String b;
+    FrameLayout i;
+    TextView j;
+    TextView k;
+    FrameLayout l;
+    ProgressBar m;
+    ci p;
+    cj q;
+    InterstitialAd r;
+    InterstitialAdLoadCallback s;
+    FullScreenContentCallback t;
+    Timer a = new Timer();
+    HashMap<String, Object> c = new HashMap<>();
+    String d = "";
+    String e = "";
+    HashMap<String, Object> f = new HashMap<>();
+    boolean g = false;
+    ArrayList<HashMap<String, Object>> h = new ArrayList<>();
+    Intent n = new Intent();
+    Intent o = new Intent();
 
     /* JADX WARN: Multi-variable type inference failed */
     private void a() {
@@ -144,7 +144,7 @@ public class WaitActivity extends AppCompatActivity {
         this.p.a(StringDecoder.decode("EhES"), StringDecoder.decode("PSAyXUtve2lMSjwsa11UNC0jXxYlNSFIS3swI1sX"), "", this.q);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
+    /* JADX INFO: Access modifiers changed from: */
     public /* synthetic */ void a(int i) {
         if ((i & 4) == 0) {
             getWindow().getDecorView().setSystemUiVisibility(5382);

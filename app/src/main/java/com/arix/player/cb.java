@@ -165,7 +165,7 @@ public class cb extends BottomSheetDialogFragment {
     @NonNull
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
     public BottomSheetDialog onCreateDialog(@Nullable Bundle bundle) {
-        final BottomSheetDialog bottomSheetDialogOnCreateDialog = super.onCreateDialog(bundle);
+        final BottomSheetDialog bottomSheetDialogOnCreateDialog = (BottomSheetDialog) super.onCreateDialog(bundle);
         bottomSheetDialogOnCreateDialog.setOnShowListener(new DialogInterface.OnShowListener() { // from class: com.arix.player.cb$$ExternalSyntheticLambda0
             @Override // android.content.DialogInterface.OnShowListener
             public final void onShow(DialogInterface dialogInterface) {
