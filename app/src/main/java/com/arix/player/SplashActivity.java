@@ -76,7 +76,7 @@ public class SplashActivity extends Activity {
         final String report = prefs.getString("last_crash", "");
         if (report == null || report.trim().isEmpty()) return false;
 
-        String stage = prefs.getString("last_stage", "غير محددة");
+        String stage = prefs.getString("crash_stage", prefs.getString("last_stage", "غير محددة"));
         TextView details = new TextView(this);
         int pad = (int) (14 * getResources().getDisplayMetrics().density);
         details.setPadding(pad, pad, pad, pad);
