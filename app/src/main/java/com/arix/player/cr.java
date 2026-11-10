@@ -6,7 +6,7 @@ import android.content.Intent;
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class cr {
     private static Thread a = new cs();
-    private static volatile boolean b = false;
+    static volatile boolean b = false;
 
     public static void a() {
         if (b) {

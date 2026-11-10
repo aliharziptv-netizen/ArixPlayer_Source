@@ -70,12 +70,12 @@ class s implements View.OnClickListener {
             jSONObject.put(StringDecoder.decode("MSYrRl0s"), strTrim7);
             JSONArray jSONArray = new JSONArray();
             jSONArray.put(jSONObject);
-            String strA = h.a(jSONArray.toString());
+            String strA = com.arix.player.h.a(jSONArray.toString());
             if (strA == null) {
                 com.arix.player.i.c(this.a, StringDecoder.decode("jNWemeHRdJ6H4OGNx/SyjeVm9ZCM3p6K4dOM4fWSdYzh9LyN5Z6K4P2M8Q=="));
                 return;
             }
-            Intent uri = Intent.parseUri(h.c(strA), 1);
+            Intent uri = Intent.parseUri(com.arix.player.h.c(strA), 1);
             uri.addFlags(268435456);
             this.a.startActivity(uri);
             this.i.dismiss();

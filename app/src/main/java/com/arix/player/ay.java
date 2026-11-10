@@ -7,9 +7,9 @@ import android.view.View;
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 class ay implements View.OnTouchListener {
     final /* synthetic */ MainActivity a;
-    private float b = 0.0f;
+    float b = 0.0f;
     private float c = 0.0f;
-    private boolean d = false;
+    boolean d = false;
     private final Runnable e;
     private final /* synthetic */ View f;
     private final /* synthetic */ int g;

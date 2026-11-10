@@ -13,7 +13,7 @@ class ey implements SeekBar.OnSeekBarChangeListener {
     @Override // android.widget.SeekBar.OnSeekBarChangeListener
     public void onProgressChanged(SeekBar seekBar, int i, boolean z) {
         this.a.h = i;
-        this.a.aE.setText(this.a.a(i));
+        this.a.aE.setText(this.a.a((long) i));
     }
 
     @Override // android.widget.SeekBar.OnSeekBarChangeListener

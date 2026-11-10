@@ -531,7 +531,7 @@ public class VideoplayerActivity extends AppCompatActivity {
 
     /* JADX WARN: Multi-variable type inference failed */
     public void b() {
-        long currentPosition;
+        long currentPosition = 0L;
         ExoPlayer exoPlayer;
         long jCurrentTimeMillis = System.currentTimeMillis();
         if (this.l) {
