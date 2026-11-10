@@ -1,0 +1,8 @@
+plugins { id 'com.android.application' }
+android {
+ namespace 'com.arix.player'
+ compileSdk 35
+ defaultConfig { applicationId 'com.arix.player'; minSdk 23; targetSdk 28; versionCode 8; versionName '2.7-reconstruction' }
+ signingConfigs { release { def ks = System.getenv('ANDROID_KEYSTORE_PATH'); if (ks != null) { storeFile file(ks); storePassword System.getenv('ANDROID_KEYSTORE_PASSWORD'); keyAlias System.getenv('ANDROID_KEY_ALIAS'); keyPassword System.getenv('ANDROID_KEY_PASSWORD') } } }
+ buildTypes { release { if (System.getenv('ANDROID_KEYSTORE_PATH') != null) signingConfig signingConfigs.release; minifyEnabled false } }
+}

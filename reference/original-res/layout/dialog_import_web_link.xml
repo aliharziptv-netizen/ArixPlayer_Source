@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_dialog_card" android:padding="22.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="rtl"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/badge_import_circle" android:layout_width="56.0dp" android:layout_height="56.0dp" android:layout_marginBottom="16.0dp">
+        <ImageView android:layout_gravity="center" android:layout_width="26.0dp" android:layout_height="26.0dp" android:src="@drawable/ic_download" android:tint="#10b981" />
+    </FrameLayout>
+    <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dp" android:text="استيراد قائمة من رابط ويب" />
+    <TextView android:textSize="12.5sp" android:textColor="@color/text_secondary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="18.0dp" android:text="أدخل رابط الويب المولد لاستخراج القنوات وحفظها في جهازك" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/box_import_url" android:background="@drawable/bg_input_normal" android:paddingLeft="14.0dp" android:paddingRight="14.0dp" android:layout_width="match_parent" android:layout_height="50.0dp" android:layout_marginBottom="18.0dp" android:layoutDirection="rtl" android:paddingHorizontal="14.0dp">
+        <ImageView android:layout_width="18.0dp" android:layout_height="18.0dp" android:src="@drawable/ic_link" android:tint="@color/text_secondary" android:layout_marginEnd="12.0dp" />
+        <EditText android:textSize="13.0sp" android:textColor="@color/text_primary" android:textColorHint="@color/text_hint" android:id="@id/edit_import_url" android:background="@null" android:layout_width="match_parent" android:layout_height="match_parent" android:hint="الصق رابط الويب هنا (https://...)" android:singleLine="true" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/layout_import_progress" android:visibility="gone" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="18.0dp">
+        <ProgressBar android:layout_width="22.0dp" android:layout_height="22.0dp" android:indeterminate="true" android:layout_marginEnd="10.0dp" />
+        <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/accent_cyan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="جاري فحص وجلب بيانات الرابط..." />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/btn_dialog_do_import" android:background="@drawable/btn_emerald" android:layout_width="0.0dp" android:layout_height="46.0dp" android:text="استيراد القائمة" android:layout_weight="1.0" android:textAllCaps="false" android:layout_marginEnd="10.0dp" />
+        <Button android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:id="@id/btn_dialog_cancel_import" android:background="@drawable/btn_dialog_cancel" android:layout_width="0.0dp" android:layout_height="46.0dp" android:text="إلغاء" android:layout_weight="1.0" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

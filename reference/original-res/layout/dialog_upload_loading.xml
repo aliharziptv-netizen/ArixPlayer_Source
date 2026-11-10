@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_dialog_card" android:padding="26.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="rtl"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ProgressBar android:id="@id/progress_upload" android:layout_width="48.0dp" android:layout_height="48.0dp" android:layout_marginBottom="18.0dp" android:indeterminate="true" />
+    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="6.0dp" android:text="جاري رفع ونشر رابط الويب..." />
+    <TextView android:textSize="12.0sp" android:textColor="@color/text_secondary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="يتم الآن رفع صفحة المشغل السحابية وتوليد الرابط، يرجى الانتظار..." />
+</LinearLayout>

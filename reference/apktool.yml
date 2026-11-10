@@ -1,0 +1,29 @@
+version: 3.0.3-dirty
+apkFileName: Arix Player_2.7.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 24
+  targetSdkVersion: 36
+versionInfo:
+  versionCode: 8
+  versionName: 2.7
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
+- png
+- firebase-common.properties
+- firebase-components.properties
+- play-services-ads-base.properties
+- play-services-ads-lite.properties
+- play-services-ads.properties
+- play-services-basement.properties
+- play-services-gass.properties
+- play-services-measurement-base.properties
+- play-services-measurement-impl.properties
+- play-services-measurement-sdk-api.properties
+- play-services-measurement-sdk.properties
+- play-services-measurement.properties
+- play-services-tasks.properties

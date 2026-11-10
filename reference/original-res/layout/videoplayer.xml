@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="vertical" android:id="@id/rl_1" android:layout_width="match_parent" android:layout_height="match_parent">
+        <androidx.media3.ui.PlayerView android:orientation="horizontal" android:id="@id/playerView" android:background="#000000" android:layout_width="match_parent" android:layout_height="match_parent" app:show_shuffle_button="false" app:show_subtitle_button="true" app:show_vr_button="true" app:use_controller="true" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/controlss" android:layout_width="match_parent" android:layout_height="match_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/linear12" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0">
+                <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/linear16" android:layout_width="match_parent" android:layout_height="105.0dp" android:layout_marginTop="15.0dp">
+                    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/linear62" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <ImageView android:id="@id/imageview15" android:background="@drawable/tv_touch_selector2" android:focusable="true" android:clickable="true" android:layout_width="34.0dp" android:layout_height="34.0dp" android:layout_marginLeft="15.0dp" android:src="@drawable/icon_chevron_left_round" android:scaleType="fitEnd" />
+                        <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/textview4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TextView" />
+                    </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerview1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dp" />
+                </LinearLayout>
+                <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linear17" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/linear18" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0">
+                        <LinearLayout android:orientation="vertical" android:id="@id/linear54" android:padding="8.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0" />
+                        <ImageView android:id="@id/settings" android:background="@drawable/tv_touch_selector2" android:padding="4.0dp" android:focusable="true" android:clickable="true" android:layout_width="40.0dp" android:layout_height="40.0dp" android:layout_marginTop="13.0dp" android:src="@drawable/icon_screen_rotation_alt_round" android:scaleType="fitCenter" />
+                        <LinearLayout android:orientation="vertical" android:id="@id/linear52" android:padding="8.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0" />
+                        <LinearLayout android:orientation="vertical" android:id="@id/linear57" android:layout_width="45.0dp" android:layout_height="45.0dp" android:layout_marginTop="23.0dp" android:layout_marginRight="40.0dp" android:layout_marginBottom="8.0dp">
+                            <ImageView android:id="@id/i_backward" android:background="@drawable/tv_touch_selector2" android:focusable="true" android:clickable="true" android:layout_width="45.0dp" android:layout_height="45.0dp" android:src="@drawable/icon_skip_previous_round" android:scaleType="fitCenter" android:alpha="0.5" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="horizontal" android:id="@id/linear59" android:layout_width="45.0dp" android:layout_height="45.0dp" android:layout_marginLeft="8.0dp" android:layout_marginTop="13.0dp" android:layout_marginRight="8.0dp">
+                            <ImageView android:id="@id/i_play_pause" android:background="@drawable/tv_touch_selector2" android:focusable="true" android:clickable="true" android:layout_width="45.0dp" android:layout_height="45.0dp" android:src="@drawable/icon_pause_circle_round" android:scaleType="fitEnd" />
+                        </LinearLayout>
+                        <com.airbnb.lottie.LottieAnimationView android:id="@id/lottie1" android:paddingLeft="9.0dp" android:paddingTop="9.0dp" android:paddingRight="8.0dp" android:paddingBottom="8.0dp" android:layout_width="55.0dp" android:layout_height="55.0dp" android:layout_marginTop="13.0dp" android:scaleType="fitCenter" android:layout_centerInParent="true" app:lottie_loop="true" />
+                        <LinearLayout android:orientation="vertical" android:id="@id/linear58" android:layout_width="45.0dp" android:layout_height="45.0dp" android:layout_marginLeft="40.0dp" android:layout_marginTop="23.0dp" android:layout_marginBottom="8.0dp">
+                            <ImageView android:id="@id/i_forward" android:background="@drawable/tv_touch_selector2" android:focusable="true" android:clickable="true" android:layout_width="45.0dp" android:layout_height="45.0dp" android:src="@drawable/icon_skip_next_round" android:scaleType="fitCenter" android:alpha="0.5" />
+                        </LinearLayout>
+                        <LinearLayout android:orientation="vertical" android:id="@id/linear53" android:padding="8.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0" />
+                        <ImageView android:id="@id/pip" android:background="@drawable/tv_touch_selector2" android:padding="5.0dp" android:focusable="true" android:clickable="true" android:layout_width="38.0dp" android:layout_height="38.0dp" android:layout_marginTop="13.0dp" android:src="@drawable/icon_picture_in_picture_round" android:scaleType="fitCenter" />
+                        <LinearLayout android:orientation="vertical" android:id="@id/linear56" android:padding="8.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="right|bottom" android:orientation="vertical" android:id="@id/linear22" android:layout_width="match_parent" android:layout_height="wrap_content">
+                        <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/linear15" android:padding="8.0dp" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="1.0">
+                            <SeekBar android:layout_gravity="center" android:id="@id/seekbar_progress" android:paddingLeft="7.0dp" android:paddingTop="6.0dp" android:paddingRight="7.0dp" android:paddingBottom="6.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dp" android:layout_marginRight="4.0dp" android:maxHeight="3.0dp" android:progressDrawable="@drawable/sek1" android:minHeight="3.0dp" android:thumb="@drawable/sek2" android:thumbOffset="0.0dp" android:layout_weight="1.0" android:progressTint="#fff44336" android:thumbTint="#fff44336" />
+                            <LinearLayout android:orientation="horizontal" android:id="@id/linear60" android:paddingLeft="22.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+                                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/textview_Current_Time" android:paddingLeft="2.0dp" android:paddingRight="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00" android:alpha="0.5" />
+                                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/textview2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="•" android:alpha="0.5" />
+                                <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="#ffffff" android:gravity="center" android:id="@id/textview_Total_Duration" android:paddingLeft="8.0dp" android:paddingRight="2.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00" android:alpha="0.5" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:id="@id/linear11" android:background="@android:color/transparent" android:layout_width="match_parent" android:layout_height="55.0dp" android:layout_marginBottom="20.0dp">
+                <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/linear27" android:layout_width="match_parent" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@id/linear41" android:padding="8.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0" />
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linear40" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/imageview14" android:background="@drawable/tv_touch_selector2" android:padding="6.0dp" android:focusable="true" android:clickable="true" android:layout_width="38.0dp" android:layout_height="38.0dp" android:src="@drawable/icon_cast_connected_round" android:scaleType="fitCenter" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linear38" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/volume" android:background="@drawable/tv_touch_selector2" android:padding="2.0dp" android:focusable="true" android:clickable="true" android:layout_width="33.0dp" android:layout_height="33.0dp" android:src="@drawable/icon_volume_up_round" android:scaleType="fitCenter" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linear30" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/cast_plus" android:background="@drawable/tv_touch_selector2" android:padding="3.0dp" android:focusable="true" android:clickable="true" android:layout_width="32.0dp" android:layout_height="32.0dp" android:src="@drawable/icon_video_settings_round" android:scaleType="fitCenter" android:alpha="0.5" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linear32" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/audio" android:background="@drawable/tv_touch_selector2" android:padding="4.0dp" android:focusable="true" android:clickable="true" android:layout_width="35.0dp" android:layout_height="35.0dp" android:src="@drawable/icon_headset_round" android:scaleType="fitCenter" android:alpha="0.5" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linear33" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/speed" android:background="@drawable/tv_touch_selector2" android:padding="4.0dp" android:focusable="true" android:clickable="true" android:layout_width="35.0dp" android:layout_height="35.0dp" android:src="@drawable/icon_speed_round" android:scaleType="fitCenter" />
+                    </LinearLayout>
+                    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linear36" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                        <ImageView android:id="@id/bt_fullscreen" android:background="@drawable/tv_touch_selector2" android:padding="6.0dp" android:focusable="true" android:clickable="true" android:layout_width="38.0dp" android:layout_height="38.0dp" android:src="@drawable/ic_aspect_ratio_white" android:scaleType="fitCenter" />
+                    </LinearLayout>
+                    <LinearLayout android:orientation="vertical" android:id="@id/linear39" android:padding="8.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
