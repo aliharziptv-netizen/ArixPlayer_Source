@@ -7,6 +7,7 @@ import androidx.media3.exoplayer.dash.manifest.DashManifestParser;
 import androidx.media3.exoplayer.upstream.ParsingLoadable;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.charset.StandardCharsets;
@@ -57,7 +58,7 @@ public class gb implements ParsingLoadable.Parser<DashManifest> {
     }
 
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
-    public DashManifest parse(Uri uri, InputStream inputStream) {
+    public DashManifest parse(Uri uri, InputStream inputStream) throws IOException {
         String next = new Scanner(inputStream, StringDecoder.decode("AAAAAAA=")).useDelimiter(StringDecoder.decode("CRU=")).next();
         Matcher matcher = Pattern.compile(StringDecoder.decode("MTEgTE05IBlmcRFpZAVjC3YbBhF3"), 2).matcher(next);
         String strGroup = matcher.find() ? matcher.group(1) : null;
