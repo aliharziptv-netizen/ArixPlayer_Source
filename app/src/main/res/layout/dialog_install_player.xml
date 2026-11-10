@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_dialog_card" android:padding="22.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="rtl"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/bg_card_inner" android:layout_width="match_parent" android:layout_height="140.0dp" android:layout_marginBottom="18.0dp">
+        <ImageView android:id="@id/img_dialog_banner" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@drawable/img_arix_banner" android:scaleType="centerCrop" />
+    </FrameLayout>
+    <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="تطبيق Arix Player غير مثبت" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/text_secondary" android:gravity="center" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="22.0dp" android:text="لتشغيل هذه القائمة والروابط المشفرة بأعلى أداء واستقرار تام، يجب تثبيت مشغل Arix Player الرسمي من متجر Google Play." android:lineSpacingExtra="3.0dp" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/btn_dialog_install" android:background="@drawable/btn_primary_purple" android:layout_width="0.0dp" android:layout_height="50.0dp" android:text="تحميل المشغل" android:layout_weight="1.3" android:textAllCaps="false" android:layout_marginEnd="10.0dp" />
+        <Button android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:id="@id/btn_dialog_cancel" android:background="@drawable/btn_dialog_cancel" android:layout_width="0.0dp" android:layout_height="50.0dp" android:text="إلغاء" android:layout_weight="0.7" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_channel_chip" android:padding="12.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/layout_chip_content" android:focusable="true" android:clickable="true" android:layout_width="0.0dp" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="2.0dp">
+            <TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@color/accent_indigo" android:id="@id/txt_chip_index" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="#1" android:layout_marginEnd="6.0dp" />
+            <TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:ellipsize="end" android:id="@id/txt_chip_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="beIN Sports 1 HD" android:maxLines="1" />
+            <ImageView android:layout_width="14.0dp" android:layout_height="14.0dp" android:src="@drawable/ic_edit" android:layout_marginStart="6.0dp" />
+        </LinearLayout>
+        <TextView android:textSize="11.0sp" android:textColor="@color/text_hint" android:ellipsize="middle" android:id="@id/txt_chip_url" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="https://server.com/live.m3u8" android:maxLines="1" />
+    </LinearLayout>
+    <ImageView android:id="@id/btn_chip_delete" android:background="@drawable/btn_chip_close" android:padding="6.0dp" android:focusable="true" android:clickable="true" android:layout_width="28.0dp" android:layout_height="28.0dp" android:src="@drawable/ic_close" android:layout_marginStart="8.0dp" />
+</LinearLayout>

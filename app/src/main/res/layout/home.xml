@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout android:id="@id/_drawer" android:layout_width="match_parent" android:layout_height="match_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.coordinatorlayout.widget.CoordinatorLayout android:id="@id/_coordinator" android:layout_width="match_parent" android:layout_height="match_parent">
+        <com.google.android.material.appbar.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@id/_app_bar" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar android:id="@id/_toolbar" android:background="?colorPrimary" android:layout_width="match_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/linear1" android:background="#3f51b5" android:paddingLeft="8.0dp" android:paddingRight="8.0dp" android:layout_width="match_parent" android:layout_height="50.0dp">
+                <LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/linear4" android:background="@android:color/transparent" android:paddingLeft="8.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@id/imageview2" android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@drawable/ic_dehaze_white" android:scaleType="fitEnd" />
+                </LinearLayout>
+                <TextView android:textSize="18.0sp" android:textColor="#ffffff" android:id="@id/textview1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Arix Player" />
+                <LinearLayout android:gravity="right|center" android:orientation="vertical" android:id="@id/linear5" android:paddingRight="8.0dp" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_weight="1.0">
+                    <ImageView android:id="@id/imageview4" android:layout_width="30.0dp" android:layout_height="30.0dp" android:src="@drawable/ic_search_white" android:scaleType="fitEnd" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linear2" android:background="#e4e4e4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+                <LinearLayout android:orientation="horizontal" android:id="@id/linear66" android:background="#e4e4e4" android:layout_width="match_parent" android:layout_height="match_parent">
+                    <androidx.recyclerview.widget.RecyclerView android:id="@id/recyclerview1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dp" android:layout_marginBottom="4.0dp" />
+                </LinearLayout>
+                <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="#3f51b5" android:id="@id/textview2" android:padding="8.0dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No Saved URL" />
+            </LinearLayout>
+        </LinearLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="right|bottom" android:id="@id/_fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="16.0dp" app:srcCompat="@drawable/icon_add_round" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <LinearLayout android:layout_gravity="start" android:id="@id/_nav_view" android:background="#eeeeee" android:layout_width="320.0dp" android:layout_height="match_parent">
+        <include layout="@layout/_drawer_home" />
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

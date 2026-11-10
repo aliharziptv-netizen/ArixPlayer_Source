@@ -1,0 +1,15 @@
+# Original APK analysis
+
+- Input: `Arix Player_2.7.apk`, 11,862,415 bytes; SHA-256 `2cbf887b334e3e7205830ade16a80b0b9d66a5b6ce91e5483a4cf7287e442f20`.
+- Package `com.arix.player`; version 2.7 / code 8; min SDK 24, target SDK 36; manifest compile SDK 33.
+- 82 DEX files. Apktool produced 16,268 Smali files total, including 221 in the app package. JADX 1.5.6 recovered 193 Java files from the app DEX; obfuscated helper names remain as in the APK.
+- Permissions: INTERNET and ACCESS_NETWORK_STATE. Optional features: touchscreen, leanback, camera, GPS, telephony, NFC. One declared service: Firebase ComponentDiscoveryService. FirebaseInitProvider is declared. No native `.so` files were found.
+- Activities: SplashActivity, HomeActivity, MainActivity, VideoplayerActivity, InformationActivity, SocialActivity, WaitActivity, DebugActivity, Google Ads AdActivity, and TrackSelectionDialog. WaitActivity and VideoplayerActivity have duplicate manifest declarations. Splash is phone and Leanback launcher. The exported WaitActivity accepts `myapp://video`, `video2`, and `video3`.
+- Home screen: RTL playlist-project manager with search, create/encrypt, import web URL, quick play, saved project list, empty/search states, and a 290dp navigation drawer.
+- Main screen: project title, VPN toggle, internal/web link type, channel chips and reorder controls; channel title/URL, advanced User-Agent/Referer/Origin/Cookie/ClearKey fields; save-channel and generate/copy/share/play outputs.
+- Player: AndroidX Media3 ExoPlayer and PlayerView, HTTP datasource with default request headers and cross-protocol redirects, DASH source handling, ClearKey DRM support, track-selection dialog, fullscreen/landscape and Picture-in-Picture manifest flags. Direct playback, encrypted intent links, and web-hosted links use distinct code paths.
+- Screens also include the splash/connection retry UI, loading handoff, social/support cards, and information form. Dialog resources cover quick play, channel entry, import, install-player prompt, allow import, upload wait, delete confirmation, and channel reordering.
+- Palette: midnight `#080c16`; card surfaces `#101626` and `#161f33`; primary text `#f8fafc`; secondary `#94a3b8`; hint `#8290a5`; purple `#8b5cf6`; cyan `#06b6d4`; amber `#f59e0b`.
+- Fonts include Cairo, Neo Sans Arabic, bold OTF, custom font, and Roboto numeric font. The resource tree has 1,493 files, including 159 layout files and 733 drawable files across density folders.
+- Embedded library evidence: AndroidX appcompat/core/recyclerview/drawer/fragment/constraintlayout; Media3; Material Components; Google Mobile Ads 20.1.0; Firebase common 19.3.1/components 16.0.0 and measurement 18.0.3; Gson, OkHttp, Lottie, and Animatoo. No native shared libraries found.
+- Tool limitation: REA resource decoding succeeded, but its deep binary-analysis providers rejected the APK archive on the Android ARM64 host. JADX source is a decompilation, not original Java source. Cloud/server behavior depends on remote services and cannot be fully inferred from packaged resources alone.

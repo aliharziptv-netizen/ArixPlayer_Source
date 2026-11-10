@@ -1,31 +1,22 @@
-# Arix Player (source reconstruction)
+# ArixPlayer Android project
 
-This is a rebuildable Android project for `com.arix.player`, based on the locally supplied Arix Player 2.7 APK. This is a reconstruction, not recovered original Java/Kotlin source.
+This project is reconstructed from the APK supplied in the workspace, `Arix Player_2.7.apk` (package `com.arix.player`, version 2.7). It is not a greenfield mock-up.
 
-## Included
+## Restored from the APK
 
-- Java implementations for splash, home, link handoff, video playback, information, and share screens.
-- Android manifest with the observed `myapp://video`, `video2`, and `video3` routes.
-- Original raster drawable assets, app icon, and extracted font files.
-- Complete decoded original resources and original app-package Smali under `reference/`; these are analysis evidence and are not compiled into the rebuilt app.
-- `.github/workflows/build-apk.yml` for manual or push-triggered debug builds, artifact upload, and optional signed release builds.
+- Decompiled Java from the app's DEX containing `com.arix.player` classes (JADX 1.5.6). Decompiled source is placed in `app/src/main/java`; the app's original short/obfuscated class names are retained. This is recovered bytecode output, not the original publisher's source tree.
+- The APK's decoded AndroidManifest, all 1,493 decoded `res/` files, and its assets/fonts are used by the build. The unusable six `$avd_*.xml` compiled resource filenames were omitted; all other decoded resource XML is present.
+- Media3 ExoPlayer, the custom HTTP request/header and ClearKey DRM path, app URL parsing/encryption code, dialogs, channel/project editing flows, persisted project list, social page, animation helper and player track-selection dialog are from the app's DEX or resources.
+- The original manifest identity and SDK levels are retained: `com.arix.player`, versionCode 8, minSdk 24, targetSdk 36.
 
-## Reconstruction limits
+`reference/original-app-smali/` preserves the Apktool Smali output. `reference/original-res/` preserves the decoded resource copy used as evidence, and `reference/AndroidManifest.decoded.xml` is the original decoded manifest. The input APK itself is not committed.
 
-REA decoded the manifest/resources and identified package `com.arix.player`, version 2.7, min SDK 24, target SDK 36, and 82 DEX files. Its deeper binary-analysis provider could not process this APK on the Android ARM64 host. The original app includes Google/Firebase/ads and media libraries. The core URL resolving/decryption, ad/Firebase behavior, playback track selection, and server-backed functions could not be recovered or fully reimplemented. The rebuilt screens use native Android UI and `VideoView` to play direct URLs supported by the platform. It will not handle every encrypted or provider-specific URL accepted by the original. Smali and resource XML in `reference/` are included for inspection; Java in `app/src/main/java/` is newly written reconstruction code.
+## APK evidence and known limits
 
-The original manifest was not copied verbatim because it declares the original `SketchApplication` class and integrations that are not part of this reconstruction. The new manifest registers the implemented screens and deep-link routes. The rebuilt target SDK is 28 for compatibility with this standalone native implementation; the original APK targets 36.
+`rea decode-android-resources` succeeded. Apktool 3.0.3 decoded the manifest/resources and all 82 DEX files to Smali. JADX 1.5.6 was then used on `classes82.dex`, which contains the app's package classes. The other DEX files principally contain bundled AndroidX, Media3, Google/Firebase, ads and third-party libraries; dependency versions are pinned below or recorded from embedded metadata where available.
+
+Some runtime behavior depends on the original remote services and credentials/configuration, so server responses cannot be reproduced from the APK alone. The decoded resource set also has inconsistent embedded branding/version strings (including Harz Player and versions 4.2.3/5.2.4 alongside package version 2.7). The package metadata and actual layouts/code are preserved rather than normalizing those values.
 
 ## Build
 
-Requires JDK 17, Android SDK platform 35/build tools 35.0.0, Android Gradle Plugin 8.6.1 and Gradle 8.7:
-
-```sh
-gradle assembleDebug
-```
-
-The output is `app/build/outputs/apk/debug/app-debug.apk`. GitHub Actions publishes it as the `ArixPlayer.apk` artifact. A signed release build runs only when the repository secrets `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, and `ANDROID_KEY_PASSWORD` are present. Never commit a keystore or signing password.
-
-## Provenance
-
-Input: `Arix Player_2.7.apk` in the user's local workspace. The APK itself is not included in this repository. Resources and Smali under `reference/` are extraction evidence; Java files under `app/src/main/java/` are new code.
+Open this folder in Android Studio, or run `gradle assembleDebug` with JDK 17 and Android SDK platform 36/build-tools 35.0.0. GitHub Actions runs the same build for pushes and `workflow_dispatch`, then uploads `ArixPlayer.apk` as an artifact. A signed release build is enabled when all four repository secrets are supplied: `ANDROID_KEYSTORE_BASE64`, `ANDROID_KEYSTORE_PASSWORD`, `ANDROID_KEY_ALIAS`, and `ANDROID_KEY_PASSWORD`. Signing material is decoded into the runner's temporary directory and is not stored in the repository.

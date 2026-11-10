@@ -1,1 +1,48 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"><uses-permission android:name="android.permission.INTERNET"/><uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/><application android:theme="@style/AppTheme" android:label="Arix Player" android:icon="@drawable/app_icon" android:usesCleartextTraffic="true" android:allowBackup="true"><activity android:name=".VideoplayerActivity" android:screenOrientation="sensorLandscape" android:configChanges="orientation|screenSize|keyboardHidden" android:exported="true"/><activity android:name=".InformationActivity" android:exported="true"/><activity android:name=".SocialActivity" android:exported="true"/><activity android:name=".MainActivity" android:exported="true"/><activity android:name=".HomeActivity" android:exported="true"/><activity android:name=".WaitActivity" android:screenOrientation="sensorLandscape" android:exported="true"><intent-filter><action android:name="android.intent.action.VIEW"/><category android:name="android.intent.category.DEFAULT"/><category android:name="android.intent.category.BROWSABLE"/><data android:scheme="myapp" android:host="video"/><data android:scheme="myapp" android:host="video2"/><data android:scheme="myapp" android:host="video3"/></intent-filter></activity><activity android:name=".SplashActivity" android:exported="true"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity></application></manifest>
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="33" android:compileSdkVersionCodename="13" package="com.arix.player" platformBuildVersionCode="33" platformBuildVersionName="13">
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false"/>
+    <uses-feature android:name="android.software.leanback" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+    <uses-feature android:name="android.hardware.telephony" android:required="false"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="false"/>
+    <application android:allowBackup="true" android:icon="@drawable/app_icon" android:label="@string/app_name" android:name=".SketchApplication" android:theme="@style/AppTheme" android:usesCleartextTraffic="true">
+        <meta-data android:name="android.banner" android:resource="@drawable/tv_banner"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:name=".MainActivity" android:screenOrientation="unspecified" android:supportsPictureInPicture="true" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:name=".VideoplayerActivity" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:name=".HomeActivity" android:screenOrientation="unspecified" android:supportsPictureInPicture="true" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:name=".InformationActivity" android:screenOrientation="unspecified" android:supportsPictureInPicture="true" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:name=".WaitActivity" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:hardwareAccelerated="true" android:name=".SplashActivity" android:screenOrientation="unspecified" android:supportsPictureInPicture="true" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="keyboardHidden|orientation|screenLayout|screenSize|smallestScreenSize" android:hardwareAccelerated="true" android:name=".SocialActivity" android:screenOrientation="unspecified" android:supportsPictureInPicture="true" android:theme="@style/AppTheme" android:windowSoftInputMode="stateHidden"/>
+        <activity android:name=".DebugActivity" android:screenOrientation="portrait"/>
+        <activity android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" android:name="com.google.android.gms.ads.AdActivity" android:theme="@android:style/Theme.Translucent"/>
+        <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
+        <provider android:authorities="com.arix.player.firebaseinitprovider" android:exported="false" android:initOrder="100" android:name="com.google.firebase.provider.FirebaseInitProvider"/>
+        <service android:exported="false" android:name="com.google.firebase.components.ComponentDiscoveryService"/>
+        <activity android:configChanges="orientation|screenSize" android:name="com.arix.player.TrackSelectionDialog"/>
+        <uses-library android:name="org.apache.http.legacy" android:required="false"/>
+        <activity android:exported="true" android:name=".WaitActivity" android:screenOrientation="sensorLandscape">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="video" android:scheme="myapp"/>
+                <data android:host="video2" android:scheme="myapp"/>
+                <data android:host="video3" android:scheme="myapp"/>
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|screenLayout|screenSize|smallestScreenSize" android:exported="true" android:name=".VideoplayerActivity" android:screenOrientation="sensorLandscape" android:supportsPictureInPicture="true"/>
+    </application>
+</manifest>

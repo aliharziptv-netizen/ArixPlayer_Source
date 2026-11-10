@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_card_inner" android:paddingLeft="12.0dp" android:paddingRight="12.0dp" android:layout_width="match_parent" android:layout_height="52.0dp" android:layout_marginBottom="8.0dp" android:layoutDirection="rtl" android:paddingHorizontal="12.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/accent_purple" android:gravity="center" android:id="@id/txt_reorder_item_index" android:background="@drawable/badge_count" android:layout_width="32.0dp" android:layout_height="32.0dp" android:text="1" android:layout_marginEnd="10.0dp" />
+    <TextView android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:ellipsize="end" android:id="@id/txt_reorder_item_name" android:layout_width="0.0dp" android:layout_height="wrap_content" android:text="اسم القناة" android:singleLine="true" android:layout_weight="1.0" android:layout_marginEnd="10.0dp" />
+    <LinearLayout android:gravity="center" android:id="@id/btn_reorder_item_up" android:background="@drawable/btn_reorder_arrow" android:focusable="true" android:clickable="true" android:layout_width="36.0dp" android:layout_height="36.0dp" android:layout_marginEnd="6.0dp">
+        <ImageView android:layout_width="18.0dp" android:layout_height="18.0dp" android:src="@drawable/ic_arrow_up" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:id="@id/btn_reorder_item_down" android:background="@drawable/btn_reorder_arrow" android:focusable="true" android:clickable="true" android:layout_width="36.0dp" android:layout_height="36.0dp">
+        <ImageView android:layout_width="18.0dp" android:layout_height="18.0dp" android:src="@drawable/ic_arrow_down" />
+    </LinearLayout>
+</LinearLayout>

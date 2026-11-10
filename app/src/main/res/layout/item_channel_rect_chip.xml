@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_rect_chip_root" android:background="@drawable/bg_rect_chip" android:layout_width="wrap_content" android:layout_height="34.0dp" android:paddingStart="10.0dp" android:paddingEnd="6.0dp" android:layout_marginEnd="6.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/layout_rect_chip_click" android:focusable="true" android:clickable="true" android:layout_width="wrap_content" android:layout_height="match_parent">
+        <TextView android:textSize="11.5sp" android:textStyle="bold" android:textColor="@color/text_primary" android:id="@id/txt_rect_chip_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:maxWidth="135.0dp" android:text="1. قناة" android:singleLine="true" />
+    </LinearLayout>
+    <ImageView android:id="@id/btn_rect_chip_delete" android:background="@drawable/btn_chip_close" android:padding="4.0dp" android:focusable="true" android:clickable="true" android:layout_width="19.0dp" android:layout_height="19.0dp" android:src="@drawable/ic_close" android:layout_marginStart="6.0dp" />
+</LinearLayout>

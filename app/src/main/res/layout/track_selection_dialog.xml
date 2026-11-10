@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffff" android:padding="0.0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_margin="12.0dp"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabLayout android:textColor="#ff3f51b5" android:id="@id/track_selection_dialog_tab_layout" android:paddingTop="0.0dp" android:paddingBottom="0.0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" app:tabGravity="fill" app:tabMode="fixed" />
+    <androidx.viewpager.widget.ViewPager android:id="@id/track_selection_dialog_view_pager" android:padding="0.0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="0.0dp" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="end" android:orientation="horizontal" android:padding="0.0dp" android:clipToPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textColor="#ff3f51b5" android:id="@id/track_selection_dialog_cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="إلغاء" style="?android:borderlessButtonStyle" />
+        <Button android:textColor="#ff3f51b5" android:id="@id/track_selection_dialog_ok_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="حسنًا" style="?android:borderlessButtonStyle" />
+    </LinearLayout>
+</LinearLayout>

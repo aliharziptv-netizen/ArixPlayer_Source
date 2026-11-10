@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/bg_dialog_card" android:padding="22.0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layoutDirection="rtl"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:background="@drawable/badge_import_circle" android:layout_width="56.0dp" android:layout_height="56.0dp" android:layout_marginBottom="16.0dp">
+        <ImageView android:layout_gravity="center" android:layout_width="26.0dp" android:layout_height="26.0dp" android:src="@drawable/ic_download" android:tint="#10b981" />
+    </FrameLayout>
+    <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dp" android:text="السماح بالاستيراد" />
+    <TextView android:textSize="13.0sp" android:textColor="@color/text_secondary" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="22.0dp" android:text="هل ترغب في السماح للمستخدمين الآخرين باستيراد وتعديل هذه القائمة داخل مولد الروابط عند مشاركة رابط الويب معهم؟" android:lineSpacingMultiplier="1.2" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <Button android:textSize="13.0sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@id/btn_dialog_allow" android:background="@drawable/btn_emerald" android:layout_width="0.0dp" android:layout_height="46.0dp" android:text="سماح بالاستيراد" android:layout_weight="1.0" android:textAllCaps="false" android:layout_marginEnd="10.0dp" />
+        <Button android:textSize="13.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:id="@id/btn_dialog_deny" android:background="@drawable/btn_dialog_cancel" android:layout_width="0.0dp" android:layout_height="46.0dp" android:text="منع الاستيراد" android:layout_weight="1.0" android:textAllCaps="false" />
+    </LinearLayout>
+</LinearLayout>
