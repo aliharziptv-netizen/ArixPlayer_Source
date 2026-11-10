@@ -3,26 +3,54 @@ package com.arix.player;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Process;
 import android.util.Log;
 
-/* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
+/** Saves an uncaught exception and opens the crash report screen after the process exits. */
 class cq implements Thread.UncaughtExceptionHandler {
-    final /* synthetic */ SketchApplication a;
+    private final SketchApplication application;
 
     cq(SketchApplication sketchApplication) {
-        this.a = sketchApplication;
+        this.application = sketchApplication;
     }
 
-    @Override // java.lang.Thread.UncaughtExceptionHandler
-    public void uncaughtException(Thread thread, Throwable th) {
-        Intent intent = new Intent(this.a.getApplicationContext(), (Class<?>) DebugActivity.class);
-        intent.setFlags(32768);
-        intent.putExtra(StringDecoder.decode("MCY0Qko="), Log.getStackTraceString(th));
-        ((AlarmManager) this.a.getSystemService(StringDecoder.decode("NDgnX1U="))).set(2, 1000L, PendingIntent.getActivity(this.a.getApplicationContext(), 11111, intent, 1073741824));
-        cr.a(Log.getStackTraceString(th));
-        Process.killProcess(Process.myPid());
-        System.exit(1);
-        this.a.b.uncaughtException(thread, th);
+    @Override
+    public void uncaughtException(Thread thread, Throwable error) {
+        String report = Log.getStackTraceString(error);
+        try {
+            // commit() is intentional: the process is about to be terminated.
+            application.getSharedPreferences("arix_crash_report", 0)
+                    .edit()
+                    .putString("last_crash", report)
+                    .putLong("crash_time", System.currentTimeMillis())
+                    .commit();
+
+            Intent intent = new Intent(application, DebugActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.putExtra("crash_report", report);
+
+            int flags = PendingIntent.FLAG_UPDATE_CURRENT;
+            if (Build.VERSION.SDK_INT >= 23) {
+                flags |= PendingIntent.FLAG_IMMUTABLE;
+            }
+            PendingIntent pendingIntent = PendingIntent.getActivity(
+                    application, 11111, intent, flags);
+
+            AlarmManager alarmManager =
+                    (AlarmManager) application.getSystemService(android.content.Context.ALARM_SERVICE);
+            if (alarmManager != null) {
+                alarmManager.set(
+                        AlarmManager.RTC,
+                        System.currentTimeMillis() + 1000L,
+                        pendingIntent
+                );
+            }
+        } catch (Throwable reportError) {
+            Log.e("ArixCrash", "Could not schedule crash report screen", reportError);
+        } finally {
+            Process.killProcess(Process.myPid());
+            System.exit(1);
+        }
     }
 }
