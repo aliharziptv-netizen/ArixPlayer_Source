@@ -17,22 +17,13 @@ public class SketchApplication extends Application {
         a = getApplicationContext();
 
         // Install the handler before running any other app initialization.
-        getSharedPreferences("arix_crash_report", MODE_PRIVATE)
-                .edit().putString("last_stage", "SketchApplication.onCreate")
-                .commit();
+        android.content.SharedPreferences crashPrefs = getSharedPreferences("arix_crash_report", MODE_PRIVATE);
+        if (!crashPrefs.contains("last_crash")) crashPrefs.edit().putString("last_stage", "SketchApplication.onCreate").commit();
         this.b = Thread.getDefaultUncaughtExceptionHandler();
         Thread.setDefaultUncaughtExceptionHandler(new cq(this));
 
-        try {
-            getSharedPreferences("arix_crash_report", MODE_PRIVATE)
-                    .edit().putString("last_stage", "SketchApplication: initializing cr")
-                    .commit();
-            cr.a();
-            getSharedPreferences("arix_crash_report", MODE_PRIVATE)
-                    .edit().putString("last_stage", "Application initialized; opening SplashActivity")
-                    .commit();
-        } catch (Throwable error) {
-            throw error;
-        }
+        if (!crashPrefs.contains("last_crash")) crashPrefs.edit().putString("last_stage", "SketchApplication: initializing cr").commit();
+        cr.a();
+        if (!crashPrefs.contains("last_crash")) crashPrefs.edit().putString("last_stage", "Application initialized; opening SplashActivity").commit();
     }
 }
