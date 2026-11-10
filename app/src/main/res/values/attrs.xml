@@ -309,10 +309,6 @@
         <enum name="cut" value="1" />
         <enum name="rounded" value="0" />
     </attr>
-    <attr name="cornerFamilyBottomRight">
-        <enum name="cut" value="1" />
-        <enum name="rounded" value="0" />
-    </attr>
     <attr name="cornerRadius" format="dimension" />
     <attr name="cornerSize" format="dimension|fraction" />
     <attr name="cornerSizeBottomLeft" format="dimension|fraction" />
@@ -411,13 +407,6 @@
     <attr name="endIconContentDescription" format="string" />
     <attr name="endIconDrawable" format="reference" />
     <attr name="endIconTint" format="color" />
-    <attr name="endIconTintMode">
-        <enum name="multiply" value="14" />
-        <enum name="screen" value="15" />
-        <enum name="src_atop" value="9" />
-        <enum name="src_in" value="5" />
-        <enum name="src_over" value="3" />
-    </attr>
     <attr name="enforceMaterialTheme" format="boolean" />
     <attr name="enforceTextAppearance" format="boolean" />
     <attr name="ensureMinTouchTargetSize" format="boolean" />
@@ -566,14 +555,6 @@
     <attr name="iconSize" format="dimension" />
     <attr name="iconStartPadding" format="dimension" />
     <attr name="iconTint" format="color" />
-    <attr name="iconTintMode">
-        <enum name="add" value="16" />
-        <enum name="multiply" value="14" />
-        <enum name="screen" value="15" />
-        <enum name="src_atop" value="9" />
-        <enum name="src_in" value="5" />
-        <enum name="src_over" value="3" />
-    </attr>
     <attr name="iconifiedByDefault" format="boolean" />
     <attr name="ifTagNotSet" format="reference" />
     <attr name="ifTagSet" format="reference" />
@@ -941,16 +922,6 @@
         <enum name="sharedValueSet" value="4" />
         <enum name="sharedValueUnset" value="5" />
     </attr>
-    <attr name="onTouchUp">
-        <enum name="autoComplete" value="0" />
-        <enum name="autoCompleteToEnd" value="2" />
-        <enum name="autoCompleteToStart" value="1" />
-        <enum name="decelerate" value="4" />
-        <enum name="decelerateAndComplete" value="5" />
-        <enum name="neverCompleteToEnd" value="7" />
-        <enum name="neverCompleteToStart" value="6" />
-        <enum name="stop" value="3" />
-    </attr>
     <attr name="overlapAnchor" format="boolean" />
     <attr name="overlay" format="boolean" />
     <attr name="paddingBottomNoButtons" format="dimension" />
@@ -1179,11 +1150,6 @@
     <attr name="switchTextAppearance" format="reference" />
     <attr name="tabBackground" format="reference" />
     <attr name="tabContentStart" format="dimension" />
-    <attr name="tabGravity">
-        <enum name="center" value="1" />
-        <enum name="fill" value="0" />
-        <enum name="start" value="2" />
-    </attr>
     <attr name="tabIconTint" format="color" />
     <attr name="tabIconTintMode">
         <enum name="add" value="16" />
