@@ -27,6 +27,8 @@ class ay implements View.OnTouchListener {
         int i;
         int action = motionEvent.getAction();
         int i2 = 0;
+        mainActivity = this.a;
+        i = mainActivity.ag;
         if (action == 0) {
             this.b = motionEvent.getRawX();
             this.c = motionEvent.getRawY();
