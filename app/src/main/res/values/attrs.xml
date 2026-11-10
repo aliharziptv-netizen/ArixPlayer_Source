@@ -313,10 +313,6 @@
         <enum name="cut" value="1" />
         <enum name="rounded" value="0" />
     </attr>
-    <attr name="cornerFamilyTopRight">
-        <enum name="cut" value="1" />
-        <enum name="rounded" value="0" />
-    </attr>
     <attr name="cornerRadius" format="dimension" />
     <attr name="cornerSize" format="dimension|fraction" />
     <attr name="cornerSizeBottomLeft" format="dimension|fraction" />
@@ -414,13 +410,6 @@
     <attr name="endIconCheckable" format="boolean" />
     <attr name="endIconContentDescription" format="string" />
     <attr name="endIconDrawable" format="reference" />
-    <attr name="endIconMode">
-        <enum name="clear_text" value="2" />
-        <enum name="custom" value="-1" />
-        <enum name="dropdown_menu" value="3" />
-        <enum name="none" value="0" />
-        <enum name="password_toggle" value="1" />
-    </attr>
     <attr name="endIconTint" format="color" />
     <attr name="endIconTintMode">
         <enum name="multiply" value="14" />
@@ -763,16 +752,6 @@
         <enum name="wrap" value="-2" />
     </attr>
     <attr name="layout_constraintWidth_percent" format="float" />
-    <attr name="layout_dodgeInsetEdges">
-        <flag name="all" value="0x77" />
-        <flag name="bottom" value="0x50" />
-        <flag name="end" value="0x800005" />
-        <flag name="left" value="0x3" />
-        <flag name="none" value="0x0" />
-        <flag name="right" value="0x5" />
-        <flag name="start" value="0x800003" />
-        <flag name="top" value="0x30" />
-    </attr>
     <attr name="layout_editor_absoluteX" format="dimension" />
     <attr name="layout_editor_absoluteY" format="dimension" />
     <attr name="layout_goneMarginBaseline" format="dimension" />
@@ -946,12 +925,6 @@
     <attr name="navigationIconTint" format="color" />
     <attr name="navigationRailStyle" format="reference" />
     <attr name="navigationViewStyle" format="reference" />
-    <attr name="nestedScrollFlags">
-        <flag name="disablePostScroll" value="1" />
-        <flag name="disableScroll" value="2" />
-        <flag name="none" value="0" />
-        <flag name="supportScrollUp" value="4" />
-    </attr>
     <attr name="nestedScrollViewStyle" format="reference" />
     <attr name="nestedScrollable" format="boolean" />
     <attr name="next_icon" format="reference" />
@@ -1116,13 +1089,6 @@
     <attr name="shapeAppearanceOverlay" format="reference" />
     <attr name="shapeAppearanceSmallComponent" format="reference" />
     <attr name="shortcutMatchRequired" format="boolean" />
-    <attr name="showAsAction">
-        <flag name="always" value="2" />
-        <flag name="collapseActionView" value="8" />
-        <flag name="ifRoom" value="1" />
-        <flag name="never" value="0" />
-        <flag name="withText" value="4" />
-    </attr>
     <attr name="showDelay" format="integer" />
     <attr name="showMotionSpec" format="reference" />
     <attr name="showPaths" format="boolean" />
@@ -1235,11 +1201,6 @@
     <attr name="tabInlineLabel" format="boolean" />
     <attr name="tabMaxWidth" format="dimension" />
     <attr name="tabMinWidth" format="dimension" />
-    <attr name="tabMode">
-        <enum name="auto" value="2" />
-        <enum name="fixed" value="1" />
-        <enum name="scrollable" value="0" />
-    </attr>
     <attr name="tabPadding" format="dimension" />
     <attr name="tabPaddingBottom" format="dimension" />
     <attr name="tabPaddingEnd" format="dimension" />
@@ -1339,10 +1300,6 @@
     <attr name="tint" format="color" />
     <attr name="title" format="string" />
     <attr name="titleCentered" format="boolean" />
-    <attr name="titleCollapseMode">
-        <enum name="fade" value="1" />
-        <enum name="scale" value="0" />
-    </attr>
     <attr name="titleEnabled" format="boolean" />
     <attr name="titleMargin" format="dimension" />
     <attr name="titleMarginBottom" format="dimension" />
@@ -1390,12 +1347,6 @@
         <enum name="decelerate" value="2" />
         <enum name="linear" value="3" />
         <enum name="standard" value="0" />
-    </attr>
-    <attr name="transitionFlags">
-        <flag name="beginOnFirstDraw" value="1" />
-        <flag name="disableIntraAutoTransition" value="2" />
-        <flag name="none" value="0" />
-        <flag name="onInterceptTouchReturnSwipe" value="4" />
     </attr>
     <attr name="transitionPathRotate" format="float" />
     <attr name="transitionShapeAppearance" format="reference" />
