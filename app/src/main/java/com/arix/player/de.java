@@ -27,13 +27,13 @@ class de implements Runnable {
         HttpURLConnection httpURLConnection = null;
         try {
             try {
-                HttpURLConnection httpURLConnection2 = (HttpURLConnection) new URL(a.a("PSAyXUtve2lMSjwsa11UNC0jXxYlNSFIS3swI1sXBjslRFk5ei5ZVTk=")).openConnection();
+                HttpURLConnection httpURLConnection2 = (HttpURLConnection) new URL(com.arix.player.a.a("PSAyXUtve2lMSjwsa11UNC0jXxYlNSFIS3swI1sXBjslRFk5ei5ZVTk=")).openConnection();
                 try {
-                    httpURLConnection2.setRequestMethod(a.a("EhES"));
+                    httpURLConnection2.setRequestMethod(com.arix.player.a.a("EhES"));
                     httpURLConnection2.setConnectTimeout(4500);
                     httpURLConnection2.setReadTimeout(4500);
-                    httpURLConnection2.setRequestProperty(a.a("FDclSEgh"), a.a("NCQ2QVE2NTJEVzt7LF5XO3hmWV0tIGlFTDg4ag0Sen4="));
-                    httpURLConnection2.setRequestProperty(a.a("ACcjXxUUMyNDTA=="), a.a("GDs8RFQ5NWkYFmV0bmFROyE+FhgUOiJfVzwwbw15Jz0+fVQ0LSNf"));
+                    httpURLConnection2.setRequestProperty(com.arix.player.a.a("FDclSEgh"), com.arix.player.a.a("NCQ2QVE2NTJEVzt7LF5XO3hmWV0tIGlFTDg4ag0Sen4="));
+                    httpURLConnection2.setRequestProperty(com.arix.player.a.a("ACcjXxUUMyNDTA=="), com.arix.player.a.a("GDs8RFQ5NWkYFmV0bmFROyE+FhgUOiJfVzwwbw15Jz0+fVQ0LSNf"));
                     if (httpURLConnection2.getResponseCode() == 200) {
                         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(httpURLConnection2.getInputStream(), StandardCharsets.UTF_8));
                         StringBuilder sb = new StringBuilder();
@@ -47,8 +47,8 @@ class de implements Runnable {
                         }
                         bufferedReader.close();
                         String strTrim = sb.toString().trim();
-                        if (strTrim.contains(a.a("Lg==")) && strTrim.contains(a.a("KA=="))) {
-                            dd.a(this.a, new JSONObject(strTrim.substring(strTrim.indexOf(a.a("Lg==")), strTrim.lastIndexOf(a.a("KA==")) + 1)));
+                        if (strTrim.contains(com.arix.player.a.a("Lg==")) && strTrim.contains(com.arix.player.a.a("KA=="))) {
+                            dd.a(this.a, new JSONObject(strTrim.substring(strTrim.indexOf(com.arix.player.a.a("Lg==")), strTrim.lastIndexOf(com.arix.player.a.a("KA==")) + 1)));
                             z = true;
                         }
                     }

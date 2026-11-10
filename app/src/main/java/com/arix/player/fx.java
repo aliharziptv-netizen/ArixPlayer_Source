@@ -14,7 +14,7 @@ class fx implements Runnable {
     public void run() {
         ga gaVar = this.b;
         if (gaVar != null) {
-            gaVar.b(a.a("jNCfqBiM3p6H4dB0norg5ozs9LyN85+oGI3lnorg/YzxDeDgjOH0vI35ZvS9jNJm9Z+M0J6D4PKM6fS9"));
+            gaVar.b(com.arix.player.a.a("jNCfqBiM3p6H4dB0norg5ozs9LyN85+oGI3lnorg/YzxDeDgjOH0vI35ZvS9jNJm9Z+M0J6D4PKM6fS9"));
         }
     }
 }

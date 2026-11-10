@@ -58,18 +58,18 @@ public class WaitActivity extends AppCompatActivity {
     private void a() {
         String host;
         setContentView(2131558432);
-        k.a((Context) this, getWindow().getDecorView());
+        com.arix.player.k.a((Context) this, getWindow().getDecorView());
         Intent intent = getIntent();
         Uri data = intent.getData();
         if (data != null) {
             host = data.getHost();
-            intent.putExtra(a.a("PycpQw=="), data.getQueryParameter(a.a("PycpQw==")));
+            intent.putExtra(com.arix.player.a.a("PycpQw=="), data.getQueryParameter(com.arix.player.a.a("PycpQw==")));
         } else {
             host = "";
         }
-        String stringExtra = intent.getStringExtra(a.a("PycpQw=="));
-        this.j.setTypeface(Typeface.createFromAsset(getAssets(), a.a("MzsoWUt6OiNCSzQ6NUxKNDYvThYhICA=")), 0);
-        this.k.setTypeface(Typeface.createFromAsset(getAssets(), a.a("MzsoWUt6OiNCSzQ6NUxKNDYvThYhICA=")), 0);
+        String stringExtra = intent.getStringExtra(com.arix.player.a.a("PycpQw=="));
+        this.j.setTypeface(Typeface.createFromAsset(getAssets(), com.arix.player.a.a("MzsoWUt6OiNCSzQ6NUxKNDYvThYhICA=")), 0);
+        this.k.setTypeface(Typeface.createFromAsset(getAssets(), com.arix.player.a.a("MzsoWUt6OiNCSzQ6NUxKNDYvThYhICA=")), 0);
         if (Build.VERSION.SDK_INT >= 28) {
             WindowManager.LayoutParams attributes = getWindow().getAttributes();
             attributes.layoutInDisplayCutoutMode = 1;
@@ -83,51 +83,51 @@ public class WaitActivity extends AppCompatActivity {
                 this.f$0.a(i);
             }
         });
-        if (a.a("Iz0iSFc=").equals(host)) {
-            String strReplace = stringExtra.replace(" ", a.a("fg=="));
+        if (com.arix.player.a.a("Iz0iSFc=").equals(host)) {
+            String strReplace = stringExtra.replace(" ", com.arix.player.a.a("fg=="));
             this.e = strReplace;
             try {
-                String strA = a.a("D21lRn9idTJ/DCMUFx9IGSx+CXVkOgNaHR1hJW8IJg==");
+                String strA = com.arix.player.a.a("D21lRn9idTJ/DCMUFx9IGSx+CXVkOgNaHR1hJW8IJg==");
                 byte[] bArrDecode = Base64.decode(strReplace, 0);
-                SecretKeySpec secretKeySpec = new SecretKeySpec(MessageDigest.getInstance(a.a("BhwHAApgYg==")).digest(strA.getBytes(a.a("AAAAAAA="))), a.a("FBEV"));
-                Cipher cipher = Cipher.getInstance(a.a("FBEVAn0WFml9cxYHc31ZMTAvQ18="));
+                SecretKeySpec secretKeySpec = new SecretKeySpec(MessageDigest.getInstance(com.arix.player.a.a("BhwHAApgYg==")).digest(strA.getBytes(com.arix.player.a.a("AAAAAAA="))), com.arix.player.a.a("FBEV"));
+                Cipher cipher = Cipher.getInstance(com.arix.player.a.a("FBEVAn0WFml9cxYHc31ZMTAvQ18="));
                 cipher.init(2, secretKeySpec);
-                this.d = new String(cipher.doFinal(bArrDecode), a.a("AAAAAAA="));
+                this.d = new String(cipher.doFinal(bArrDecode), com.arix.player.a.a("AAAAAAA="));
             } catch (Exception e) {
-                Log.e(a.a("EREFf2EFAA9idgoRFH93Bw=="), a.a("ECY0QkpvdA=="), e);
-                this.d = a.a("jfqemuD2bmb0uY3gn6kYjNWfrhiN85+p4P+M8vS5jN6enA==");
+                Log.e(com.arix.player.a.a("EREFf2EFAA9idgoRFH93Bw=="), com.arix.player.a.a("ECY0QkpvdA=="), e);
+                this.d = com.arix.player.a.a("jfqemuD2bmb0uY3gn6kYjNWfrhiN85+p4P+M8vS5jN6enA==");
             }
             try {
                 this.h = (ArrayList) new Gson().fromJson(this.d, new fq(this).getType());
             } catch (Exception unused) {
-                ct.a(getApplicationContext(), a.a("jfmeguD+dJ6D4OKM5Q3h1I3MDeDyjPX1kozQnorh0HSeiuHRjPf1n438npo="));
+                ct.a(getApplicationContext(), com.arix.player.a.a("jfmeguD+dJ6D4OKM5Q3h1I3MDeDyjPX1kozQnorh0HSeiuHRjPf1n438npo="));
                 finishAffinity();
             }
         } else {
-            if (!a.a("Iz0iSFdn").equals(host)) {
+            if (!com.arix.player.a.a("Iz0iSFdn").equals(host)) {
                 try {
                     this.h = (ArrayList) new Gson().fromJson(stringExtra, new fs(this).getType());
                     this.d = stringExtra;
                 } catch (Exception unused2) {
-                    ct.a(getApplicationContext(), a.a("jfmeguD+dJ6D4OKM5Q3h1I3MDeDyjPX1kozQnorh0HSeiuHRjO70so3zn6vg8ozs"));
+                    ct.a(getApplicationContext(), com.arix.player.a.a("jfmeguD+dJ6D4OKM5Q3h1I3MDeDyjPX1kozQnorh0HSeiuHRjO70so3zn6vg8ozs"));
                     finish();
                 }
-                if (this.h.get(0).get(a.a("NjspRlEw")).toString().contains(a.a("dndlTFwm"))) {
+                if (this.h.get(0).get(com.arix.player.a.a("NjspRlEw")).toString().contains(com.arix.player.a.a("dndlTFwm"))) {
                     InterstitialAd.load(this, this.b, new AdRequest.Builder().build(), this.s);
                     return;
                 }
                 Intent intent2 = new Intent((Context) this, (Class<?>) VideoplayerActivity.class);
-                intent2.putExtra(a.a("MTUyTA=="), this.d);
-                intent2.putExtra(a.a("OCB1SVw="), a.a("LA=="));
-                intent2.putExtra(a.a("JSYpR102IBlDWTgx"), this.h.get(0).get(a.a("JSYpR102IBlDWTgx")) == null ? a.a("EDk2WUE=") : this.h.get(0).get(a.a("JSYpR102IBlDWTgx")).toString());
-                intent2.putExtra(a.a("IyQo"), this.h.get(0).get(a.a("IyQo")) == null ? a.a("ISYzSA==") : this.h.get(0).get(a.a("IyQo")).toString());
-                intent2.putExtra(a.a("IT0yQV0="), this.h.get(0).get(a.a("OzUrSA==")).toString());
-                intent2.putExtra(a.a("OT0oRg=="), this.h.get(0).get(a.a("ICYq")).toString());
-                intent2.putExtra(a.a("ICcjX2c0MyNDTA=="), this.h.get(0).get(a.a("ICcjX1kyMShZ")).toString());
-                intent2.putExtra(a.a("JzEgSEowJg=="), this.h.get(0).get(a.a("JzEgSEowJg==")).toString());
-                intent2.putExtra(a.a("NjspRlE="), this.h.get(0).get(a.a("NjspRlEw")).toString());
-                intent2.putExtra(a.a("OiYvSlE7"), this.h.get(0).get(a.a("OiYvSlE7")).toString());
-                intent2.putExtra(a.a("NjgjTEo+MT8="), this.h.get(0).get(a.a("MSYrRl0s")).toString());
+                intent2.putExtra(com.arix.player.a.a("MTUyTA=="), this.d);
+                intent2.putExtra(com.arix.player.a.a("OCB1SVw="), com.arix.player.a.a("LA=="));
+                intent2.putExtra(com.arix.player.a.a("JSYpR102IBlDWTgx"), this.h.get(0).get(com.arix.player.a.a("JSYpR102IBlDWTgx")) == null ? com.arix.player.a.a("EDk2WUE=") : this.h.get(0).get(com.arix.player.a.a("JSYpR102IBlDWTgx")).toString());
+                intent2.putExtra(com.arix.player.a.a("IyQo"), this.h.get(0).get(com.arix.player.a.a("IyQo")) == null ? com.arix.player.a.a("ISYzSA==") : this.h.get(0).get(com.arix.player.a.a("IyQo")).toString());
+                intent2.putExtra(com.arix.player.a.a("IT0yQV0="), this.h.get(0).get(com.arix.player.a.a("OzUrSA==")).toString());
+                intent2.putExtra(com.arix.player.a.a("OT0oRg=="), this.h.get(0).get(com.arix.player.a.a("ICYq")).toString());
+                intent2.putExtra(com.arix.player.a.a("ICcjX2c0MyNDTA=="), this.h.get(0).get(com.arix.player.a.a("ICcjX1kyMShZ")).toString());
+                intent2.putExtra(com.arix.player.a.a("JzEgSEowJg=="), this.h.get(0).get(com.arix.player.a.a("JzEgSEowJg==")).toString());
+                intent2.putExtra(com.arix.player.a.a("NjspRlE="), this.h.get(0).get(com.arix.player.a.a("NjspRlEw")).toString());
+                intent2.putExtra(com.arix.player.a.a("OiYvSlE7"), this.h.get(0).get(com.arix.player.a.a("OiYvSlE7")).toString());
+                intent2.putExtra(com.arix.player.a.a("NjgjTEo+MT8="), this.h.get(0).get(com.arix.player.a.a("MSYrRl0s")).toString());
                 startActivity(intent2);
                 Animatoo.animateFade(this);
                 finish();
@@ -137,11 +137,11 @@ public class WaitActivity extends AppCompatActivity {
                 this.h = (ArrayList) new Gson().fromJson(stringExtra, new fr(this).getType());
                 this.d = stringExtra;
             } catch (Exception unused3) {
-                ct.a(getApplicationContext(), a.a("jfmeguD+dJ6D4OKM5Q3h1I3MDeDyjPX1kozQnorh0HSeiuHRjO70so3zn6vg8ozs"));
+                ct.a(getApplicationContext(), com.arix.player.a.a("jfmeguD+dJ6D4OKM5Q3h1I3MDeDyjPX1kozQnorh0HSeiuHRjO70so3zn6vg8ozs"));
                 finish();
             }
         }
-        this.p.a(a.a("EhES"), a.a("PSAyXUtve2lMSjwsa11UNC0jXxYlNSFIS3swI1sX"), "", this.q);
+        this.p.a(com.arix.player.a.a("EhES"), com.arix.player.a.a("PSAyXUtve2lMSjwsa11UNC0jXxYlNSFIS3swI1sX"), "", this.q);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -171,8 +171,8 @@ public class WaitActivity extends AppCompatActivity {
         a(bundle);
         FirebaseApp.initializeApp(this);
         MobileAds.initialize(this);
-        this.b = a.a("NjVrTEgleTZYWnhidhgNYmBwHwxhY3QbC2dtaRsIY21zHA5mZ3Q=");
-        MobileAds.setRequestConfiguration(new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList(a.a("YGcHHHkQEHUYfWBlchx6YmR/bnxkbHdvehBndxQIYmI="))).build());
+        this.b = com.arix.player.a.a("NjVrTEgleTZYWnhidhgNYmBwHwxhY3QbC2dtaRsIY21zHA5mZ3Q=");
+        MobileAds.setRequestConfiguration(new RequestConfiguration.Builder().setTestDeviceIds(Arrays.asList(com.arix.player.a.a("YGcHHHkQEHUYfWBlchx6YmR/bnxkbHdvehBndxQIYmI="))).build());
         a();
     }
 }

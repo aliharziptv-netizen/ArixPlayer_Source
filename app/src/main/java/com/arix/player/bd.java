@@ -27,13 +27,13 @@ class bd implements Runnable {
         for (int i2 = i; i2 >= 0; i2--) {
             g gVar = (g) this.a.af.get(i2);
             View viewInflate = layoutInflaterFrom.inflate(2131558476, (ViewGroup) this.b, false);
-            k.a(this.a, viewInflate);
+            com.arix.player.k.a(this.a, viewInflate);
             TextView textView = (TextView) viewInflate.findViewById(2131362564);
             TextView textView2 = (TextView) viewInflate.findViewById(2131362565);
             View viewFindViewById = viewInflate.findViewById(2131361954);
             View viewFindViewById2 = viewInflate.findViewById(2131361953);
             textView.setText(String.valueOf(size - i2));
-            textView2.setText(this.a.a(i2, gVar.b()).replaceFirst(a.a("Cw92AAEIfxoDZCZ+"), ""));
+            textView2.setText(this.a.a(i2, gVar.b()).replaceFirst(com.arix.player.a.a("Cw92AAEIfxoDZCZ+"), ""));
             if (i2 == i) {
                 viewFindViewById.setAlpha(0.25f);
                 viewFindViewById.setEnabled(false);

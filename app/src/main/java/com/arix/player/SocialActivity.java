@@ -81,11 +81,11 @@ public class SocialActivity extends Activity {
             return;
         }
         try {
-            Intent intent = new Intent(a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(str.trim()));
+            Intent intent = new Intent(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(str.trim()));
             intent.addFlags(268435456);
             startActivity(intent);
         } catch (Exception unused) {
-            i.c(this, a.a("jf6elODljPcN4dSM7PWVdYzh9LyN5Z6K4P2M8Q=="));
+            com.arix.player.i.c(this, com.arix.player.a.a("jf6elODljPcN4dSM7PWVdYzh9LyN5Z6K4P2M8Q=="));
         }
     }
 
@@ -104,7 +104,7 @@ public class SocialActivity extends Activity {
     public void b() {
         if (this.d != null) {
             String strF = dd.f(this);
-            this.d.setText(a.a("jfOfqeDwjPP1l43znpwCdQ==") + strF + a.a("dbbGjxgaEgBkexwVCg=="));
+            this.d.setText(com.arix.player.a.a("jfOfqeDwjPP1l43znpwCdQ==") + strF + com.arix.player.a.a("dbbGjxgaEgBkexwVCg=="));
         }
     }
 
@@ -115,9 +115,9 @@ public class SocialActivity extends Activity {
         }
         String strTrim = str.trim();
         try {
-            if (strTrim.contains(a.a("IXorSBc="))) {
-                String strSubstring = strTrim.substring(strTrim.indexOf(a.a("IXorSBc=")) + 5);
-                Intent intent = new Intent(a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(a.a("ITN8AhcnMTVCVCMxeUlXODUvQwU=") + strSubstring));
+            if (strTrim.contains(com.arix.player.a.a("IXorSBc="))) {
+                String strSubstring = strTrim.substring(strTrim.indexOf(com.arix.player.a.a("IXorSBc=")) + 5);
+                Intent intent = new Intent(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(com.arix.player.a.a("ITN8AhcnMTVCVCMxeUlXODUvQwU=") + strSubstring));
                 intent.addFlags(268435456);
                 startActivity(intent);
                 return;
@@ -164,17 +164,17 @@ public class SocialActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void d() {
-        String strA = a.a("NjsrA1knPT4DSDk1P0hK");
+        String strA = com.arix.player.a.a("NjsrA1knPT4DSDk1P0hK");
         try {
-            Intent intent = new Intent(a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(a.a("ODU0Rl0hbmkCXDAgJ0RUJmsvSQU=") + strA));
+            Intent intent = new Intent(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(com.arix.player.a.a("ODU0Rl0hbmkCXDAgJ0RUJmsvSQU=") + strA));
             intent.addFlags(268435456);
             startActivity(intent);
         } catch (ActivityNotFoundException unused) {
-            Intent intent2 = new Intent(a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(a.a("PSAyXUtve2ldVDQtaEpXOjMqSBY2OysCSyE7NEgXNCQ2XhcxMTJMUTkneURcaA==") + strA));
+            Intent intent2 = new Intent(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehBkfQI="), Uri.parse(com.arix.player.a.a("PSAyXUtve2ldVDQtaEpXOjMqSBY2OysCSyE7NEgXNCQ2XhcxMTJMUTkneURcaA==") + strA));
             intent2.addFlags(268435456);
             startActivity(intent2);
         } catch (Exception unused2) {
-            i.c(this, a.a("jf6elODljPcN4dSM7PWVdY3D9ZKN+J6cGAU4J1Q="));
+            com.arix.player.i.c(this, com.arix.player.a.a("jf6elODljPcN4dSM7PWVdY3D9ZKN+J6cGAU4J1Q="));
         }
     }
 
@@ -183,13 +183,13 @@ public class SocialActivity extends Activity {
         String strE = dd.e(this);
         try {
             Intent intent = new Intent();
-            intent.setAction(a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehVodhE="));
-            intent.putExtra(a.a("NDoiX1c8MGhEViExKFkWMCwyX1l7BxNvchAXEg=="), a.a("jf6emuD9jcz0unUVNERAdQQqTEEwJg=="));
-            intent.putExtra(a.a("NDoiX1c8MGhEViExKFkWMCwyX1l7AAN1bA=="), a.a("jeCeiuHSjOkN4d2M4fWLjf6fqOD/jP8N4P2M4fS8jNafq+HdjOH1knWNzvWfjNCenOHdjOH1kI3jZvWfjNCfqODhjcf1iY39ZvWBjfyenBiN/p6a4P2NzPS6dRU0REB1BCpMQTAmfCc=") + strE);
-            intent.setType(a.a("ITE+WRclOCdEVg=="));
-            startActivity(Intent.createChooser(intent, a.a("jNGemeDyjPf0u439ZvWSjeOeheHfjcQNeSc9Pg1oOTU/SEp1jP/1kI3l")));
+            intent.setAction(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWNDcyRFc7ehVodhE="));
+            intent.putExtra(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWMCwyX1l7BxNvchAXEg=="), com.arix.player.a.a("jf6emuD9jcz0unUVNERAdQQqTEEwJg=="));
+            intent.putExtra(com.arix.player.a.a("NDoiX1c8MGhEViExKFkWMCwyX1l7AAN1bA=="), com.arix.player.a.a("jeCeiuHSjOkN4d2M4fWLjf6fqOD/jP8N4P2M4fS8jNafq+HdjOH1knWNzvWfjNCenOHdjOH1kI3jZvWfjNCfqODhjcf1iY39ZvWBjfyenBiN/p6a4P2NzPS6dRU0REB1BCpMQTAmfCc=") + strE);
+            intent.setType(com.arix.player.a.a("ITE+WRclOCdEVg=="));
+            startActivity(Intent.createChooser(intent, com.arix.player.a.a("jNGemeDyjPf0u439ZvWSjeOeheHfjcQNeSc9Pg1oOTU/SEp1jP/1kI3l")));
         } catch (Exception unused) {
-            i.c(this, a.a("jf6elODljPcN4dCM8vWfjeWfruD8dJ6K4dGM9/Wfjfyemg=="));
+            com.arix.player.i.c(this, com.arix.player.a.a("jf6elODljPcN4dCM8vWfjeWfruD8dJ6K4dGM9/Wfjfyemg=="));
         }
     }
 
@@ -216,7 +216,7 @@ public class SocialActivity extends Activity {
             }
         });
         setContentView(2131558430);
-        k.a(this, getWindow().getDecorView());
+        com.arix.player.k.a(this, getWindow().getDecorView());
         a();
         c();
         b();

@@ -32,6 +32,6 @@ class aa implements Runnable {
         if (view3 != null) {
             view3.setEnabled(true);
         }
-        i.c(this.a, this.e);
+        com.arix.player.i.c(this.a, this.e);
     }
 }

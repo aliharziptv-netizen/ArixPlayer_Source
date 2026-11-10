@@ -14,6 +14,6 @@ class dr implements View.OnClickListener {
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         this.a.c();
-        cb.a((Player) this.a.a).show(this.a.getSupportFragmentManager(), a.a("JiQjSFwKMC9MVDoz"));
+        cb.a((Player) this.a.a).show(this.a.getSupportFragmentManager(), com.arix.player.a.a("JiQjSFwKMC9MVDoz"));
     }
 }

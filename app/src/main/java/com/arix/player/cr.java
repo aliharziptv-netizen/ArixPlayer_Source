@@ -10,7 +10,7 @@ public class cr {
 
     public static void a() {
         if (b) {
-            throw new IllegalStateException(a.a("GTshSl0ndCdBSjA1IlQYJyEoQ1E7Mw=="));
+            throw new IllegalStateException(com.arix.player.a.a("GTshSl0ndCdBSjA1IlQYJyEoQ1E7Mw=="));
         }
         a.start();
     }
@@ -18,9 +18,9 @@ public class cr {
     public static void a(String str) {
         Context contextA = SketchApplication.a();
         Intent intent = new Intent();
-        intent.setAction(a.a("NjsrA0s+MTJOUCI1NEgWJzErQlx7FQV5cRoaGWN9AgsCaHoAExlhdxI="));
-        intent.putExtra(a.a("OTsh"), str);
-        intent.putExtra(a.a("JTUlRlkyMQhMVTA="), contextA.getPackageName());
+        intent.setAction(com.arix.player.a.a("NjsrA0s+MTJOUCI1NEgWJzErQlx7FQV5cRoaGWN9AgsCaHoAExlhdxI="));
+        intent.putExtra(com.arix.player.a.a("OTsh"), str);
+        intent.putExtra(com.arix.player.a.a("JTUlRlkyMQhMVTA="), contextA.getPackageName());
         contextA.sendBroadcast(intent);
     }
 }

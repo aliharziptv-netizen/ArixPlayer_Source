@@ -16,7 +16,7 @@ class fz implements Runnable {
     public void run() {
         ga gaVar = this.b;
         if (gaVar != null) {
-            gaVar.b(this.c.getMessage() != null ? this.c.getMessage() : a.a("jfqemuD2dJ+s4d90norh0Yzh9ZKN4Z6K4dF0noXg8o3C9Z2M0p6H4OSNwPWS"));
+            gaVar.b(this.c.getMessage() != null ? this.c.getMessage() : com.arix.player.a.a("jfqemuD2dJ+s4d90norh0Yzh9ZKN4Z6K4dF0noXg8o3C9Z2M0p6H4OSNwPWS"));
         }
     }
 }

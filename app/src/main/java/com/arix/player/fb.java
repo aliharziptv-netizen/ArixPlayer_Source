@@ -40,8 +40,8 @@ public class fb extends RecyclerView.Adapter<fl> {
         view2.setClickable(false);
         view2.setFocusable(false);
         linearLayout.addView(view2, new FrameLayout.LayoutParams(-1, -1));
-        boolean z = ((UiModeManager) this.b.getSystemService(a.a("ID0rQlww"))).getCurrentModeType() == 4;
-        if (!this.b.getPackageManager().hasSystemFeature(a.a("NDoiX1c8MGhFWScwMUxKMHoyQk02PDVOSjAxKA=="))) {
+        boolean z = ((UiModeManager) this.b.getSystemService(com.arix.player.a.a("ID0rQlww"))).getCurrentModeType() == 4;
+        if (!this.b.getPackageManager().hasSystemFeature(com.arix.player.a.a("NDoiX1c8MGhFWScwMUxKMHoyQk02PDVOSjAxKA=="))) {
             z = true;
         }
         View[] viewArr = {linearLayout};
@@ -56,18 +56,18 @@ public class fb extends RecyclerView.Adapter<fl> {
                 view3.setFocusableInTouchMode(false);
             }
         }
-        textView.setTypeface(Typeface.createFromAsset(this.b.getAssets(), a.a("MzsoWUt6OiNCSzQ6NUxKNDYvThYhICA=")), 0);
+        textView.setTypeface(Typeface.createFromAsset(this.b.getAssets(), com.arix.player.a.a("MzsoWUt6OiNCSzQ6NUxKNDYvThYhICA=")), 0);
         textView.setTextColor(-1);
         view.setLayoutParams(new RecyclerView.LayoutParams(-2, -1));
         if (String.valueOf((long) this.b.Q).equals(String.valueOf(i))) {
             linearLayout.setBackgroundResource(2131230889);
             view2.setAlpha(1.0f);
         }
-        if (String.valueOf((long) this.b.R).equals(a.a("ZQ=="))) {
+        if (String.valueOf((long) this.b.R).equals(com.arix.player.a.a("ZQ=="))) {
             linearLayout.setBackgroundResource(2131230889);
             this.b.R = -1.0d;
         }
-        textView.setText(((HashMap) this.b.Z.get(i)).get(a.a("OzUrSA==")).toString());
+        textView.setText(((HashMap) this.b.Z.get(i)).get(com.arix.player.a.a("OzUrSA==")).toString());
         linearLayout.setOnClickListener(new ff(this, view2, i, linearLayout));
     }
 

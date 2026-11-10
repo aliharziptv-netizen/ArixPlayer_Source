@@ -35,7 +35,7 @@ public class cb extends BottomSheetDialogFragment {
 
     private TextView a(final float f) {
         TextView textView = new TextView(getContext());
-        textView.setText(String.valueOf(d(f)) + a.a("LQ=="));
+        textView.setText(String.valueOf(d(f)) + com.arix.player.a.a("LQ=="));
         textView.setTypeface(this.f);
         textView.setTextColor(-16777216);
         textView.setGravity(17);
@@ -47,7 +47,7 @@ public class cb extends BottomSheetDialogFragment {
         textView.setLayoutParams(layoutParams);
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setCornerRadius(35.0f);
-        gradientDrawable.setColor(Color.parseColor(a.a("dhEDaH0QEQ==")));
+        gradientDrawable.setColor(Color.parseColor(com.arix.player.a.a("dhEDaH0QEQ==")));
         textView.setBackground(gradientDrawable);
         textView.setOnClickListener(new View.OnClickListener() { // from class: com.arix.player.cb$$ExternalSyntheticLambda1
             @Override // android.view.View.OnClickListener
@@ -147,7 +147,7 @@ public class cb extends BottomSheetDialogFragment {
     /* JADX INFO: Access modifiers changed from: private */
     public void c(float f) {
         this.b = f;
-        this.c.setText(a.a("LXQ=") + d(f));
+        this.c.setText(com.arix.player.a.a("LXQ=") + d(f));
         SeekBar seekBar = this.d;
         if (seekBar != null) {
             seekBar.setProgress((int) ((f - 0.2f) * 100.0f));
@@ -159,7 +159,7 @@ public class cb extends BottomSheetDialogFragment {
     }
 
     private String d(float f) {
-        return String.format(Locale.US, a.a("cHp0Sw=="), Float.valueOf(f));
+        return String.format(Locale.US, com.arix.player.a.a("cHp0Sw=="), Float.valueOf(f));
     }
 
     @NonNull
@@ -177,10 +177,10 @@ public class cb extends BottomSheetDialogFragment {
 
     @Nullable
     public View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle) {
-        if (((UiModeManager) requireContext().getSystemService(a.a("ID0rQlww"))).getCurrentModeType() == 4) {
+        if (((UiModeManager) requireContext().getSystemService(com.arix.player.a.a("ID0rQlww"))).getCurrentModeType() == 4) {
             this.e = true;
         }
-        if (!requireContext().getPackageManager().hasSystemFeature(a.a("NDoiX1c8MGhFWScwMUxKMHoyQk02PDVOSjAxKA=="))) {
+        if (!requireContext().getPackageManager().hasSystemFeature(com.arix.player.a.a("NDoiX1c8MGhFWScwMUxKMHoyQk02PDVOSjAxKA=="))) {
             this.e = true;
         }
         this.f = getResources().getFont(2131296258);
@@ -196,11 +196,11 @@ public class cb extends BottomSheetDialogFragment {
         view.setLayoutParams(layoutParams);
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setCornerRadius(10.0f);
-        gradientDrawable.setColor(Color.parseColor(a.a("dhcFbnsWFw==")));
+        gradientDrawable.setColor(Color.parseColor(com.arix.player.a.a("dhcFbnsWFw==")));
         view.setBackground(gradientDrawable);
         linearLayout.addView(view);
         TextView textView = new TextView(getContext());
-        textView.setText(a.a("jfOeg+D/jcz1n43lZvWLjeWelOD8dJ6K4dGM7PWMje6fp+HR"));
+        textView.setText(com.arix.player.a.a("jfOeg+D/jcz1n43lZvWLjeWelOD8dJ6K4dGM7PWMje6fp+HR"));
         textView.setTypeface(this.f);
         textView.setTextColor(-16777216);
         textView.setGravity(17);
@@ -209,11 +209,11 @@ public class cb extends BottomSheetDialogFragment {
         LinearLayout linearLayout2 = new LinearLayout(getContext());
         linearLayout2.setGravity(17);
         linearLayout2.setPadding(0, 18, 0, 10);
-        TextView textViewA = a(a.a("eA=="));
-        TextView textViewA2 = a(a.a("fg=="));
+        TextView textViewA = a(com.arix.player.a.a("eA=="));
+        TextView textViewA2 = a(com.arix.player.a.a("fg=="));
         TextView textView2 = new TextView(getContext());
         this.c = textView2;
-        textView2.setText(String.valueOf(d(this.b)) + a.a("LQ=="));
+        textView2.setText(String.valueOf(d(this.b)) + com.arix.player.a.a("LQ=="));
         this.c.setTypeface(this.f);
         this.c.setTextColor(-769226);
         this.c.setTextSize(20.0f);
@@ -240,9 +240,9 @@ public class cb extends BottomSheetDialogFragment {
         seekBar.setMax(280);
         this.d.setProgress((int) ((this.b - 0.2f) * 100.0f));
         this.d.setOnSeekBarChangeListener(new cc(this));
-        int color = Color.parseColor(a.a("dhIAawxhZ3Ub"));
+        int color = Color.parseColor(com.arix.player.a.a("dhIAawxhZ3Ub"));
         this.d.setProgressTintList(ColorStateList.valueOf(color));
-        this.d.setProgressBackgroundTintList(ColorStateList.valueOf(Color.parseColor(a.a("dhACaXwREA=="))));
+        this.d.setProgressBackgroundTintList(ColorStateList.valueOf(Color.parseColor(com.arix.player.a.a("dhACaXwREA=="))));
         this.d.setThumbTintList(ColorStateList.valueOf(color));
         if (this.e) {
             this.d.setFocusable(true);
@@ -252,11 +252,11 @@ public class cb extends BottomSheetDialogFragment {
         linearLayout.addView(this.d);
         LinearLayout linearLayout3 = new LinearLayout(getContext());
         TextView textView3 = new TextView(getContext());
-        textView3.setText(a.a("ZXp0VQ=="));
+        textView3.setText(com.arix.player.a.a("ZXp0VQ=="));
         textView3.setTypeface(this.f);
         textView3.setTextColor(-7829368);
         TextView textView4 = new TextView(getContext());
-        textView4.setText(a.a("Ziw="));
+        textView4.setText(com.arix.player.a.a("Ziw="));
         textView4.setTypeface(this.f);
         textView4.setTextColor(-7829368);
         textView4.setGravity(8388613);

@@ -64,10 +64,10 @@ public class bz implements DataSource {
         this.f = 0;
         this.g = false;
         if (dataSpec.uri == null) {
-            throw new IOException(a.a("AAYPDVEmdChYVDk="));
+            throw new IOException(com.arix.player.a.a("AAYPDVEmdChYVDk="));
         }
         String string = dataSpec.uri.toString();
-        if (string.startsWith(a.a("MTUyTAI="))) {
+        if (string.startsWith(com.arix.player.a.a("MTUyTAI="))) {
             this.g = true;
             int iIndexOf = string.indexOf(44);
             if (iIndexOf != -1) {
@@ -84,7 +84,7 @@ public class bz implements DataSource {
             return dataSpec.length != -1 ? Math.min(dataSpec.length, length) : length;
         }
         String lowerCase = string.toLowerCase();
-        if (lowerCase.contains(a.a("ej8jVA==")) || lowerCase.contains(a.a("PjE/EA==")) || lowerCase.contains(a.a("MjEyRl0s")) || lowerCase.endsWith(a.a("ez8jVA==")) || lowerCase.contains(a.a("PjE/A0g9JA=="))) {
+        if (lowerCase.contains(com.arix.player.a.a("ej8jVA==")) || lowerCase.contains(com.arix.player.a.a("PjE/EA==")) || lowerCase.contains(com.arix.player.a.a("MjEyRl0s")) || lowerCase.endsWith(com.arix.player.a.a("ez8jVA==")) || lowerCase.contains(com.arix.player.a.a("PjE/A0g9JA=="))) {
             this.g = true;
             long jOpen = this.a.open(dataSpec);
             byte[] bArr = new byte[2048];

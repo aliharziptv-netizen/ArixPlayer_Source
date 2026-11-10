@@ -17,18 +17,18 @@ class an implements RadioGroup.OnCheckedChangeListener {
             if (this.a.e != null) {
                 this.a.e.setVisibility(8);
             }
-            this.a.X.setText(a.a("jfGfq+DhjOH1mXWNzvWVjNWelRiN85+p4OSM4fWQjeNm9Z+M0J+o4OGNx/WJ"));
+            this.a.X.setText(com.arix.player.a.a("jfGfq+DhjOH1mXWNzvWVjNWelRiN85+p4OSM4fWQjeNm9Z+M0J+o4OGNx/WJ"));
             this.a.ab.setVisibility(0);
             if (this.a.ae != null) {
-                this.a.ae.setText(a.a("jNGemeDyjPf0u439"));
+                this.a.ae.setText(com.arix.player.a.a("jNGemeDyjPf0u439"));
                 return;
             }
             return;
         }
-        this.a.X.setText(a.a("jNKemeDkdJ+l4P+NzvS8jN6eghiN5Z6K4P2M8Q3h3Y3M9ZB1jcP1kI3znpng5A=="));
+        this.a.X.setText(com.arix.player.a.a("jNKemeDkdJ+l4P+NzvS8jN6eghiN5Z6K4P2M8Q3h3Y3M9ZB1jcP1kI3znpng5A=="));
         this.a.ab.setVisibility(0);
         if (this.a.ae != null) {
-            this.a.ae.setText(a.a("jNGemeDyjPf0u439"));
+            this.a.ae.setText(com.arix.player.a.a("jNGemeDyjPf0u439"));
         }
         if (this.a.e != null) {
             this.a.e.setVisibility(0);

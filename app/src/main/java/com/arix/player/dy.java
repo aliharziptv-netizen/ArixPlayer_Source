@@ -28,8 +28,8 @@ class dy implements cj {
     public void a(String str, String str2, HashMap<String, Object> map) {
         Typeface font;
         try {
-            this.a.H = (HashMap) new Gson().fromJson(fa.a(a.a("ODUyTlA7OzE="), str2), new dz(this).getType());
-            if (a.a("bXp0Aw8=").equals(this.a.H.get(a.a("ICQiTEwwZw==")).toString())) {
+            this.a.H = (HashMap) new Gson().fromJson(fa.a(com.arix.player.a.a("ODUyTlA7OzE="), str2), new dz(this).getType());
+            if (com.arix.player.a.a("bXp0Aw8=").equals(this.a.H.get(com.arix.player.a.a("ICQiTEwwZw==")).toString())) {
                 return;
             }
             LinearLayout linearLayout = new LinearLayout(this.a);
@@ -42,7 +42,7 @@ class dy implements cj {
             GradientDrawable gradientDrawable = new GradientDrawable();
             gradientDrawable.setColor(-1);
             gradientDrawable.setCornerRadius(40.0f);
-            gradientDrawable.setStroke(2, Color.parseColor(a.a("dhEDaH0QEQ==")));
+            gradientDrawable.setStroke(2, Color.parseColor(com.arix.player.a.a("dhEDaH0QEQ==")));
             linearLayout2.setBackground(gradientDrawable);
             ImageView imageView = new ImageView(this.a);
             try {
@@ -59,7 +59,7 @@ class dy implements cj {
                 font = Typeface.DEFAULT;
             }
             TextView textView = new TextView(this.a);
-            textView.setText(a.a("jf6egOD6jcz1k3WM6vWXjN6eghiM0Z6H4d2Nx/WJ"));
+            textView.setText(com.arix.player.a.a("jf6egOD6jcz1k3WM6vWXjN6eghiM0Z6H4d2Nx/WJ"));
             textView.setTextSize(26.0f);
             textView.setTextColor(-16777216);
             textView.setTypeface(font, 1);
@@ -67,22 +67,22 @@ class dy implements cj {
             textView.setPadding(0, 0, 0, 30);
             linearLayout2.addView(textView);
             TextView textView2 = new TextView(this.a);
-            textView2.setText(a.a("jNKenuD7jO8N4PmM6fSyjfuehBiM0Z6H4d2Nx/WJjf1m9Z+M0J6P4dN1TPSyjeWegeHcdJ6K4dGM7PWVjfufp+D+dJ+p4dGM6/WNjNyfqRiN7Z+p4dx0no/g+4z3DeDyjcL0vYzRn6fg54zh9ZJ1jc71ko35np7h343A9Z+N/mb1n4zQno7g+ozh9Zl7"));
+            textView2.setText(com.arix.player.a.a("jNKenuD7jO8N4PmM6fSyjfuehBiM0Z6H4d2Nx/WJjf1m9Z+M0J6P4dN1TPSyjeWegeHcdJ6K4dGM7PWVjfufp+D+dJ+p4dGM6/WNjNyfqRiN7Z+p4dx0no/g+4z3DeDyjcL0vYzRn6fg54zh9ZJ1jc71ko35np7h343A9Z+N/mb1n4zQno7g+ozh9Zl7"));
             textView2.setTextSize(17.0f);
-            textView2.setTextColor(Color.parseColor(a.a("dmJ3GwljZQ==")));
+            textView2.setTextColor(Color.parseColor(com.arix.player.a.a("dmJ3GwljZQ==")));
             textView2.setTypeface(font);
             textView2.setGravity(17);
             textView2.setLineSpacing(10.0f, 1.2f);
             textView2.setPadding(0, 0, 0, 60);
             linearLayout2.addView(textView2);
             Button button = new Button(this.a);
-            button.setText(a.a("jf6egOD6jcz1k3WM4fS8jfafqw=="));
+            button.setText(com.arix.player.a.a("jf6egOD6jcz1k3WM4fS8jfafqw=="));
             button.setTextSize(19.0f);
-            button.setTextColor(Color.parseColor(a.a("dhIAGHpsFQJr")));
+            button.setTextColor(Color.parseColor(com.arix.player.a.a("dhIAGHpsFQJr")));
             button.setTypeface(font, 1);
             button.setAllCaps(false);
             GradientDrawable gradientDrawable2 = new GradientDrawable();
-            gradientDrawable2.setColor(Color.parseColor(a.a("dhIAbg8RFwNr")));
+            gradientDrawable2.setColor(Color.parseColor(com.arix.player.a.a("dhIAbg8RFwNr")));
             gradientDrawable2.setCornerRadius(30.0f);
             button.setBackground(gradientDrawable2);
             float f = this.a.getResources().getDisplayMetrics().density;

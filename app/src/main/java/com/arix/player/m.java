@@ -16,7 +16,7 @@ class m implements View.OnClickListener {
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         Intent intent = new Intent(this.a, (Class<?>) MainActivity.class);
-        intent.putExtra(a.a("EAwSf3kKBBRichAXEnJxEQ=="), this.b.b());
+        intent.putExtra(com.arix.player.a.a("EAwSf3kKBBRichAXEnJxEQ=="), this.b.b());
         this.a.startActivity(intent);
         this.a.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
     }

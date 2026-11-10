@@ -29,7 +29,7 @@ public class gb implements ParsingLoadable.Parser<DashManifest> {
         if (lowerCase.length() < 32) {
             return lowerCase;
         }
-        return String.valueOf(lowerCase.substring(0, 8)) + a.a("eA==") + lowerCase.substring(8, 12) + a.a("eA==") + lowerCase.substring(12, 16) + a.a("eA==") + lowerCase.substring(16, 20) + a.a("eA==") + lowerCase.substring(20, 32);
+        return String.valueOf(lowerCase.substring(0, 8)) + com.arix.player.a.a("eA==") + lowerCase.substring(8, 12) + com.arix.player.a.a("eA==") + lowerCase.substring(12, 16) + com.arix.player.a.a("eA==") + lowerCase.substring(16, 20) + com.arix.player.a.a("eA==") + lowerCase.substring(20, 32);
     }
 
     private static byte[] a(byte[] bArr) {
@@ -58,16 +58,16 @@ public class gb implements ParsingLoadable.Parser<DashManifest> {
 
     /* JADX INFO: renamed from: a, reason: merged with bridge method [inline-methods] */
     public DashManifest parse(Uri uri, InputStream inputStream) {
-        String next = new Scanner(inputStream, a.a("AAAAAAA=")).useDelimiter(a.a("CRU=")).next();
-        Matcher matcher = Pattern.compile(a.a("MTEgTE05IBlmcRFpZAVjC3YbBhF3"), 2).matcher(next);
+        String next = new Scanner(inputStream, com.arix.player.a.a("AAAAAAA=")).useDelimiter(com.arix.player.a.a("CRU=")).next();
+        Matcher matcher = Pattern.compile(com.arix.player.a.a("MTEgTE05IBlmcRFpZAVjC3YbBhF3"), 2).matcher(next);
         String strGroup = matcher.find() ? matcher.group(1) : null;
         if (strGroup == null) {
             String str = this.a;
-            strGroup = a((str == null || !str.contains(a.a("bw=="))) ? a.a("ZWR2HQhlZHYdCGVkdh0IZWR2HQhlZHYdCGVkdh0IZWQ=") : this.a.split(a.a("bw=="))[0].trim());
+            strGroup = a((str == null || !str.contains(com.arix.player.a.a("bw=="))) ? com.arix.player.a.a("ZWR2HQhlZHYdCGVkdh0IZWR2HQhlZHYdCGVkdh0IZWQ=") : this.a.split(com.arix.player.a.a("bw=="))[0].trim());
         }
-        String str2 = a.a("aRcpQ0wwOjJ9SjogI05MPDsoDUs2PCNAXRwwE19RaHYzX1ZvOTZIX28wJ15Qbzk2GUgnOzJIWyE9KUMCZ2R3HBp1IidBTTBpZE5dOzdkDVwwMidYVCELDWR8aHY=") + strGroup + a.a("d3t4") + a.a("aRcpQ0wwOjJ9SjogI05MPDsoDUs2PCNAXRwwE19RaHYzX1ZvITNEXG8xdBoJbDBzFRU0bX4YFTdnJRQVYmx3TBU3ZHUdWTNjfkkLZTFkEw==") + a.a("aTcjQ1tvJDVeUHUsK0FWJm4lSFY2aWRYSjtuK11dMm4lSFY2bnQdCWZ2eA==") + Base64.encodeToString(a(b(strGroup.replace(a.a("eA=="), ""))), 2) + a.a("aXslSFY2bjZeSz1qegJ7OjoySFYhBDRCTDA3MkRXO2o=");
-        if (!next.contains(a.a("ICYoF00gPSIXXWdjdxRcYGxrTAFtYWtPCzZtaxoAZDVrTwhmZCdLD20wdR1d"))) {
-            next = next.replaceAll(a.a("fWsvBBBpFSJMSCE1MkRXOwcjWWMLahsHBnw="), a.a("cWVM") + Matcher.quoteReplacement(str2));
+        String str2 = com.arix.player.a.a("aRcpQ0wwOjJ9SjogI05MPDsoDUs2PCNAXRwwE19RaHYzX1ZvOTZIX28wJ15Qbzk2GUgnOzJIWyE9KUMCZ2R3HBp1IidBTTBpZE5dOzdkDVwwMidYVCELDWR8aHY=") + strGroup + com.arix.player.a.a("d3t4") + com.arix.player.a.a("aRcpQ0wwOjJ9SjogI05MPDsoDUs2PCNAXRwwE19RaHYzX1ZvITNEXG8xdBoJbDBzFRU0bX4YFTdnJRQVYmx3TBU3ZHUdWTNjfkkLZTFkEw==") + com.arix.player.a.a("aTcjQ1tvJDVeUHUsK0FWJm4lSFY2aWRYSjtuK11dMm4lSFY2bnQdCWZ2eA==") + Base64.encodeToString(a(b(strGroup.replace(com.arix.player.a.a("eA=="), ""))), 2) + com.arix.player.a.a("aXslSFY2bjZeSz1qegJ7OjoySFYhBDRCTDA3MkRXO2o=");
+        if (!next.contains(com.arix.player.a.a("ICYoF00gPSIXXWdjdxRcYGxrTAFtYWtPCzZtaxoAZDVrTwhmZCdLD20wdR1d"))) {
+            next = next.replaceAll(com.arix.player.a.a("fWsvBBBpFSJMSCE1MkRXOwcjWWMLahsHBnw="), com.arix.player.a.a("cWVM") + Matcher.quoteReplacement(str2));
         }
         return this.b.parse(uri, new ByteArrayInputStream(next.getBytes(StandardCharsets.UTF_8)));
     }

@@ -27,7 +27,7 @@ class v implements View.OnClickListener {
     public void onClick(View view) {
         String strTrim = this.b.getText().toString().trim();
         if (strTrim.isEmpty()) {
-            i.c(this.a, a.a("jN6enOD5jc8N4PCM6fWWjfOfqRiN95+lGIzQnpjh13SenODyjO71j3WM4fS8jNyfp+D9"));
+            com.arix.player.i.c(this.a, com.arix.player.a.a("jN6enOD5jc8N4PCM6fWWjfOfqRiN95+lGIzQnpjh13SenODyjO71j3WM4fS8jNyfp+D9"));
         } else {
             this.a.a(strTrim, this.c, this.d, this.e, this.f);
         }

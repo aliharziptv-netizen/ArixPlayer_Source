@@ -71,9 +71,9 @@ public final class a extends BottomSheetDialogFragment {
     private String a(Format format) {
         String str;
         StringBuilder sb = new StringBuilder();
-        sb.append((format.language == null || format.language.isEmpty()) ? a.a("jfOfqeDgjc71kg==") : a(format.language));
+        sb.append((format.language == null || format.language.isEmpty()) ? com.arix.player.a.a("jfOfqeDgjc71kg==") : a(format.language));
         if (format.channelCount > 0) {
-            sb.append(a.a("dXlm"));
+            sb.append(com.arix.player.a.a("dXlm"));
             int i = format.channelCount;
             if (i == 1) {
                 str = "GDsoQg==";
@@ -87,17 +87,17 @@ public final class a extends BottomSheetDialogFragment {
             } else {
                 str = "Ynp3DWsgJjRCTTsw";
             }
-            sb.append(a.a(str));
+            sb.append(com.arix.player.a.a(str));
         }
         if (format.sampleRate > 0) {
-            sb.append(a.a("dbbGjxg="));
+            sb.append(com.arix.player.a.a("dbbGjxg="));
             sb.append(format.sampleRate / 1000);
-            sb.append(a.a("Phw8"));
+            sb.append(com.arix.player.a.a("Phw8"));
         }
         if (format.bitrate > 0) {
-            sb.append(a.a("dbbGjxg="));
+            sb.append(com.arix.player.a.a("dbbGjxg="));
             sb.append(format.bitrate / 1000);
-            sb.append(a.a("PjY2Xg=="));
+            sb.append(com.arix.player.a.a("PjY2Xg=="));
         }
         return sb.toString();
     }
@@ -111,87 +111,87 @@ public final class a extends BottomSheetDialogFragment {
         String lowerCase = str.toLowerCase();
         int iHashCode = lowerCase.hashCode();
         if (iHashCode == 3121) {
-            if (lowerCase.equals(a.a("NCY="))) {
+            if (lowerCase.equals(com.arix.player.a.a("NCY="))) {
                 str2 = "jfOfqeDsjPf1kIzenoQ=";
-                return a.a(str2);
+                return com.arix.player.a.a(str2);
             }
             if (displayLanguage == null) {
                 return str;
             }
         }
         if (iHashCode == 3201) {
-            if (lowerCase.equals(a.a("MTE="))) {
+            if (lowerCase.equals(com.arix.player.a.a("MTE="))) {
                 str2 = "ETEzWUs2PA==";
-                return a.a(str2);
+                return com.arix.player.a.a(str2);
             }
             if (displayLanguage == null) {
                 return str;
             }
         }
         if (iHashCode == 3241) {
-            if (lowerCase.equals(a.a("MDo="))) {
+            if (lowerCase.equals(com.arix.player.a.a("MDo="))) {
                 str2 = "EDohQVEmPA==";
-                return a.a(str2);
+                return com.arix.player.a.a(str2);
             }
             if (displayLanguage == null) {
                 return str;
             }
         }
         if (iHashCode == 3246) {
-            if (lowerCase.equals(a.a("MCc="))) {
+            if (lowerCase.equals(com.arix.player.a.a("MCc="))) {
                 str2 = "ECc2TPvkOyo=";
-                return a.a(str2);
+                return com.arix.player.a.a(str2);
             }
             if (displayLanguage == null) {
                 return str;
             }
         }
         if (iHashCode == 3276) {
-            if (lowerCase.equals(a.a("MyY="))) {
+            if (lowerCase.equals(com.arix.player.a.a("MyY="))) {
                 str2 = "EyYnQ/vyNS9e";
-                return a.a(str2);
+                return com.arix.player.a.a(str2);
             }
             if (displayLanguage == null) {
                 return str;
             }
         }
         if (iHashCode == 3371) {
-            if (lowerCase.equals(a.a("PCA="))) {
+            if (lowerCase.equals(com.arix.player.a.a("PCA="))) {
                 str2 = "HCAnQVE0Oik=";
-                return a.a(str2);
+                return com.arix.player.a.a(str2);
             }
             if (displayLanguage == null) {
                 return str;
             }
         }
         if (iHashCode == 3383) {
-            if (lowerCase.equals(a.a("PzU="))) {
+            if (lowerCase.equals(com.arix.player.a.a("PzU="))) {
                 str2 = "s8Pjy6T5vOyz";
-                return a.a(str2);
+                return com.arix.player.a.a(str2);
             }
             if (displayLanguage == null) {
                 return str;
             }
         }
         if (iHashCode == 3428) {
-            if (lowerCase.equals(a.a("Pjs="))) {
+            if (lowerCase.equals(com.arix.player.a.a("Pjs="))) {
                 str2 = "uMHax434uNCZ";
-                return a.a(str2);
+                return com.arix.player.a.a(str2);
             }
             if (displayLanguage == null) {
                 return str;
             }
         }
         if (iHashCode != 3651) {
-            if (iHashCode == 3886 && lowerCase.equals(a.a("Lzw="))) {
+            if (iHashCode == 3886 && lowerCase.equals(com.arix.player.a.a("Lzw="))) {
                 str2 = "sezry67S";
-                return a.a(str2);
+                return com.arix.player.a.a(str2);
             }
             return (displayLanguage == null || displayLanguage.isEmpty()) ? str : displayLanguage;
         }
-        if (lowerCase.equals(a.a("JyE="))) {
+        if (lowerCase.equals(com.arix.player.a.a("JyE="))) {
             str2 = "hfSXrunUhcf9goXslpQ=";
-            return a.a(str2);
+            return com.arix.player.a.a(str2);
         }
         if (displayLanguage == null) {
             return str;
@@ -247,7 +247,7 @@ public final class a extends BottomSheetDialogFragment {
         }
         linearLayout.removeAllViews();
         boolean z = this.d.isEmpty() && !this.e;
-        a(linearLayout, a.a("FCEyQhh9jOz0vIzWnorg843MBA=="), z, new View.OnClickListener() { // from class: com.arix.player.a$$ExternalSyntheticLambda0
+        a(linearLayout, com.arix.player.a.a("FCEyQhh9jOz0vIzWnorg843MBA=="), z, new View.OnClickListener() { // from class: com.arix.player.a$$ExternalSyntheticLambda0
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
                 this.f$0.a(view);
@@ -302,7 +302,7 @@ public final class a extends BottomSheetDialogFragment {
         if (z) {
             gradientDrawable.setStroke(2, -769226);
         } else {
-            gradientDrawable.setStroke(1, Color.parseColor(a.a("dhEDaH0QEQ==")));
+            gradientDrawable.setStroke(1, Color.parseColor(com.arix.player.a.a("dhEDaH0QEQ==")));
         }
         linearLayout2.setBackground(gradientDrawable);
         linearLayout2.setClickable(true);
@@ -310,7 +310,7 @@ public final class a extends BottomSheetDialogFragment {
             linearLayout2.setFocusable(true);
             linearLayout2.setFocusableInTouchMode(true);
             try {
-                int identifier = getResources().getIdentifier(a.a("ISIZWVcgNy5ySzA4I05MOiZ0"), a.a("MSYnWlk3OCM="), requireContext().getPackageName());
+                int identifier = getResources().getIdentifier(com.arix.player.a.a("ISIZWVcgNy5ySzA4I05MOiZ0"), com.arix.player.a.a("MSYnWlk3OCM="), requireContext().getPackageName());
                 if (identifier != 0) {
                     linearLayout2.setBackgroundResource(identifier);
                 }
@@ -323,7 +323,7 @@ public final class a extends BottomSheetDialogFragment {
         linearLayout2.setOnClickListener(new View.OnClickListener() { // from class: com.arix.player.a$$ExternalSyntheticLambda3
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                a.a(onClickListener, view);
+                com.arix.player.a.a(onClickListener, view);
             }
         });
         TextView textView = new TextView(getContext());
@@ -344,9 +344,9 @@ public final class a extends BottomSheetDialogFragment {
             } else {
                 str2 = eVar.f == 2 ? "pcvIisjK2vM=" : "pcvIig==";
             }
-            textView2.setText(a.a(str2));
+            textView2.setText(com.arix.player.a.a(str2));
             textView2.setTextSize(12.0f);
-            textView2.setTextColor(z ? -769226 : Color.parseColor(a.a("dm1/FAFsbQ==")));
+            textView2.setTextColor(z ? -769226 : Color.parseColor(com.arix.player.a.a("dm1/FAFsbQ==")));
             linearLayout2.addView(textView2);
         }
         linearLayout.addView(linearLayout2);
@@ -389,10 +389,10 @@ public final class a extends BottomSheetDialogFragment {
 
     @Nullable
     public View onCreateView(@NonNull LayoutInflater layoutInflater, @Nullable ViewGroup viewGroup, @Nullable Bundle bundle) {
-        if (((UiModeManager) requireContext().getSystemService(a.a("ID0rQlww"))).getCurrentModeType() == 4) {
+        if (((UiModeManager) requireContext().getSystemService(com.arix.player.a.a("ID0rQlww"))).getCurrentModeType() == 4) {
             this.h = true;
         }
-        if (!requireContext().getPackageManager().hasSystemFeature(a.a("NDoiX1c8MGhFWScwMUxKMHoyQk02PDVOSjAxKA=="))) {
+        if (!requireContext().getPackageManager().hasSystemFeature(com.arix.player.a.a("NDoiX1c8MGhFWScwMUxKMHoyQk02PDVOSjAxKA=="))) {
             this.h = true;
         }
         LinearLayout linearLayout = new LinearLayout(getContext());
@@ -403,7 +403,7 @@ public final class a extends BottomSheetDialogFragment {
             try {
                 g = getResources().getFont(2131296258);
             } catch (Exception unused) {
-                g = Typeface.create(a.a("JjUoXhUmMTREXg=="), 0);
+                g = Typeface.create(com.arix.player.a.a("JjUoXhUmMTREXg=="), 0);
             }
         }
         LinearLayout linearLayout2 = new LinearLayout(getContext());
@@ -419,7 +419,7 @@ public final class a extends BottomSheetDialogFragment {
         GradientDrawable gradientDrawable = new GradientDrawable();
         gradientDrawable.setShape(0);
         gradientDrawable.setCornerRadius(8.0f);
-        gradientDrawable.setColor(Color.parseColor(a.a("dhcFbnsWFw==")));
+        gradientDrawable.setColor(Color.parseColor(com.arix.player.a.a("dhcFbnsWFw==")));
         view.setBackground(gradientDrawable);
         linearLayout2.addView(view);
         linearLayout.addView(linearLayout2);
@@ -427,7 +427,7 @@ public final class a extends BottomSheetDialogFragment {
         LinearLayout.LayoutParams layoutParams3 = new LinearLayout.LayoutParams(-1, -2);
         layoutParams3.setMargins(5, 5, 5, 12);
         textView.setLayoutParams(layoutParams3);
-        textView.setText(a.a("jfOeg+D/jPcN4PmNzvWXjf1m9Z+M0J6Y4d2M7A=="));
+        textView.setText(com.arix.player.a.a("jfOeg+D/jPcN4PmNzvWXjf1m9Z+M0J6Y4d2M7A=="));
         textView.setTextColor(-13421773);
         textView.setTextSize(15.0f);
         textView.setTypeface(g, 1);
@@ -437,7 +437,7 @@ public final class a extends BottomSheetDialogFragment {
         LinearLayout.LayoutParams layoutParams4 = new LinearLayout.LayoutParams(-1, 1);
         layoutParams4.setMargins(10, 0, 10, 12);
         view2.setLayoutParams(layoutParams4);
-        view2.setBackgroundColor(Color.parseColor(a.a("dhF2aAgQZA==")));
+        view2.setBackgroundColor(Color.parseColor(com.arix.player.a.a("dhF2aAgQZA==")));
         linearLayout.addView(view2);
         View nestedScrollView = new NestedScrollView(getContext());
         nestedScrollView.setLayoutParams(new LinearLayout.LayoutParams(-1, -2));

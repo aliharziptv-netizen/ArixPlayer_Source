@@ -36,7 +36,7 @@ class s implements View.OnClickListener {
         EditText editText = this.b;
         String strTrim = editText != null ? editText.getText().toString().trim() : "";
         if (strTrim.isEmpty()) {
-            i.c(this.a, a.a("jN6enOD5jc8N4PCM6fWWjfOfqRiN5Z6K4P2M8Q3g8o3C9ZCN/w=="));
+            com.arix.player.i.c(this.a, com.arix.player.a.a("jN6enOD5jc8N4PCM6fWWjfOfqRiN5Z6K4P2M8Q3g8o3C9ZCN/w=="));
             EditText editText2 = this.b;
             if (editText2 != null) {
                 editText2.requestFocus();
@@ -47,7 +47,7 @@ class s implements View.OnClickListener {
         EditText editText3 = this.c;
         String strTrim2 = editText3 != null ? editText3.getText().toString().trim() : "";
         if (strTrim2.isEmpty()) {
-            strTrim2 = a.a("jfyehhiM0Z6F4PKM8vWJ");
+            strTrim2 = com.arix.player.a.a("jfyehhiM0Z6F4PKM8vWJ");
         }
         EditText editText4 = this.d;
         String strTrim3 = editText4 != null ? editText4.getText().toString().trim() : "";
@@ -61,18 +61,18 @@ class s implements View.OnClickListener {
         String strTrim7 = editText8 != null ? editText8.getText().toString().trim() : "";
         try {
             JSONObject jSONObject = new JSONObject();
-            jSONObject.put(a.a("OzUrSA=="), strTrim2);
-            jSONObject.put(a.a("ICYq"), strTrim);
-            jSONObject.put(a.a("ICcjX1kyMShZ"), strTrim3);
-            jSONObject.put(a.a("JzEgSEowJg=="), strTrim4);
-            jSONObject.put(a.a("OiYvSlE7"), strTrim5);
-            jSONObject.put(a.a("NjspRlEw"), strTrim6);
-            jSONObject.put(a.a("MSYrRl0s"), strTrim7);
+            jSONObject.put(com.arix.player.a.a("OzUrSA=="), strTrim2);
+            jSONObject.put(com.arix.player.a.a("ICYq"), strTrim);
+            jSONObject.put(com.arix.player.a.a("ICcjX1kyMShZ"), strTrim3);
+            jSONObject.put(com.arix.player.a.a("JzEgSEowJg=="), strTrim4);
+            jSONObject.put(com.arix.player.a.a("OiYvSlE7"), strTrim5);
+            jSONObject.put(com.arix.player.a.a("NjspRlEw"), strTrim6);
+            jSONObject.put(com.arix.player.a.a("MSYrRl0s"), strTrim7);
             JSONArray jSONArray = new JSONArray();
             jSONArray.put(jSONObject);
             String strA = h.a(jSONArray.toString());
             if (strA == null) {
-                i.c(this.a, a.a("jNWemeHRdJ6H4OGNx/SyjeVm9ZCM3p6K4dOM4fWSdYzh9LyN5Z6K4P2M8Q=="));
+                com.arix.player.i.c(this.a, com.arix.player.a.a("jNWemeHRdJ6H4OGNx/SyjeVm9ZCM3p6K4dOM4fWSdYzh9LyN5Z6K4P2M8Q=="));
                 return;
             }
             Intent uri = Intent.parseUri(h.c(strA), 1);
@@ -80,7 +80,7 @@ class s implements View.OnClickListener {
             this.a.startActivity(uri);
             this.i.dismiss();
         } catch (Throwable unused) {
-            i.c(this.a, a.a("jf6elODljPcN4P+M8vWCjN6fqRiN85+p4OSM4fWQjeNm9LmM3mb1n4zQn6jg4Yz89Lw="));
+            com.arix.player.i.c(this.a, com.arix.player.a.a("jf6elODljPcN4P+M8vWCjN6fqRiN85+p4OSM4fWQjeNm9LmM3mb1n4zQn6jg4Yz89Lw="));
         }
     }
 }

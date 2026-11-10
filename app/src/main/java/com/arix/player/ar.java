@@ -14,6 +14,6 @@ class ar implements View.OnClickListener {
     public void onClick(View view) {
         this.a.g();
         this.a.C.requestFocus();
-        i.a(this.a, a.a("jf6fqBiN/p+s4OSNzPWCdYzh9LyN+Z+v4d2Nwg3h3Yzq9Z+M056fGIzQnojg44zh9LmN/Wb0uozSnorg/HSegeD6jcz1l439"));
+        i.a(this.a, com.arix.player.a.a("jf6fqBiN/p+s4OSNzPWCdYzh9LyN+Z+v4d2Nwg3h3Yzq9Z+M056fGIzQnojg44zh9LmN/Wb0uozSnorg/HSegeD6jcz1l439"));
     }
 }

@@ -83,7 +83,7 @@ public class SplashActivity extends Activity {
             }
         });
         setContentView(2131558431);
-        k.a(this, getWindow().getDecorView());
+        com.arix.player.k.a(this, getWindow().getDecorView());
         this.a = (FrameLayout) findViewById(2131362201);
         this.b = (TextView) findViewById(2131362570);
         this.c = (TextView) findViewById(2131362569);

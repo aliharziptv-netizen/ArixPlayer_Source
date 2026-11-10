@@ -21,7 +21,7 @@ class dq implements View.OnClickListener {
     public void onClick(View view) {
         this.a.c();
         this.a.e = true;
-        a.a((Player) this.a.a, new DialogInterface.OnDismissListener() { // from class: com.arix.player.dq$$ExternalSyntheticLambda0
+        com.arix.player.a.a((Player) this.a.a, new DialogInterface.OnDismissListener() { // from class: com.arix.player.dq$$ExternalSyntheticLambda0
             @Override // android.content.DialogInterface.OnDismissListener
             public final void onDismiss(DialogInterface dialogInterface) {
                 this.f$0.a(dialogInterface);

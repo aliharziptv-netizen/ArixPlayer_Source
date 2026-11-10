@@ -9,14 +9,14 @@ import org.json.JSONArray;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class di {
-    private static final String a = a.a("NCYvVWc5PShGXScLNVlXJzUhSA==");
-    private static final String b = a.a("JjUwSFwKJDRCUjA3Ml4=");
+    private static final String a = com.arix.player.a.a("NCYvVWc5PShGXScLNVlXJzUhSA==");
+    private static final String b = com.arix.player.a.a("JjUwSFwKJDRCUjA3Ml4=");
 
     public static synchronized List<ch> a(Context context) {
         ArrayList arrayList;
         arrayList = new ArrayList();
         try {
-            JSONArray jSONArray = new JSONArray(b(context).getString(b, a.a("Dgk=")));
+            JSONArray jSONArray = new JSONArray(b(context).getString(b, com.arix.player.a.a("Dgk=")));
             for (int i = 0; i < jSONArray.length(); i++) {
                 ch chVarA = ch.a(jSONArray.getJSONObject(i));
                 if (chVarA != null) {

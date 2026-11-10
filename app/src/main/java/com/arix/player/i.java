@@ -31,7 +31,7 @@ public class i {
                 imageView.setImageResource(i);
                 imageView.setColorFilter(i2);
             }
-            k.a(context, viewInflate);
+            com.arix.player.k.a(context, viewInflate);
             toast.setView(viewInflate);
             toast.setGravity(81, 0, 120);
             toast.show();

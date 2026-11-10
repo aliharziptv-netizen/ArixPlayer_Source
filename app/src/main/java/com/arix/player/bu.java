@@ -41,7 +41,7 @@ public class bu {
         ConnectivityManager connectivityManager;
         String strA;
         String str;
-        if (f && Build.VERSION.SDK_INT >= 23 && (connectivityManager = (ConnectivityManager) activity.getSystemService(a.a("NjsoQ102IC9bUSEt"))) != null) {
+        if (f && Build.VERSION.SDK_INT >= 23 && (connectivityManager = (ConnectivityManager) activity.getSystemService(com.arix.player.a.a("NjsoQ102IC9bUSEt"))) != null) {
             for (Network network : connectivityManager.getAllNetworks()) {
                 NetworkCapabilities networkCapabilities = connectivityManager.getNetworkCapabilities(network);
                 if (networkCapabilities != null && !networkCapabilities.hasTransport(4) && networkCapabilities.hasCapability(12)) {
@@ -51,23 +51,23 @@ public class bu {
             }
             Network network2 = d;
             if (network2 == null) {
-                strA = a.a("BhEFeGocAB8=");
+                strA = com.arix.player.a.a("BhEFeGocAB8=");
                 str = "GztmSVEnMSVZGDsxMlpXJz9mS1cgOiI=";
             } else if (connectivityManager.bindProcessToNetwork(network2)) {
-                Log.d(a.a("BhEFeGocAB8="), a.a("FzszQ1x1ICkNXDwmI05MdTojWU86Ji0NEDs7ZntoG30="));
+                Log.d(com.arix.player.a.a("BhEFeGocAB8="), com.arix.player.a.a("FzszQ1x1ICkNXDwmI05MdTojWU86Ji0NEDs7ZntoG30="));
                 return;
             } else {
-                strA = a.a("BhEFeGocAB8=");
+                strA = com.arix.player.a.a("BhEFeGocAB8=");
                 str = "EzUvQV0xdDJCGDc9KEkYITtmSVEnMSVZGDsxMlpXJz8=";
             }
-            Log.w(strA, a.a(str));
+            Log.w(strA, com.arix.player.a.a(str));
         }
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     public static void b(Activity activity, Network network) {
         ConnectivityManager connectivityManager;
-        if (f && (connectivityManager = (ConnectivityManager) activity.getSystemService(a.a("NjsoQ102IC9bUSEt"))) != null) {
+        if (f && (connectivityManager = (ConnectivityManager) activity.getSystemService(com.arix.player.a.a("NjsoQ102IC9bUSEt"))) != null) {
             NetworkCapabilities networkCapabilities = connectivityManager.getNetworkCapabilities(network);
             if (networkCapabilities != null && networkCapabilities.hasTransport(4)) {
                 g();
@@ -83,7 +83,7 @@ public class bu {
 
     private static void c(Activity activity) {
         ConnectivityManager connectivityManager;
-        if (f && Build.VERSION.SDK_INT >= 23 && c == null && (connectivityManager = (ConnectivityManager) activity.getSystemService(a.a("NjsoQ102IC9bUSEt"))) != null) {
+        if (f && Build.VERSION.SDK_INT >= 23 && c == null && (connectivityManager = (ConnectivityManager) activity.getSystemService(com.arix.player.a.a("NjsoQ102IC9bUSEt"))) != null) {
             c = new bw(activity);
             connectivityManager.registerNetworkCallback(new NetworkRequest.Builder().addCapability(12).build(), c);
         }
@@ -102,7 +102,7 @@ public class bu {
         ConnectivityManager connectivityManager;
         Network activeNetwork;
         NetworkCapabilities networkCapabilities;
-        return a == null || Build.VERSION.SDK_INT < 23 || (connectivityManager = (ConnectivityManager) a.getSystemService(a.a("NjsoQ102IC9bUSEt"))) == null || (activeNetwork = connectivityManager.getActiveNetwork()) == null || (networkCapabilities = connectivityManager.getNetworkCapabilities(activeNetwork)) == null || !networkCapabilities.hasTransport(4);
+        return a == null || Build.VERSION.SDK_INT < 23 || (connectivityManager = (ConnectivityManager) a.getSystemService(com.arix.player.a.a("NjsoQ102IC9bUSEt"))) == null || (activeNetwork = connectivityManager.getActiveNetwork()) == null || (networkCapabilities = connectivityManager.getNetworkCapabilities(activeNetwork)) == null || !networkCapabilities.hasTransport(4);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -112,7 +112,7 @@ public class bu {
             return;
         }
         e = true;
-        Toast.makeText(a, a.a("jf6fqBiN85+u4P+M8vWfjNVme2gb"), 0).show();
+        Toast.makeText(a, com.arix.player.a.a("jf6fqBiN85+u4P+M8vWfjNVme2gb"), 0).show();
         a.finish();
     }
 }

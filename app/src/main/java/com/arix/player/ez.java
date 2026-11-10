@@ -15,9 +15,9 @@ class ez implements View.OnClickListener {
     public void onClick(View view) {
         this.a.c();
         try {
-            this.a.startActivityForResult(new Intent(a.a("NDoiX1c8MGheXSEgL0NfJnoFbGsBCxVobAEdCGpr")), 0);
+            this.a.startActivityForResult(new Intent(com.arix.player.a.a("NDoiX1c8MGheXSEgL0NfJnoFbGsBCxVobAEdCGpr")), 0);
         } catch (Exception unused) {
-            ct.a(this.a.getApplicationContext(), a.a("GzsyRVE7Mw=="));
+            ct.a(this.a.getApplicationContext(), com.arix.player.a.a("GzsyRVE7Mw=="));
         }
     }
 }

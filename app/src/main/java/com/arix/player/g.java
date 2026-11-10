@@ -39,25 +39,25 @@ public class g implements Serializable {
             return null;
         }
         g gVar = new g();
-        gVar.a(jSONObject.optString(a.a("OzUrSA=="), ""));
-        gVar.b(jSONObject.optString(a.a("ICYq"), ""));
-        gVar.c(jSONObject.optString(a.a("ICcjX1kyMShZ"), ""));
-        gVar.d(jSONObject.optString(a.a("JzEgSEowJg=="), ""));
-        gVar.e(jSONObject.optString(a.a("OiYvSlE7"), ""));
-        gVar.f(jSONObject.optString(a.a("NjspRlEw"), ""));
-        gVar.g(jSONObject.optString(a.a("MSYrRl0s"), ""));
+        gVar.a(jSONObject.optString(com.arix.player.a.a("OzUrSA=="), ""));
+        gVar.b(jSONObject.optString(com.arix.player.a.a("ICYq"), ""));
+        gVar.c(jSONObject.optString(com.arix.player.a.a("ICcjX1kyMShZ"), ""));
+        gVar.d(jSONObject.optString(com.arix.player.a.a("JzEgSEowJg=="), ""));
+        gVar.e(jSONObject.optString(com.arix.player.a.a("OiYvSlE7"), ""));
+        gVar.f(jSONObject.optString(com.arix.player.a.a("NjspRlEw"), ""));
+        gVar.g(jSONObject.optString(com.arix.player.a.a("MSYrRl0s"), ""));
         return gVar;
     }
 
     public JSONObject a() throws JSONException {
         JSONObject jSONObject = new JSONObject();
-        jSONObject.put(a.a("OzUrSA=="), this.a);
-        jSONObject.put(a.a("ICYq"), this.b);
-        jSONObject.put(a.a("ICcjX1kyMShZ"), this.c);
-        jSONObject.put(a.a("OiYvSlE7"), this.e);
-        jSONObject.put(a.a("JzEgSEowJg=="), this.d);
-        jSONObject.put(a.a("MSYrRl0s"), this.g);
-        jSONObject.put(a.a("NjspRlEw"), this.f);
+        jSONObject.put(com.arix.player.a.a("OzUrSA=="), this.a);
+        jSONObject.put(com.arix.player.a.a("ICYq"), this.b);
+        jSONObject.put(com.arix.player.a.a("ICcjX1kyMShZ"), this.c);
+        jSONObject.put(com.arix.player.a.a("OiYvSlE7"), this.e);
+        jSONObject.put(com.arix.player.a.a("JzEgSEowJg=="), this.d);
+        jSONObject.put(com.arix.player.a.a("MSYrRl0s"), this.g);
+        jSONObject.put(com.arix.player.a.a("NjspRlEw"), this.f);
         return jSONObject;
     }
 

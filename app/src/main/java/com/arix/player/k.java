@@ -20,7 +20,7 @@ public class k {
             return typeface;
         }
         try {
-            Typeface typefaceCreateFromAsset = Typeface.createFromAsset(context.getAssets(), a.a("MzsoWUt6NydESjp6Mlle"));
+            Typeface typefaceCreateFromAsset = Typeface.createFromAsset(context.getAssets(), com.arix.player.a.a("MzsoWUt6NydESjp6Mlle"));
             a = typefaceCreateFromAsset;
             if (typefaceCreateFromAsset != null) {
                 return typefaceCreateFromAsset;
@@ -28,7 +28,7 @@ public class k {
         } catch (Throwable unused) {
         }
         try {
-            Typeface typefaceCreateFromAsset2 = Typeface.createFromAsset(context.getAssets(), a.a("NjUvX1d7IDJL"));
+            Typeface typefaceCreateFromAsset2 = Typeface.createFromAsset(context.getAssets(), com.arix.player.a.a("NjUvX1d7IDJL"));
             a = typefaceCreateFromAsset2;
             if (typefaceCreateFromAsset2 != null) {
                 return typefaceCreateFromAsset2;
@@ -37,7 +37,7 @@ public class k {
         }
         if (Build.VERSION.SDK_INT >= 26) {
             try {
-                int identifier = context.getResources().getIdentifier(a.a("NjUvX1c="), a.a("MzsoWQ=="), context.getPackageName());
+                int identifier = context.getResources().getIdentifier(com.arix.player.a.a("NjUvX1c="), com.arix.player.a.a("MzsoWQ=="), context.getPackageName());
                 if (identifier != 0) {
                     Typeface font = context.getResources().getFont(identifier);
                     a = font;
@@ -49,9 +49,9 @@ public class k {
             }
         }
         try {
-            int identifier2 = context.getResources().getIdentifier(a.a("NjUvX1c="), a.a("MzsoWQ=="), context.getPackageName());
+            int identifier2 = context.getResources().getIdentifier(com.arix.player.a.a("NjUvX1c="), com.arix.player.a.a("MzsoWQ=="), context.getPackageName());
             if (identifier2 != 0) {
-                File file = new File(context.getCacheDir(), a.a("NjUvX1cKNTZdFiEgIA=="));
+                File file = new File(context.getCacheDir(), com.arix.player.a.a("NjUvX1cKNTZdFiEgIA=="));
                 if (!file.exists() || file.length() == 0) {
                     InputStream inputStreamOpenRawResource = context.getResources().openRawResource(identifier2);
                     FileOutputStream fileOutputStream = new FileOutputStream(file);
@@ -77,7 +77,7 @@ public class k {
         } catch (Throwable unused4) {
         }
         try {
-            a = Typeface.create(a.a("JjUoXhUmMTREXg=="), 1);
+            a = Typeface.create(com.arix.player.a.a("JjUoXhUmMTREXg=="), 1);
         } catch (Throwable unused5) {
         }
         return a;

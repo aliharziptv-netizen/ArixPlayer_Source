@@ -21,8 +21,8 @@ class bm implements ga {
         if (this.b.isShowing()) {
             this.b.dismiss();
         }
-        this.a.a(str, a.a("IjEk"), this.c, this.d);
-        i.b(this.a, a.a("jf6fqBiN5Z+s4Ox0n6Xg/43O9LyM3p6CGI3lnorg/YzxDeDyjcL0sIzenoUYjfyfq+D5jOH1lXQ="));
+        this.a.a(str, com.arix.player.a.a("IjEk"), this.c, this.d);
+        com.arix.player.i.b(this.a, com.arix.player.a.a("jf6fqBiN5Z+s4Ox0n6Xg/43O9LyM3p6CGI3lnorg/YzxDeDyjcL0sIzenoUYjfyfq+D5jOH1lXQ="));
     }
 
     @Override // com.arix.player.ga
@@ -30,6 +30,6 @@ class bm implements ga {
         if (this.b.isShowing()) {
             this.b.dismiss();
         }
-        i.c(this.a, a.a("jNWemeHRdJ6K4dGM9/S5je18DQ==") + str);
+        com.arix.player.i.c(this.a, com.arix.player.a.a("jNWemeHRdJ6K4dGM9/S5je18DQ==") + str);
     }
 }
