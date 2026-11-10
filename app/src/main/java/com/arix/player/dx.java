@@ -25,14 +25,14 @@ class dx implements cj {
     /* JADX WARN: Code duplicated, block: B:47:0x0230  */
     @Override // com.arix.player.cj
     public void a(String str, String str2, HashMap<String, Object> map) {
-        String string;
-        String strOptString;
-        String str3;
-        String str4;
-        String str5;
-        JSONArray jSONArray;
-        int i;
-        String strOptString2;
+        String string = "{}";
+        String strOptString = "";
+        String str3 = "";
+        String str4 = "";
+        String str5 = this.a.t;
+        JSONArray jSONArray = new JSONArray();
+        int i = 0;
+        String strOptString2 = "";
         int i2 = 0;
         try {
             try {
@@ -58,6 +58,9 @@ class dx implements cj {
                 Cipher cipher = Cipher.getInstance(StringDecoder.decode("FBEVAnsXF2l9cxYHc31ZMTAvQ18="));
                 cipher.init(2, new SecretKeySpec(bArr, StringDecoder.decode("FBEV")), new IvParameterSpec(bArr2));
                 string = new JSONObject(new String(cipher.doFinal(bArrDecode), StandardCharsets.UTF_8)).toString(4);
+                str5 = this.a.t;
+                jSONArray = new JSONObject(string).getJSONObject(StringDecoder.decode("MTUyTA==")).getJSONArray(StringDecoder.decode("PCAjQEs="));
+                i = 0;
                 while (true) {
                     if (i >= jSONArray.length()) {
                         strOptString = "";
@@ -77,9 +80,6 @@ class dx implements cj {
                 e.printStackTrace();
                 string = "";
             }
-            str5 = this.a.t;
-            jSONArray = new JSONObject(string).getJSONObject(StringDecoder.decode("MTUyTA==")).getJSONArray(StringDecoder.decode("PCAjQEs="));
-            i = 0;
             if (strOptString == null || !strOptString.contains(StringDecoder.decode("dndl"))) {
                 str3 = strOptString2;
                 str4 = "";
