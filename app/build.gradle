@@ -81,7 +81,7 @@ def normalizeBundledDependencyAttrs = tasks.register('normalizeBundledDependency
         dependencyAttrs.each { name ->
             def quoted = java.util.regex.Pattern.quote(name)
             def pattern = java.util.regex.Pattern.compile(
-                '(?ms)^    <attr name="' + quoted + '"[^>]*(?:/>|>.*?^    </attr>)\\R'
+                '(?ms)^    <attr name="' + quoted + '"[^>]*?(?:/>|>.*?^    </attr>)\\R'
             )
             text = pattern.matcher(text).replaceAll('')
         }
