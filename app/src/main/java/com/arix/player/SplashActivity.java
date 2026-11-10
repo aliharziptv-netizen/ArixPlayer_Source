@@ -77,7 +77,7 @@ public class SplashActivity extends Activity {
                 getSharedPreferences("arix_crash_report", MODE_PRIVATE);
         final String report = prefs.getString("last_crash", "");
         if (report == null || report.trim().isEmpty()) {
-            showSavedCrashOrContinue();
+            new Handler(Looper.getMainLooper()).postDelayed(new dh(this), 1800L);
             return;
         }
 
@@ -120,7 +120,6 @@ public class SplashActivity extends Activity {
     @Override // android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
-        getSharedPreferences("arix_crash_report", MODE_PRIVATE).edit().putString("last_stage", "SplashActivity.onCreate").apply();
         if (Build.VERSION.SDK_INT >= 28) {
             WindowManager.LayoutParams attributes = getWindow().getAttributes();
             attributes.layoutInDisplayCutoutMode = 1;
@@ -142,6 +141,6 @@ public class SplashActivity extends Activity {
         this.d = (LinearLayout) findViewById(2131362235);
         a();
         dd.a(this, (dg) null);
-        new Handler(Looper.getMainLooper()).postDelayed(new dh(this), 1800L);
+        showSavedCrashOrContinue();
     }
 }
