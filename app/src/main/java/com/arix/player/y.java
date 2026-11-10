@@ -48,12 +48,12 @@ class y implements Runnable {
         char c;
         int i;
         int iIndexOf;
-        String str;
-        String str2;
-        int length;
-        boolean z;
-        String str3;
-        String str4;
+        String str = StringDecoder.decode("jNaeiuDzjcP1kXWNw/WLjf6fpeDkjOn1kQ==");
+        String str2 = "";
+        int length = 1;
+        boolean z = false;
+        String str3 = StringDecoder.decode("jNaeiuDzjcP1kXWNw/WLjf6fpeDkjOn1kQ==");
+        String str4 = "";
         boolean zOptBoolean;
         try {
             String strTrim2 = this.b.trim();
