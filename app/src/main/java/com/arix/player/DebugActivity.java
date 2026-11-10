@@ -7,6 +7,7 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 /** Displays the last uncaught exception in a readable, selectable dialog. */
@@ -35,9 +36,12 @@ public class DebugActivity extends Activity {
         message.setTextIsSelectable(true);
         message.setText(crashReport);
 
+        ScrollView scrollView = new ScrollView(this);
+        scrollView.addView(message);
+
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle("Arix Player - Crash Report")
-                .setView(message)
+                .setView(scrollView)
                 .setPositiveButton("Close", (d, which) -> finish())
                 .setNeutralButton("Copy report", (d, which) -> {
                     ClipboardManager clipboard = (ClipboardManager)
