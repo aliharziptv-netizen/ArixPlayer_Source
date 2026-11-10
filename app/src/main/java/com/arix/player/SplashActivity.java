@@ -20,7 +20,6 @@ import android.widget.Toast;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class SplashActivity extends Activity {
     FrameLayout a;
     TextView b;
@@ -54,32 +53,28 @@ public class SplashActivity extends Activity {
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    public /* synthetic */ void a(int i) {
+    private void a(int i) {
         if ((i & 4) == 0) {
             getWindow().getDecorView().setSystemUiVisibility(5382);
         }
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    public void b() {
-        if (isFinishing() || this.e) {
-            return;
-        }
+    private void b() {
+        if (isFinishing() || this.e) return;
         this.e = true;
-        startActivity(new Intent(this, (Class<?>) HomeActivity.class));
+        getSharedPreferences("arix_crash_report", MODE_PRIVATE).edit()
+                .putString("last_stage", "Starting HomeActivity").commit();
+        startActivity(new Intent(this, HomeActivity.class));
         overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
         finish();
     }
 
-    private void showSavedCrashOrContinue() {
+    // Returns true when a saved crash dialog is being shown.
+    private boolean showSavedCrashOrContinue() {
         final android.content.SharedPreferences prefs =
                 getSharedPreferences("arix_crash_report", MODE_PRIVATE);
         final String report = prefs.getString("last_crash", "");
-        if (report == null || report.trim().isEmpty()) {
-            new Handler(Looper.getMainLooper()).postDelayed(new dh(this), 1800L);
-            return;
-        }
+        if (report == null || report.trim().isEmpty()) return false;
 
         String stage = prefs.getString("last_stage", "غير محددة");
         TextView details = new TextView(this);
@@ -88,7 +83,7 @@ public class SplashActivity extends Activity {
         details.setTextSize(12);
         details.setTextIsSelectable(true);
         details.setText("آخر مرحلة وصل إليها التطبيق: " + stage
-                + "\\n\\nسبب الإغلاق (Stack trace):\\n" + report);
+                + "\n\nسبب الإغلاق (Stack trace):\n" + report);
 
         ScrollView scroll = new ScrollView(this);
         scroll.addView(details);
@@ -109,17 +104,29 @@ public class SplashActivity extends Activity {
                 }
             });
             dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(view -> {
-                prefs.edit().remove("last_crash").remove("last_stage").apply();
+                prefs.edit().remove("last_crash").remove("last_stage").commit();
                 dialog.dismiss();
-                new Handler(Looper.getMainLooper()).postDelayed(new dh(this), 350L);
+                b();
             });
         });
         dialog.show();
+        return true;
     }
 
-    @Override // android.app.Activity
+    @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+
+        // Check for a previous crash BEFORE loading splash resources or animations.
+        getSharedPreferences("arix_crash_report", MODE_PRIVATE).edit()
+                .putString("last_stage", "SplashActivity.onCreate - checking previous crash")
+                .commit();
+        if (showSavedCrashOrContinue()) return;
+
+        getSharedPreferences("arix_crash_report", MODE_PRIVATE).edit()
+                .putString("last_stage", "SplashActivity: setting up window and layout")
+                .commit();
+
         if (Build.VERSION.SDK_INT >= 28) {
             WindowManager.LayoutParams attributes = getWindow().getAttributes();
             attributes.layoutInDisplayCutoutMode = 1;
@@ -127,13 +134,17 @@ public class SplashActivity extends Activity {
         }
         getWindow().setFlags(1024, 1024);
         getWindow().getDecorView().setSystemUiVisibility(5382);
-        getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() { // from class: com.arix.player.SplashActivity$$ExternalSyntheticLambda0
-            @Override // android.view.View.OnSystemUiVisibilityChangeListener
-            public final void onSystemUiVisibilityChange(int i) {
-                SplashActivity.this.a(i);
-            }
-        });
+        getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(
+                new View.OnSystemUiVisibilityChangeListener() {
+                    @Override
+                    public void onSystemUiVisibilityChange(int i) {
+                        SplashActivity.this.a(i);
+                    }
+                });
         setContentView(2131558431);
+        getSharedPreferences("arix_crash_report", MODE_PRIVATE).edit()
+                .putString("last_stage", "SplashActivity: layout loaded")
+                .commit();
         com.arix.player.k.a(this, getWindow().getDecorView());
         this.a = (FrameLayout) findViewById(2131362201);
         this.b = (TextView) findViewById(2131362570);
@@ -141,6 +152,6 @@ public class SplashActivity extends Activity {
         this.d = (LinearLayout) findViewById(2131362235);
         a();
         dd.a(this, (dg) null);
-        showSavedCrashOrContinue();
+        new Handler(Looper.getMainLooper()).postDelayed(new dh(this), 1800L);
     }
 }
