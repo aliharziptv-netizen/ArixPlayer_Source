@@ -294,6 +294,7 @@ public class HomeActivity extends Activity {
     @Override // android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+        getSharedPreferences("arix_crash_report", MODE_PRIVATE).edit().putString("last_stage", "HomeActivity.onCreate: before UI initialization").apply();
         if (Build.VERSION.SDK_INT >= 28) {
             WindowManager.LayoutParams attributes = getWindow().getAttributes();
             attributes.layoutInDisplayCutoutMode = 1;
