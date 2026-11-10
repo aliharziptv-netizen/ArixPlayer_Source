@@ -64,12 +64,12 @@ def normalizeBundledDependencyAttrs = tasks.register('normalizeBundledDependency
                             def document = factory.newDocumentBuilder().parse(
                                 new ByteArrayInputStream(text.getBytes('UTF-8'))
                             )
-                            def children = document.documentElement.childNodes
-                            for (int i = 0; i < children.length; i++) {
-                                def child = children.item(i)
-                                if (child.nodeType == org.w3c.dom.Node.ELEMENT_NODE && child.nodeName == 'attr') {
-                                    dependencyAttrs.add(child.getAttribute('name'))
-                                }
+                            def attrs = document.getElementsByTagName('attr')
+                            for (int i = 0; i < attrs.length; i++) {
+                                def attr = attrs.item(i)
+                                def isRootResource = attr.parentNode == document.documentElement
+                                def hasDefinition = attr.hasAttribute('format') || attr.getElementsByTagName('enum').length > 0 || attr.getElementsByTagName('flag').length > 0
+                                if (isRootResource || hasDefinition) dependencyAttrs.add(attr.getAttribute('name'))
                             }
                         }
                     }
@@ -78,15 +78,21 @@ def normalizeBundledDependencyAttrs = tasks.register('normalizeBundledDependency
                 }
             }
         def text = sourceAttrs.getText('UTF-8')
+        int removedDefinitions = 0
         dependencyAttrs.each { name ->
+            if (name == 'themeLineHeight') return
             def quoted = java.util.regex.Pattern.quote(name)
             def pattern = java.util.regex.Pattern.compile(
                 '(?ms)^    <attr name="' + quoted + '"[^>]*?(?:/>|>.*?^    </attr>)\\R'
             )
-            text = pattern.matcher(text).replaceAll('')
+            def matcher = pattern.matcher(text)
+            if (matcher.find()) {
+                removedDefinitions++
+                text = matcher.replaceAll('')
+            }
         }
         appAttrs.setText(text, 'UTF-8')
-        logger.lifecycle("Normalized merged Android attrs: ${dependencyAttrs.size()} AAR attr names checked")
+        logger.lifecycle("Normalized merged Android attrs: ${removedDefinitions} duplicate definitions removed from ${dependencyAttrs.size()} AAR attr names")
     }
 }
 tasks.named('preBuild').configure {
