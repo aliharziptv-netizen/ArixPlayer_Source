@@ -22,20 +22,20 @@ import java.util.List;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class HomeActivity extends Activity {
-    private TextView a;
-    private LinearLayout b;
-    private EditText c;
-    private ImageView d;
-    private LinearLayout e;
-    private LinearLayout f;
-    private LinearLayout g;
-    private View h;
-    private LinearLayout i;
-    private LinearLayout j;
-    private TextView k;
-    private LinearLayout l;
-    private List<ch> m = new ArrayList();
-    private String n = "";
+    TextView a;
+    LinearLayout b;
+    EditText c;
+    ImageView d;
+    LinearLayout e;
+    LinearLayout f;
+    LinearLayout g;
+    View h;
+    LinearLayout i;
+    LinearLayout j;
+    TextView k;
+    LinearLayout l;
+    List<ch> m = new ArrayList();
+    String n = "";
 
     private void a() {
         this.a = (TextView) findViewById(2131362566);
@@ -304,7 +304,7 @@ public class HomeActivity extends Activity {
         getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() { // from class: com.arix.player.HomeActivity$$ExternalSyntheticLambda0
             @Override // android.view.View.OnSystemUiVisibilityChangeListener
             public final void onSystemUiVisibilityChange(int i) {
-                this.f$0.a(i);
+                HomeActivity.this.a(i);
             }
         });
         setContentView(2131558429);
@@ -321,6 +321,6 @@ public class HomeActivity extends Activity {
     }
 
     public void openDrawer(View view) {
-        findViewById(2131362580).openDrawer(8388611);
+        ((androidx.drawerlayout.widget.DrawerLayout) findViewById(2131362580)).openDrawer(8388611);
     }
 }

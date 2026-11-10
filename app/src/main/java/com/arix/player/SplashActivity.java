@@ -16,11 +16,11 @@ import android.widget.TextView;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class SplashActivity extends Activity {
-    private FrameLayout a;
-    private TextView b;
-    private TextView c;
-    private LinearLayout d;
-    private boolean e = false;
+    FrameLayout a;
+    TextView b;
+    TextView c;
+    LinearLayout d;
+    boolean e = false;
 
     private void a() {
         FrameLayout frameLayout = this.a;
@@ -79,7 +79,7 @@ public class SplashActivity extends Activity {
         getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() { // from class: com.arix.player.SplashActivity$$ExternalSyntheticLambda0
             @Override // android.view.View.OnSystemUiVisibilityChangeListener
             public final void onSystemUiVisibilityChange(int i) {
-                this.f$0.a(i);
+                SplashActivity.this.a(i);
             }
         });
         setContentView(2131558431);

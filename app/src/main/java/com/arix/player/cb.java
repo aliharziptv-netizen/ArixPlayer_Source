@@ -52,7 +52,7 @@ public class cb extends BottomSheetDialogFragment {
         textView.setOnClickListener(new View.OnClickListener() { // from class: com.arix.player.cb$$ExternalSyntheticLambda1
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                this.f$0.a(f, view);
+                cb.this.a(f, view);
             }
         });
         if (this.e) {
@@ -169,7 +169,7 @@ public class cb extends BottomSheetDialogFragment {
         bottomSheetDialogOnCreateDialog.setOnShowListener(new DialogInterface.OnShowListener() { // from class: com.arix.player.cb$$ExternalSyntheticLambda0
             @Override // android.content.DialogInterface.OnShowListener
             public final void onShow(DialogInterface dialogInterface) {
-                this.f$0.a(bottomSheetDialogOnCreateDialog, dialogInterface);
+                cb.this.a(bottomSheetDialogOnCreateDialog, dialogInterface);
             }
         });
         return bottomSheetDialogOnCreateDialog;
@@ -222,13 +222,13 @@ public class cb extends BottomSheetDialogFragment {
         textViewA.setOnClickListener(new View.OnClickListener() { // from class: com.arix.player.cb$$ExternalSyntheticLambda2
             @Override // android.view.View.OnClickListener
             public final void onClick(View view2) {
-                this.f$0.a(view2);
+                cb.this.a(view2);
             }
         });
         textViewA2.setOnClickListener(new View.OnClickListener() { // from class: com.arix.player.cb$$ExternalSyntheticLambda3
             @Override // android.view.View.OnClickListener
             public final void onClick(View view2) {
-                this.f$0.b(view2);
+                cb.this.b(view2);
             }
         });
         linearLayout2.addView(textViewA);

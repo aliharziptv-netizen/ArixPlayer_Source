@@ -28,51 +28,51 @@ import java.util.HashMap;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class InformationActivity extends AppCompatActivity {
-    private EditText A;
-    private EditText B;
-    private EditText C;
-    private LinearLayout D;
-    private LinearLayout E;
-    private CheckBox F;
-    private LinearLayout G;
-    private CheckBox H;
-    private SharedPreferences J;
-    private SharedPreferences K;
-    private LinearLayout h;
-    private LinearLayout i;
-    private TextView j;
-    private LinearLayout k;
-    private TextInputLayout l;
-    private TextInputLayout m;
-    private LinearLayout n;
-    private TextInputLayout o;
-    private TextInputLayout p;
-    private TextInputLayout q;
-    private TextInputLayout r;
-    private TextInputLayout s;
-    private LinearLayout t;
-    private Button u;
-    private EditText v;
-    private EditText w;
-    private TextView x;
-    private EditText y;
-    private EditText z;
-    private String a = "";
-    private String b = "";
-    private HashMap<String, Object> c = new HashMap<>();
-    private String d = "";
-    private String e = "";
-    private double f = 0.0d;
-    private ArrayList<HashMap<String, Object>> g = new ArrayList<>();
-    private Intent I = new Intent();
-    private Intent L = new Intent();
+    EditText A;
+    EditText B;
+    EditText C;
+    LinearLayout D;
+    LinearLayout E;
+    CheckBox F;
+    LinearLayout G;
+    CheckBox H;
+    SharedPreferences J;
+    SharedPreferences K;
+    LinearLayout h;
+    LinearLayout i;
+    TextView j;
+    LinearLayout k;
+    TextInputLayout l;
+    TextInputLayout m;
+    LinearLayout n;
+    TextInputLayout o;
+    TextInputLayout p;
+    TextInputLayout q;
+    TextInputLayout r;
+    TextInputLayout s;
+    LinearLayout t;
+    Button u;
+    EditText v;
+    EditText w;
+    TextView x;
+    EditText y;
+    EditText z;
+    String a = "";
+    String b = "";
+    HashMap<String, Object> c = new HashMap<>();
+    String d = "";
+    String e = "";
+    double f = 0.0d;
+    ArrayList<HashMap<String, Object>> g = new ArrayList<>();
+    Intent I = new Intent();
+    Intent L = new Intent();
 
     private void a() {
         getWindow().getDecorView().setSystemUiVisibility(4098);
         getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() { // from class: com.arix.player.InformationActivity$$ExternalSyntheticLambda0
             @Override // android.view.View.OnSystemUiVisibilityChangeListener
             public final void onSystemUiVisibilityChange(int i) {
-                this.f$0.a(i);
+                InformationActivity.this.a(i);
             }
         });
         a(this.u, 12.0d, 5.0d, 0.0d, StringDecoder.decode("dmB0FQpgFQ=="), StringDecoder.decode("dmcAGAkXYQ=="));

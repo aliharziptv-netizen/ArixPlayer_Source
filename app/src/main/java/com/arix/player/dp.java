@@ -24,7 +24,7 @@ class dp implements View.OnClickListener {
         TrackSelectionDialog.a((Player) this.a.a, new DialogInterface.OnDismissListener() { // from class: com.arix.player.dp$$ExternalSyntheticLambda0
             @Override // android.content.DialogInterface.OnDismissListener
             public final void onDismiss(DialogInterface dialogInterface) {
-                this.f$0.a(dialogInterface);
+                dp.this.a(dialogInterface);
             }
         }).show(this.a.getSupportFragmentManager(), null);
     }

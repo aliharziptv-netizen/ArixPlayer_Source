@@ -80,7 +80,7 @@ public class WaitActivity extends AppCompatActivity {
         getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() { // from class: com.arix.player.WaitActivity$$ExternalSyntheticLambda0
             @Override // android.view.View.OnSystemUiVisibilityChangeListener
             public final void onSystemUiVisibilityChange(int i) {
-                this.f$0.a(i);
+                WaitActivity.this.a(i);
             }
         });
         if (StringDecoder.decode("Iz0iSFc=").equals(host)) {

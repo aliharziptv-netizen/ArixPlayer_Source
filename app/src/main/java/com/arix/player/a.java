@@ -250,7 +250,7 @@ public final class a extends BottomSheetDialogFragment {
         a(linearLayout, StringDecoder.decode("FCEyQhh9jOz0vIzWnorg843MBA=="), z, new View.OnClickListener() { // from class: com.arix.player.a$$ExternalSyntheticLambda0
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                this.f$0.a(view);
+                a.this.a(view);
             }
         }, true, null);
         ArrayList<e> arrayList = new ArrayList();
@@ -278,7 +278,7 @@ public final class a extends BottomSheetDialogFragment {
             a(linearLayout, eVar2.c, eVar2.d, new View.OnClickListener() { // from class: com.arix.player.a$$ExternalSyntheticLambda1
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view) {
-                    this.f$0.a(eVar2, view);
+                    a.this.a(eVar2, view);
                 }
             }, false, eVar2);
         }
@@ -323,7 +323,7 @@ public final class a extends BottomSheetDialogFragment {
         linearLayout2.setOnClickListener(new View.OnClickListener() { // from class: com.arix.player.a$$ExternalSyntheticLambda3
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                StringDecoder.decode(onClickListener, view);
+                com.arix.player.a.a(onClickListener, view);
             }
         });
         TextView textView = new TextView(getContext());
@@ -381,7 +381,7 @@ public final class a extends BottomSheetDialogFragment {
         bottomSheetDialogOnCreateDialog.setOnShowListener(new DialogInterface.OnShowListener() { // from class: com.arix.player.a$$ExternalSyntheticLambda4
             @Override // android.content.DialogInterface.OnShowListener
             public final void onShow(DialogInterface dialogInterface) {
-                this.f$0.a(dialogInterface);
+                a.this.a(dialogInterface);
             }
         });
         return bottomSheetDialogOnCreateDialog;

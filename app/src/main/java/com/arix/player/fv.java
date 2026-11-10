@@ -25,7 +25,7 @@ class fv implements Runnable {
     /* JADX WARN: Code duplicated, block: B:37:0x0127  */
     /* JADX WARN: Code duplicated, block: B:43:? A[RETURN, SYNTHETIC] */
     @Override // java.lang.Runnable
-    public void run() throws Throwable {
+    public void run() {
         Throwable th;
         HttpURLConnection httpURLConnection;
         Exception e;
@@ -93,7 +93,7 @@ class fv implements Runnable {
                 if (0 != 0) {
                     httpURLConnection2.disconnect();
                 }
-                throw th;
+                throw new RuntimeException(th);
             }
         } catch (Exception e3) {
             httpURLConnection = null;
@@ -103,7 +103,7 @@ class fv implements Runnable {
             if (0 != 0) {
                 httpURLConnection2.disconnect();
             }
-            throw th;
+            throw new RuntimeException(th);
         }
     }
 }

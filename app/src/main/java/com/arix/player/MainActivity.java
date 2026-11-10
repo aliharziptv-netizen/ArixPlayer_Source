@@ -37,69 +37,69 @@ import org.json.JSONObject;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class MainActivity extends Activity {
-    private TextView B;
-    private EditText C;
-    private EditText D;
-    private LinearLayout E;
-    private LinearLayout F;
-    private ImageView G;
-    private EditText H;
-    private EditText I;
-    private EditText J;
-    private EditText K;
-    private EditText L;
-    private Button M;
-    private Button N;
-    private View O;
-    private View P;
-    private View Q;
-    private View R;
-    private View S;
-    private View T;
-    private View U;
-    private View V;
-    private LinearLayout W;
-    private TextView X;
-    private LinearLayout Y;
-    private TextView Z;
-    private LinearLayout a;
-    private LinearLayout aa;
-    private LinearLayout ab;
-    private LinearLayout ac;
-    private TextView ad;
-    private TextView ae;
-    private TextView b;
-    private EditText c;
-    private RadioGroup d;
-    private LinearLayout e;
-    private RadioButton f;
-    private RadioButton g;
-    private LinearLayout i;
-    private LinearLayout j;
-    private ImageView k;
-    private TextView l;
-    private TextView m;
-    private LinearLayout n;
-    private View o;
-    private HorizontalScrollView p;
-    private TextView q;
-    private LinearLayout r;
-    private LinearLayout s;
-    private boolean h = false;
-    private boolean t = false;
-    private int u = -1;
-    private View v = null;
-    private final Handler w = new Handler();
-    private float x = 0.0f;
-    private float y = 0.0f;
-    private int z = 0;
-    private final Runnable A = new am(this);
-    private List<g> af = new ArrayList();
-    private int ag = -1;
-    private String ah = null;
-    private String ai = "";
-    private String aj = "";
-    private boolean ak = false;
+    TextView B;
+    EditText C;
+    EditText D;
+    LinearLayout E;
+    LinearLayout F;
+    ImageView G;
+    EditText H;
+    EditText I;
+    EditText J;
+    EditText K;
+    EditText L;
+    Button M;
+    Button N;
+    View O;
+    View P;
+    View Q;
+    View R;
+    View S;
+    View T;
+    View U;
+    View V;
+    LinearLayout W;
+    TextView X;
+    LinearLayout Y;
+    TextView Z;
+    LinearLayout a;
+    LinearLayout aa;
+    LinearLayout ab;
+    LinearLayout ac;
+    TextView ad;
+    TextView ae;
+    TextView b;
+    EditText c;
+    RadioGroup d;
+    LinearLayout e;
+    RadioButton f;
+    RadioButton g;
+    LinearLayout i;
+    LinearLayout j;
+    ImageView k;
+    TextView l;
+    TextView m;
+    LinearLayout n;
+    View o;
+    HorizontalScrollView p;
+    TextView q;
+    LinearLayout r;
+    LinearLayout s;
+    boolean h = false;
+    boolean t = false;
+    int u = -1;
+    View v = null;
+    final Handler w = new Handler();
+    float x = 0.0f;
+    float y = 0.0f;
+    int z = 0;
+    final Runnable A = new am(this);
+    List<g> af = new ArrayList();
+    int ag = -1;
+    String ah = null;
+    String ai = "";
+    String aj = "";
+    boolean ak = false;
 
     /* JADX INFO: Access modifiers changed from: private */
     public int a(float f) {
@@ -294,7 +294,7 @@ public class MainActivity extends Activity {
         try {
             JSONArray jSONArray2 = new JSONArray(chVarB.g());
             for (int i = 0; i < jSONArray2.length(); i++) {
-                g gVarA = g.a(jSONArray2.getJSONObject(i));
+                g gVarA = com.arix.player.g.a(jSONArray2.getJSONObject(i));
                 if (gVarA != null) {
                     this.af.add(0, gVarA);
                 }
@@ -312,7 +312,7 @@ public class MainActivity extends Activity {
     }
 
     private void a(String str, String str2) {
-        String strD = h.d(this.ai);
+        String strD = com.arix.player.h.d(this.ai);
         Dialog dialog = new Dialog(this);
         dialog.requestWindowFeature(1);
         dialog.setContentView(2131558460);
@@ -351,7 +351,7 @@ public class MainActivity extends Activity {
         chVar.d(str3);
         chVar.e(str);
         String str6 = this.ai;
-        chVar.f((str6 == null || str6.isEmpty()) ? h.c(str3) : this.ai);
+        chVar.f((str6 == null || str6.isEmpty()) ? com.arix.player.h.c(str3) : this.ai);
         chVar.g(str4);
         chVar.h(str5);
         chVar.a(this.af.size());
@@ -537,12 +537,12 @@ public class MainActivity extends Activity {
             }
         }
         String string = jSONArray.toString();
-        String strA = h.a(string);
+        String strA = com.arix.player.h.a(string);
         if (strA == null) {
             com.arix.player.i.c(this, StringDecoder.decode("jNWemeHRdJ6H4OGNx/SyjeVm9Z+M0J6F4d+M4fS+jfOehxk="));
             return;
         }
-        this.ai = h.c(strA);
+        this.ai = com.arix.player.h.c(strA);
         if (this.g.isChecked()) {
             a(this.ai, StringDecoder.decode("PDoySFYh"), strA, string);
         } else {
@@ -701,7 +701,7 @@ public class MainActivity extends Activity {
     public void k() {
         List<g> list = this.af;
         if (list == null || list.size() < 2) {
-            i.a(this, StringDecoder.decode("jfeem+HUdJ+v4dOM4fWSjN6fqxiN7Z+p4dx0norh0Yzl9LqM0Gb0vI3xnpTg8ozp9ZF1jOH0vI3+npzg/43M9ZA="));
+            com.arix.player.i.a(this, StringDecoder.decode("jfeem+HUdJ+v4dOM4fWSjN6fqxiN7Z+p4dx0norh0Yzl9LqM0Gb0vI3xnpTg8ozp9ZF1jOH0vI3+npzg/43M9ZA="));
             return;
         }
         Dialog dialog = new Dialog(this);
@@ -823,7 +823,7 @@ public class MainActivity extends Activity {
         getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() { // from class: com.arix.player.MainActivity$$ExternalSyntheticLambda0
             @Override // android.view.View.OnSystemUiVisibilityChangeListener
             public final void onSystemUiVisibilityChange(int i) {
-                this.f$0.b(i);
+                MainActivity.this.b(i);
             }
         });
         setContentView(2131558483);

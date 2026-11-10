@@ -137,7 +137,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
         a(linearLayout, StringDecoder.decode("FCEyQhh9jOz0vIzWnorg843MBA=="), z, new View.OnClickListener() { // from class: com.arix.player.TrackSelectionDialog$$ExternalSyntheticLambda2
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                this.f$0.a(view);
+                TrackSelectionDialog.this.a(view);
             }
         }, true, -1);
         ArrayList<dl> arrayList = new ArrayList();
@@ -186,7 +186,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
             a(linearLayout, dlVar2.e, dlVar2.f, new View.OnClickListener() { // from class: com.arix.player.TrackSelectionDialog$$ExternalSyntheticLambda4
                 @Override // android.view.View.OnClickListener
                 public final void onClick(View view) {
-                    this.f$0.a(dlVar2, view);
+                    TrackSelectionDialog.this.a(dlVar2, view);
                 }
             }, false, dlVar2.d);
         }
@@ -286,7 +286,7 @@ public final class TrackSelectionDialog extends BottomSheetDialogFragment {
         bottomSheetDialogOnCreateDialog.setOnShowListener(new DialogInterface.OnShowListener() { // from class: com.arix.player.TrackSelectionDialog$$ExternalSyntheticLambda0
             @Override // android.content.DialogInterface.OnShowListener
             public final void onShow(DialogInterface dialogInterface) {
-                this.f$0.a(dialogInterface);
+                TrackSelectionDialog.this.a(dialogInterface);
             }
         });
         return bottomSheetDialogOnCreateDialog;

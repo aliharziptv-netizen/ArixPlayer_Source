@@ -17,16 +17,16 @@ import android.widget.TextView;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class SocialActivity extends Activity {
-    private FrameLayout a;
-    private FrameLayout b;
-    private ImageView c;
-    private TextView d;
-    private LinearLayout e;
-    private LinearLayout f;
-    private LinearLayout g;
-    private LinearLayout h;
-    private LinearLayout i;
-    private LinearLayout j;
+    FrameLayout a;
+    FrameLayout b;
+    ImageView c;
+    TextView d;
+    LinearLayout e;
+    LinearLayout f;
+    LinearLayout g;
+    LinearLayout h;
+    LinearLayout i;
+    LinearLayout j;
 
     private void a() {
         this.a = (FrameLayout) findViewById(2131361925);
@@ -212,7 +212,7 @@ public class SocialActivity extends Activity {
         getWindow().getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() { // from class: com.arix.player.SocialActivity$$ExternalSyntheticLambda0
             @Override // android.view.View.OnSystemUiVisibilityChangeListener
             public final void onSystemUiVisibilityChange(int i) {
-                this.f$0.a(i);
+                SocialActivity.this.a(i);
             }
         });
         setContentView(2131558430);

@@ -5,8 +5,8 @@ import android.content.Context;
 
 /* JADX INFO: loaded from: /data/user/0/com.termux/files/usr/tmp/arix-classes82.dex */
 public class SketchApplication extends Application {
-    private static Context a;
-    private Thread.UncaughtExceptionHandler b;
+    static Context a;
+    Thread.UncaughtExceptionHandler b;
 
     public static Context a() {
         return a;

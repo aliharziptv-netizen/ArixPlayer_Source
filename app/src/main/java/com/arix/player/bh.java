@@ -29,6 +29,6 @@ class bh implements View.OnClickListener {
         }
         this.a.j();
         this.a.b(true);
-        i.a(this.a, StringDecoder.decode("jf6fqBiN+Z6d4dR0norh0Y3E9L6N856EGI38n6vg+Yzh9ZU="));
+        com.arix.player.i.a(this.a, StringDecoder.decode("jf6fqBiN+Z6d4dR0norh0Y3E9L6N856EGI38n6vg+Yzh9ZU="));
     }
 }
