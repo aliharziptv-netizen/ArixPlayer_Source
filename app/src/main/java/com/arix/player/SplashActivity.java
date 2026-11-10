@@ -1,6 +1,10 @@
 package com.arix.player;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,6 +15,8 @@ import android.view.WindowManager;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.FrameLayout;
+import android.widget.ScrollView;
+import android.widget.Toast;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -66,9 +72,55 @@ public class SplashActivity extends Activity {
         finish();
     }
 
+    private void showSavedCrashOrContinue() {
+        final android.content.SharedPreferences prefs =
+                getSharedPreferences("arix_crash_report", MODE_PRIVATE);
+        final String report = prefs.getString("last_crash", "");
+        if (report == null || report.trim().isEmpty()) {
+            showSavedCrashOrContinue();
+            return;
+        }
+
+        String stage = prefs.getString("last_stage", "غير محددة");
+        TextView details = new TextView(this);
+        int pad = (int) (14 * getResources().getDisplayMetrics().density);
+        details.setPadding(pad, pad, pad, pad);
+        details.setTextSize(12);
+        details.setTextIsSelectable(true);
+        details.setText("آخر مرحلة وصل إليها التطبيق: " + stage
+                + "\\n\\nسبب الإغلاق (Stack trace):\\n" + report);
+
+        ScrollView scroll = new ScrollView(this);
+        scroll.addView(details);
+        final AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Arix Player - تشخيص العطل")
+                .setView(scroll)
+                .setPositiveButton("متابعة", null)
+                .setNeutralButton("نسخ التقرير", null)
+                .setCancelable(false)
+                .create();
+        dialog.setOnShowListener(ignored -> {
+            dialog.getButton(AlertDialog.BUTTON_NEUTRAL).setOnClickListener(view -> {
+                ClipboardManager clipboard = (ClipboardManager)
+                        getSystemService(Context.CLIPBOARD_SERVICE);
+                if (clipboard != null) {
+                    clipboard.setPrimaryClip(ClipData.newPlainText("Arix Player crash", details.getText()));
+                    Toast.makeText(this, "تم نسخ التقرير", Toast.LENGTH_SHORT).show();
+                }
+            });
+            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(view -> {
+                prefs.edit().remove("last_crash").remove("last_stage").apply();
+                dialog.dismiss();
+                new Handler(Looper.getMainLooper()).postDelayed(new dh(this), 350L);
+            });
+        });
+        dialog.show();
+    }
+
     @Override // android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
+        getSharedPreferences("arix_crash_report", MODE_PRIVATE).edit().putString("last_stage", "SplashActivity.onCreate").apply();
         if (Build.VERSION.SDK_INT >= 28) {
             WindowManager.LayoutParams attributes = getWindow().getAttributes();
             attributes.layoutInDisplayCutoutMode = 1;
