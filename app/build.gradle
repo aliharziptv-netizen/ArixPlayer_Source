@@ -39,3 +39,45 @@ dependencies {
     implementation 'com.squareup.okhttp3:okhttp:3.14.9'
     implementation 'com.airbnb.android:lottie:3.7.0'
 }
+
+// The decoded APK carries merged AndroidX/Material attributes. Strip only
+// definitions also supplied by resolved AARs before AAPT merges resources.
+def normalizeBundledDependencyAttrs = tasks.register('normalizeBundledDependencyAttrs') {
+    doLast {
+        def sourceAttrs = file('../reference/original-res/values/attrs.xml')
+        def appAttrs = file('src/main/res/values/attrs.xml')
+        if (!sourceAttrs.isFile()) {
+            throw new GradleException("Missing original merged attr source: ${sourceAttrs}")
+        }
+        def dependencyAttrs = new LinkedHashSet<String>()
+        configurations.getByName('debugRuntimeClasspath').files
+            .findAll { it.name.endsWith('.aar') }
+            .each { aar ->
+                def zip = new java.util.zip.ZipFile(aar)
+                try {
+                    zip.entries().each { entry ->
+                        if (!entry.directory && entry.name.startsWith('res/values') && entry.name.endsWith('.xml')) {
+                            def text = zip.getInputStream(entry).getText('UTF-8')
+                            def matcher = text =~ /<attr\s+name=[\"']([^\"']+)[\"']/
+                            matcher.each { match -> dependencyAttrs.add(match[1]) }
+                        }
+                    }
+                } finally {
+                    zip.close()
+                }
+            }
+        def text = sourceAttrs.getText('UTF-8')
+        dependencyAttrs.each { name ->
+            def quoted = java.util.regex.Pattern.quote(name)
+            def pattern = java.util.regex.Pattern.compile(
+                '(?ms)^    <attr name="' + quoted + '"[^>]*(?:/>|>.*?^    </attr>)\\R'
+            )
+            text = pattern.matcher(text).replaceAll('')
+        }
+        appAttrs.setText(text, 'UTF-8')
+        logger.lifecycle("Normalized merged Android attrs: ${dependencyAttrs.size()} AAR attr names checked")
+    }
+}
+tasks.named('preBuild').configure {
+    dependsOn(normalizeBundledDependencyAttrs)
+}
